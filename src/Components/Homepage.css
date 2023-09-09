@@ -1,182 +1,360 @@
-/* Inside Homepage.css */
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  
+}
 
-.logistics-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 4rem 0;
-    /*background-image: url('/logistics-image.jpg');*/
-    background-size: cover;
-    color: #131414;
-  }
-  
-  .logistics-section img {
-    width: 50%; /* Adjust the image width */
-    max-height: 400px; /* Adjust the maximum image height */
-    object-fit: contain;
-  }
-  
-  .tagline {
-    padding: 4rem;
-    text-align: center;
-    border-radius: 8px;
-  }
-  
-  .tagline h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .tagline p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .cta-button {
-    background-color: #ff9900;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    position: absolute;
-    margin-right: 30px;
-    right: 0;
-  }
-  
-  .cta-button:hover {
-    background-color: #ffcc33;
+section {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-size: 32px;
+  font-weight: bold;
+}
+#home {
+  margin-top: -80px;
+  background-image: url('../public/1659565076144.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display:flex
+}
+#about {
+width: 100vw;
+  height: 100vh;
+  display:flex;
+}
+
+#SandI {
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  background-color: #3b3b3c;
+}
+
+#projects,
+#contact {
+  color: #3b3b3c;
+  background: #eaf2fa;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -5px;
+  z-index: 2;
+  height: 70px;
+  min-height: 70px;
+  width: calc(100% - 1.5rem);
+  background-color: #d4d4d4;;
+  padding: 0 1rem;
+  box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
+}
+
+.nav__container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.nav__container__actions {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  padding-left: 50px;
+  flex: 1;
+}
+
+.active {
+  font-weight: bold;
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Apply these styles to your HTML structure */
+/* Apply these styles to your HTML structure */
+.fullPage {
+  height: 98vh; /* Make it occupy the full viewport height */
+  display: flex;
+  flex-direction: column; /* Arrange children vertically */
+  gap: 16px; /* Add spacing between the elements */
+  padding: 16px; /* Add padding to the container */
+}
+
+.fullPageTop {
+  flex: 1; /* Take up half of the available space */
+  background-color: #f0f0f0; /* Light gray background */
+  border-radius: 8px; /* Add rounded corners for a smoother look */
+  padding: 16px; /* Add padding inside the box */
+}
+
+.fullPageBottom {
+  flex: 1; /* Take up half of the available space */
+  display: flex;
+  gap: 16px; /* Add spacing between the child elements */
+}
+
+.fullPageLeft {
+  flex: 1; /* Take up half of the available space */
+  background-color: #f5f5f5; /* Lighter gray background */
+  border-radius: 8px; /* Add rounded corners for a smoother look */
+  padding: 16px; /* Add padding inside the box */
+}
+
+.fullPageRight {
+  flex: 1; /* Take up half of the available space */
+  background-color: #f5f5f5; /* Lighter gray background */
+  border-radius: 8px; /* Add rounded corners for a smoother look */
+  padding: 16px; /* Add padding inside the box */
+}
+
+
+/* Container styling */
+.container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%;
+  height: 100vh;
+  gap: 20px; /* Add spacing between the boxes */
+  flex-direction: column;
+}
+
+
+/* Box styling */
+.services,
+.industries {
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 20px;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  border-radius: 8px; /* Add rounded corners for a smoother look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  flex: 1; /* Each box takes equal vertical space */
+}
+
+
+/* Button styling (adjust as needed) */
+.cta-button {
+  background-color: #007bff; /* Blue button color */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Add more specific styling for h2 and p if needed */
+.services h2,
+.industries h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.services p,
+.industries p {
+  font-size: 16px;
+}
+
+
+.carousel-root {
+  width: 64% !important;
+  margin: auto !important;
+  margin-top: 3% !important;
+}
+
+.carousel .slide {
+  background: #fff !important;
+  color: black;
+  height: 100%;
+}
+
+.carousel .slide img {
+  width: 139px !important;
+  border-radius: 50%;
+}
+
+.myCarousel {
+  background: #fafafa;
+  margin-top: -6%;
+  width: 54%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 6%;
+  padding-bottom: 8%;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: 1px solid #ddd;
+  height: 286px;
+}
+
+.carousel .control-dots {
+  padding-left: 5px !important;
+  outline: 0;
+  bottom: 5% !important;
+}
+
+.myCarousel h3 {
+  color: #222;
+  font-weight: 100;
+  letter-spacing: 0.2px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.myCarousel h4 {
+  text-transform: uppercase;
+  margin-top: 0;
+  padding-top: 0;
+  font-weight: 500;
+  color: #787878;
+  font-size: 14px;
+}
+
+.myCarousel p {
+  font-weight: 100 !important;
+  line-height: 29px !important;
+  color: #222;
+  font-size: 15px;
+  font-family: sans-serif;
+  max-height: 67px;
+}
+
+.myCarousel p:before {
+  content: "“";
+  color: #aaa;
+  font-size: 26px;
+  font-family: monospace;
+  font-weight: 100;
+}
+
+.myCarousel p:after {
+  content: "”";
+  color: #aaa;
+  font-size: 26px;
+  font-family: monospace;
+  font-weight: 100;
+  line-height: 0;
+}
+
+.carousel .control-dots .dot {
+  box-shadow: none !important;
+  background: #454545 !important;
+  outline: 0;
+}
+
+.carousel.carousel-slider .control-arrow {
+  background: #000 !important;
+  height: 50px !important;
+  position: absolute;
+  top: 35% !important;
+}
+
+.App {
+  text-align: center;
+}
+
+@media only screen and (max-width: 934px) {
+  .carousel-root {
+    outline: 0;
+    width: 93% !important;
+    margin: auto !important;
   }
 
-.about-section {
-    background-color: #f4f4f4; /* Change to your desired background color */
-    padding: 4rem 0;
+  .carousel.carousel-slider .control-arrow {
+    display: none !important;
   }
-  
-  .about-content {
-    text-align: center;
-  }
-  
-  .about-content h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .about-content p {
-    font-size: 1.2rem;
-  }
-
-.carrier-shipper-section {
-    display: flex;
-    justify-content: space-between;
-    background-color: #f1f4f6; /* Change to your desired background color */
-    padding: 4rem 0;
-  }
-  
-  .carrier,
-  .shipper {
-    flex: 1;
-    text-align: center;
-    padding: 2rem;
-    background-color: #f4f4f4; /* Change to match the background color */
-    border-radius: 8px;
-  }
-  
-  .carrier h2,
-  .shipper h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .carrier p,
-  .shipper p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+  .myCarousel {
+    background: #fafafa;
+    margin-top: -9%;
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8%;
+    padding-bottom: 12.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 1px solid #ddd;
+    height: 269px;
   }
 
-.services-industries-section {
-    display: flex;
-    flex-direction: column;
-    background-color: #697781; /* Change to your desired background color */
-    padding: 4rem 0;
+  .carousel .slide img {
+    width: 24% !important;
+    border-radius: 50%;
   }
-  
-  .services,
-  .industries {
-    text-align: center;
-    padding: 2rem;
-    background-color: #f4f4f4; /* Change to match the background color */
-    border-radius: 8px;
-    margin-bottom: 2rem; /* Add spacing between the sections */
-  }
-  
-  .services h2,
-  .industries h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .services p,
-  .industries p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
+}
 
-.testimonials-section {
-    height: 300px; /* Set the desired height for the testimonials section */
-    background-color: #f4f4f4; /* Change to your desired background color */
-    padding: 2rem;
-    overflow: auto; /* Enable scrolling */
-  }
-  
-  .testimonials {
-    text-align: center;
-    background-color: #f4f4f4; /* Change to match the background color */
-    border-radius: 8px;
-    padding: 1rem;
-  }
-  
-  .testimonials h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .testimonials-content {
-    overflow: auto;
-  }
+.testiContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align the content vertically */
+  gap: 20px; /* Add spacing between the two divs */
+  padding: 20px; /* Add padding around the content */
+  background-color: #f0f0f0; /* Light gray background color */
+  border-radius: 8px; /* Add rounded corners for a smoother look */
+}
 
-  .footer-section {
-    display: flex;
-    justify-content: space-between;
-    background-color: #333; /* Change to your desired background color */
-    color: #fff; /* Text color for links and text */
-    padding: 2rem;
-  }
-  
-  .footer-item {
-    flex: 1;
-    margin: 0 1rem;
-  }
-  
-  .footer-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  /* Style the links in the footer */
-  .footer-item a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 0.5rem;
-    transition: color 0.3s;
-  }
-  
-  .footer-item a:hover {
-    color: #ff9900; /* Change to your desired hover color */
-  }
-  
+.testiUpperhalf {
+  background-color: #ffffff; /* White background color for the upper half */
+  padding: 20px; /* Add padding inside the upper half */
+  border-radius: 8px; /* Add rounded corners for a smoother look */
+}
 
-  
-  
+.testiLowerhalf {
+  background-color: #ffffff; /* White background color for the lower half */
+  padding: 20px; /* Add padding inside the lower half */
+  border-radius: 8px; /* Add rounded corners for a smoother look */
+}
+
+.testiLowerhalf {
+  display: flex; /* Display items side by side */
+  justify-content: space-around; /* Add space between items */
+}
+
+.testiLowerhalf {
+  display: flex; /* Display items side by side horizontally */
+  justify-content: space-between; /* Add space between items */
+  width: 100%; /* Make the container span the full width of the page */
+}
+
+.countUpItem {
+  flex: 1; /* Distribute available space equally among items */
+  text-align: center; /* Center the content horizontally */
+}
+
+h2 {
+  font-size: 18px; /* Adjust the heading font size */
+  margin-bottom: 10px; /* Adjust the spacing between heading and CountUp */
+}
+
+

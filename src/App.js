@@ -4,11 +4,13 @@ import Navbar from './Components/Navbar';
 import Homepage from './Components/Homepage';
 import Services from './Components/Services'; 
 import Industries from './Components/Industries';
+import Button from '@mui/material/Button';
+
 
 const App = () => {
   return (
-    <div className="app">
-      <Navbar />
+    <div className="app" >
+      {/* <Navbar /> */}
       <Homepage />
       {/* <Services /> */}
     {/*<Industries/>*/}
