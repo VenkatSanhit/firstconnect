@@ -1,0 +1,182 @@
+/* Inside Homepage.css */
+
+.logistics-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 0;
+    /*background-image: url('/logistics-image.jpg');*/
+    background-size: cover;
+    color: #131414;
+  }
+  
+  .logistics-section img {
+    width: 50%; /* Adjust the image width */
+    max-height: 400px; /* Adjust the maximum image height */
+    object-fit: contain;
+  }
+  
+  .tagline {
+    padding: 4rem;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  .tagline h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tagline p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cta-button {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    position: absolute;
+    margin-right: 30px;
+    right: 0;
+  }
+  
+  .cta-button:hover {
+    background-color: #ffcc33;
+  }
+
+.about-section {
+    background-color: #f4f4f4; /* Change to your desired background color */
+    padding: 4rem 0;
+  }
+  
+  .about-content {
+    text-align: center;
+  }
+  
+  .about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-content p {
+    font-size: 1.2rem;
+  }
+
+.carrier-shipper-section {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f1f4f6; /* Change to your desired background color */
+    padding: 4rem 0;
+  }
+  
+  .carrier,
+  .shipper {
+    flex: 1;
+    text-align: center;
+    padding: 2rem;
+    background-color: #f4f4f4; /* Change to match the background color */
+    border-radius: 8px;
+  }
+  
+  .carrier h2,
+  .shipper h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .carrier p,
+  .shipper p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+.services-industries-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #697781; /* Change to your desired background color */
+    padding: 4rem 0;
+  }
+  
+  .services,
+  .industries {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f4f4f4; /* Change to match the background color */
+    border-radius: 8px;
+    margin-bottom: 2rem; /* Add spacing between the sections */
+  }
+  
+  .services h2,
+  .industries h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .services p,
+  .industries p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+.testimonials-section {
+    height: 300px; /* Set the desired height for the testimonials section */
+    background-color: #f4f4f4; /* Change to your desired background color */
+    padding: 2rem;
+    overflow: auto; /* Enable scrolling */
+  }
+  
+  .testimonials {
+    text-align: center;
+    background-color: #f4f4f4; /* Change to match the background color */
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .testimonials h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonials-content {
+    overflow: auto;
+  }
+
+  .footer-section {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333; /* Change to your desired background color */
+    color: #fff; /* Text color for links and text */
+    padding: 2rem;
+  }
+  
+  .footer-item {
+    flex: 1;
+    margin: 0 1rem;
+  }
+  
+  .footer-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Style the links in the footer */
+  .footer-item a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+  }
+  
+  .footer-item a:hover {
+    color: #ff9900; /* Change to your desired hover color */
+  }
+  
+
+  
+  

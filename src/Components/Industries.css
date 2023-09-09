@@ -1,0 +1,125 @@
+/* Inside src/components/Industries.css */
+
+.industries-page {
+    background-color: #fff; /* Set the desired background color */
+    color: #333; /* Text color */
+    padding: 2rem;
+  }
+  
+  .industries-section {
+    text-align: center;
+  }
+  
+  .industries-section h2 {
+    font-size: 3rem;
+    padding-top: 3rem;
+  }
+  
+  .industries-section img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .tagline h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .tagline p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+
+  .split {
+    display: flex;
+    justify-content: space-between;
+    padding: auto;
+  }
+  
+  .split-column {
+    flex: 1;
+    margin: 1rem;
+  }
+  
+  /* .split-column {
+    text-align: center;
+    align-items: flex-start;
+    justify-content: space-between;
+    display: flex;
+    flex: 1;
+  }*/
+
+  .split-column img{
+    width: 300px;
+    Height: 150px;
+  } 
+
+  .split-column h3{
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+    margin-top: 0.2rem;
+  }
+  
+  .split-column ul{
+    font-size: 1.2rem;
+    margin-top: 0rem;
+    color: rgb(2, 12, 12);
+    background-color: #3169e3;
+    list-style: none;
+  }
+
+  .split-column li {
+    font-size: 1.2rem;
+    margin: 0;
+    text-align: left;
+  }
+
+  .split-column button {
+    align-self: flex-start;
+    padding: 0.5rem 1rem;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    cursor: pointer;
+  }
+  
+  .split-column button:hover {
+    background-color: #0056b3; /* Button background color on hover */
+  }
+
+
+  .meat-industry{
+    padding: 8px;
+  }
+
+  .meat-industry img{
+    width: 300px;
+    Height: 150px;/* Adjust the image size as needed */
+  }
+
+  .meat-industry-content h3{
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+    margin-top: 0.2rem;
+  }
+  
+  .meat-industry-content ul{
+    font-size: 1.2rem;
+    margin-top: 0rem;
+    color: rgb(2, 12, 12);
+    background-color: #3169e3;
+  }
+
+  .meat-industry-content button {
+    align-self: flex-start;
+    padding: 0.5rem 1rem;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    cursor: pointer;
+  }
+  
+  .meat-industry-content button:hover {
+    background-color: #0056b3; /* Button background color on hover */
+  }

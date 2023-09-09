@@ -1,0 +1,581 @@
+/* Inside src/components/Services.css */
+
+.services-page {
+    background-color: #fff; /* Set the desired background color */
+    color: #333; /* Text color */
+    padding: 2rem;
+  }
+  
+  .services-section {
+    text-align: center;
+  }
+  
+  .services-section h2 {
+    font-size: 3rem;
+    padding-top: 3rem;
+  }
+  
+  .services-section img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .tagline h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .tagline p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+
+/* Inside src/components/Services.css */
+
+.services-page {
+  background-color: #fff; /* Set the desired background color */
+  color: #333; /* Text color */
+  padding: 2rem;
+}
+
+.services-section {
+  text-align: left;
+}
+
+.service {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.freight-brokerage-service {
+  display: flex;
+  margin-bottom: 2rem;
+  background-color: antiquewhite;
+  padding: 05px;
+}
+
+.freight-brokerage-service p {
+  font-size: 1.2rem;
+  margin-top: 0rem;
+  color: aqua;
+}
+
+.freight-brokerage-service h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.freight-brokerage-service img {
+  width: 300px;
+  Height: 150px;
+   /* Adjust the image size as needed */
+}
+
+.freight-brokerage-service button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+}
+
+.freight-brokerage-service button:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+
+.ftl-ltl-service {
+  display: flex;
+  margin-bottom: 2rem;
+  background-color: antiquewhite;
+  padding: 05px;
+}
+
+.ftl-ltl-service p {
+  font-size: 1.2rem;
+  margin-top: 0rem;
+  color: aqua;
+}
+
+.ftl-ltl-service h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.ftl-ltl-service img {
+  width: 300px;
+  Height: 150px;
+   /* Adjust the image size as needed */
+}
+
+.ftl-ltl-service button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+}
+
+.ftl-ltl-service button:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+
+.drayage-service {
+  display: flex;
+  margin-bottom: 2rem;
+  background-color: antiquewhite;
+  padding: 05px;
+}
+
+.drayage-service p {
+  font-size: 1.2rem;
+  margin-top: 0rem;
+  color: aqua;
+}
+
+.drayage-service h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.drayage-service img {
+  width: 300px;
+  Height: 150px;
+   /* Adjust the image size as needed */
+}
+
+.drayage-service button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+}
+
+.drayage-service button:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+
+.warehousing-service {
+  display: flex;
+  margin-bottom: 2rem;
+  background-color: antiquewhite;
+  padding: 05px;
+}
+
+.warehousing-service p {
+  font-size: 1.2rem;
+  margin-top: 0rem;
+  color: aqua;
+}
+
+.warehousing-service h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.warehousing-service img {
+  width: 300px;
+  Height: 150px;
+   /* Adjust the image size as needed */
+}
+
+.warehousing-service button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+}
+
+.warehousing-service button:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+
+.transportation-management-service {
+  display: flex;
+  margin-bottom: 2rem;
+  background-color: antiquewhite;
+  padding: 05px;
+}
+
+.transportation-management-service p {
+  font-size: 1.2rem;
+  margin-top: 0rem;
+  color: aqua;
+}
+
+.transportation-management-service h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.transportation-management-service img {
+  width: 300px;
+  Height: 150px;
+   /* Adjust the image size as needed */
+}
+
+.transportation-management-service button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+}
+
+.transportation-management-service button:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+
+.broker-forwarder-enterprise-service {
+  display: flex;
+  margin-bottom: 2rem;
+  background-color: antiquewhite;
+  padding: 05px;
+}
+
+.broker-forwarder-enterprise-service p {
+  font-size: 1.2rem;
+  margin-top: 0rem;
+  color: aqua;
+}
+
+.broker-forwarder-enterprise-service h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.broker-forwarder-enterprise-service img {
+  width: 300px;
+  Height: 150px;
+   /* Adjust the image size as needed */
+}
+
+.broker-forwarder-enterprise-service button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+}
+
+.broker-forwarder-enterprise-service button:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+
+.white-glove-service {
+  display: flex;
+  margin-bottom: 2rem;
+  background-color: antiquewhite;
+  padding: 05px;
+}
+
+.white-glove-service p {
+  font-size: 1.2rem;
+  margin-top: 0rem;
+  color: aqua;
+}
+
+.white-glove-service h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.white-glove-service img {
+  width: 300px;
+  Height: 150px;
+   /* Adjust the image size as needed */
+}
+
+.white-glove-service button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+}
+
+.white-glove-service button:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+
+.routing-service {
+  display: flex;
+  margin-bottom: 2rem;
+  background-color: antiquewhite;
+  padding: 05px;
+}
+
+.routing-service p {
+  font-size: 1.2rem;
+  margin-top: 0rem;
+  color: aqua;
+}
+
+.routing-service h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.routing-service img {
+  width: 300px;
+  Height: 150px;
+   /* Adjust the image size as needed */
+}
+
+.routing-service button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+}
+
+.routing-service button:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+
+.cross-docking-transloading-service {
+  display: flex;
+  margin-bottom: 2rem;
+  background-color: antiquewhite;
+  padding: 05px;
+}
+
+.cross-docking-transloading-service p {
+  font-size: 1.2rem;
+  margin-top: 0rem;
+  color: aqua;
+}
+
+.cross-docking-transloading-service h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.cross-docking-transloading-service img {
+  width: 300px;
+  Height: 150px;
+   /* Adjust the image size as needed */
+}
+
+.cross-docking-transloading-service button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+}
+
+.cross-docking-transloading-service button:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+
+.cross-border-service {
+  display: flex;
+  margin-bottom: 2rem;
+  background-color: antiquewhite;
+  padding: 05px;
+}
+
+.cross-border-service p {
+  font-size: 1.2rem;
+  margin-top: 0rem;
+  color: aqua;
+}
+
+.cross-border-service h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.cross-border-service img {
+  width: 300px;
+  Height: 150px;
+   /* Adjust the image size as needed */
+}
+
+.cross-border-service button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+}
+
+.cross-border-service button:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+
+.air-land-ocean-service {
+  display: flex;
+  margin-bottom: 2rem;
+  background-color: antiquewhite;
+  padding: 05px;
+}
+
+.air-land-ocean-service p {
+  font-size: 1.2rem;
+  margin-top: 0rem;
+  color: aqua;
+}
+
+.air-land-ocean-service h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.air-land-ocean-service img {
+  width: 300px;
+  Height: 150px;
+   /* Adjust the image size as needed */
+}
+
+.air-land-ocean-service button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+}
+
+.air-land-ocean-service button:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+.service-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 02rem; /* Add spacing between image and content */
+}
+
+
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333; /* Change to your desired background color */
+  color: #fff; /* Text color for links and text */
+  padding: 2rem;
+}
+
+.footer-item {
+  flex: 1;
+  margin: 0 1rem;
+}
+
+.footer-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Style the links in the footer */
+.footer-item a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s;
+}
+
+.footer-item a:hover {
+  color: #ff9900; /* Change to your desired hover color */
+}
+
+/* Inside src/components/Services.css */
+
+/* Previous styles */
+
+.sets-us-apart {
+  text-align: center;
+  padding: 1rem;
+}
+
+.sets-us-apart h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #007bff;
+}
+
+.sets-us-apart h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  background-color: #f3d9d9;
+}
+
+.sets-us-apart h4 {
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+
+.divider {
+  display: flex;
+  justify-content: space-between;
+  padding: auto;
+}
+
+.divider-column {
+  flex: 1;
+  margin: 1rem;
+}
+
+.divider-column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.divider-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.divider-column li {
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: left;
+}
+
+
+.service-header h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.service-description p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.service-cta button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+}
+
+.service-cta button:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
