@@ -7,19 +7,20 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
+import { TextField, Button, Container, Stack } from '@mui/material';
+// import question_form from './question_form.js';
+import question_form from './question_form';
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import { Facebook, Instagram, Twitter } from "@mui/icons-material";
+import { Box } from "@mui/material";
+// import { Container, Grid, Typography, Link, Box } from '@material-ui/core';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 
 const Homepage = () => {
-  const fstyle = {
-    height: '100vh',
-    width: '100%',
-    backgroundColor: 'red',
-    display: 'flex',
-    justifyContent: 'space-between', // Add this line to separate logo and nav
-    alignItems: 'center', // Vertically center items
-    padding: '0 20px', // Add padding for spacing
-  };
-
   const navStyle = {
     display: 'flex',
     listStyleType: 'none',
@@ -39,13 +40,12 @@ const Homepage = () => {
     <div className="App">
       <header className="nav">
         <div
-          style={{
-            backgroundColor: 'red',
-            height: '50px',
-            width: '50px',
-          }}
         >
-          logo
+          <img
+              src="Logo-FCW.png"
+              alt="Company Logo"
+              style={{ maxWidth: '100%', height: 'auto', marginLeft: 60}}
+            />
         </div>
         <nav className="nav__container__actions">
           <ul style={navStyle}>
@@ -189,14 +189,177 @@ const Homepage = () => {
     {inView && <CountUp end={100} />}
   </div>
 </div>
-
-
-
-      </section>
-
-      <section id="contact">CONTACT ME</section>
+  </section>
+  {/* <div className='contact-div'> */}
+      <section id="contact">
+      {/* <FormControl> */}
+      <Stack spacing={2} direction="row" sx={{margin: 4}}>
+        <div className='questiontag'>
+          <h3>Have a questions?</h3>
+          <h1>We would love to help</h1>
+          <p><strong>USA:</strong> 24 Commerce St, #434 Newark, NJ 07102 USA.</p>
+        </div>
+      <form>
+      <Stack spacing={2} direction="row" sx={{marginBottom: 4}}>
+        <TextField
+          label="Name"
+          variant="outlined"
+          color="secondary" // Use "secondary" for a warning color
+          fullWidth // To make the input field take up the full width
+        />
+        <TextField
+          label="E-mail"
+          variant="outlined"
+          color="secondary"
+          fullWidth
+        />
+         </Stack>
+        <TextField
+          label="Message"
+          variant="outlined"
+          color="secondary"
+          fullWidth
+          multiline
+          sx={{mb:4}} // To allow multiline input for the message
+          rows={4} // Specify the number of rows for the message input
+        />
+        <Button variant="outlined" color="secondary" type="submit">Submit</Button>
+      </form>
+      </Stack>
+      {/* </FormControl> */}
+  </section>
+{/* </div> */}
+<Box
+      component="footer"
+      sx={{
+        backgroundColor: (theme) =>
+          theme.palette.mode === "light"
+            ? theme.palette.grey[200]
+            : theme.palette.grey[800],
+        p: 6,
+      }}
+    >
+      <Container maxWidth="lg">
+        <Grid container spacing={4}>
+          <Grid item xs={12} sm={3}>
+            <img
+              src="Logo-FCW.png"
+              alt="Company Logo"
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
+          </Grid>
+          <Grid item xs={12} sm={3}>
+            <Typography variant="h6" gutterBottom style={{ color: '#ff5733' }}>
+              About Us
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
+              We are XYZ company, dedicated to providing the best service to our customers.
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={3}>
+            <Typography variant="h6" gutterBottom style={{ color: '#ff5733' }}>
+              Contact Us
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
+              123 Main Street, Anytown, USA
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
+              Email: info@example.com
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
+              Phone: +1 234 567 8901
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={3}>
+            <Typography variant="h6" gutterBottom style={{ color: '#ff5733' }}>
+              Follow Us
+            </Typography>
+            <Link href="https://www.facebook.com/" color="inherit" style={{ marginRight: '1rem' }}>
+              <FacebookIcon fontSize="large" />
+            </Link>
+            <Link href="https://www.instagram.com/" color="inherit" style={{ marginRight: '1rem' }}>
+              <InstagramIcon fontSize="large" />
+            </Link>
+            <Link href="https://www.twitter.com/" color="inherit">
+              <TwitterIcon fontSize="large" />
+            </Link>
+          </Grid>
+        </Grid>
+        <Box mt={5} style={{ borderTop: '1px solid #555', paddingTop: '1rem' }}>
+          <Typography variant="body2" color="textSecondary" align="center">
+            {"Copyright © "}
+            <Link color="inherit" href="https://your-website.com/">
+              Your Website
+            </Link>{" "}
+            {new Date().getFullYear()}
+            {"."}
+          </Typography>
+        </Box>
+      </Container>
+      {/* <Container maxWidth="lg">
+        <Grid container spacing={5}>
+        <Grid item xs={12} sm={4}>
+          <img src="Logo-FCW.png" alt="Company Logo" />
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Typography variant="h6" color="text.primary" gutterBottom>
+              About Us
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              We are XYZ company, dedicated to providing the best service to our
+              customers.
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Typography variant="h6" color="text.primary" gutterBottom>
+              Contact Us
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              123 Main Street, Anytown, USA
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Email: info@example.com
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Phone: +1 234 567 8901
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Typography variant="h6" color="text.primary" gutterBottom>
+              Follow Us
+            </Typography>
+            <Link href="https://www.facebook.com/" color="inherit">
+              <Facebook />
+            </Link>
+            <Link
+              href="https://www.instagram.com/"
+              color="inherit"
+              sx={{ pl: 1, pr: 1 }}
+            >
+              <Instagram />
+            </Link>
+            <Link href="https://www.twitter.com/" color="inherit">
+              <Twitter />
+            </Link>
+          </Grid>
+        </Grid>
+        <Box mt={5}>
+          <Typography variant="body2" color="text.secondary" align="center">
+            {"Copyright © "}
+            <Link color="inherit" href="https://your-website.com/">
+              Your Website
+            </Link>{" "}
+            {new Date().getFullYear()}
+            {"."}
+          </Typography>
+        </Box>
+      </Container> */}
+    </Box>
     </div>
+    
   );
 };
+
+
 
 export default Homepage;

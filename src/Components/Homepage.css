@@ -357,4 +357,13 @@ h2 {
   margin-bottom: 10px; /* Adjust the spacing between heading and CountUp */
 }
 
+#contact{
+  height: 50%;
+  /* display: flex; /* Use flexbox to control the spacing */
+  /*justify-content: space-around; Space the items evenly horizontally */
+}
+
+.questiontag{
+  padding-right: 20%;
+}
 

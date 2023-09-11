@@ -1,202 +1,412 @@
-// Inside src/components/Services.js
-
-import React from 'react';
-import './Services.css';
+import React from "react";
+import "./Services.css";
+import Fullpage, {
+  FullPageSections,
+  FullpageSection,
+  FullpageNavigation,
+} from "@ap.cx/react-fullpage";
+import Navbar from "./Navbar.js";
+import { Link } from "react-scroll";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
+import { TextField, Container, Stack } from "@mui/material";
+// import question_form from './question_form.js';
+import question_form from "./question_form";
+// import Typography from "@mui/material/Typography";
+// import Grid from "@mui/material/Grid";
+import { Facebook, Instagram, Twitter } from "@mui/icons-material";
+import { Box } from "@mui/material";
+// import { Container, Grid, Typography, Link, Box } from '@material-ui/core';
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import {
+  Grid,
+  Typography,
+  Button,
+  Paper,
+  List,
+  ListItem,
+  ListItemText,
+} from "@mui/material";
 
 const Services = () => {
+  const fstyle = {
+    height: "100vh",
+    width: "100%",
+    backgroundColor: "red",
+    display: "flex",
+    justifyContent: "space-between", // Add this line to separate logo and nav
+    alignItems: "center", // Vertically center items
+    padding: "0 20px", // Add padding for spacing
+  };
+
+  const navStyle = {
+    display: "flex",
+    listStyleType: "none",
+    margin: 0,
+    padding: 0,
+  };
+
+  const navItemStyle = {
+    marginLeft: "20px", // Add space between nav items
+  };
+
+  const [ref, inView] = useInView({
+    triggerOnce: true, // This ensures the callback is triggered only once when the element is in view
+  });
+
+  const servicesData = [
+    {
+      title: "FTL & LTL",
+      imageSrc: "/ftl-ltl.jpg",
+      altText: "FTL & LTL",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      button:"Get a quote",
+
+    },
+    {
+      title: "Drayage",
+      imageSrc: "/drayage.jpg",
+      altText: "Drayage",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      button:"Get a quote"
+    },
+    {
+      title: "warehousing",
+      imageSrc: "/warehousing.jpg",
+      altText: "Warehousing",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      button:"Get a quote"
+    },
+    {
+      title: "Transportation-Management",
+      imageSrc: "/transportation-management.jpg",
+      altText: "Transportation-Management",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      button:"Get a quote"
+    },
+    {
+      title: "Routing",
+      imageSrc: "/routing.jpg",
+      altText: "Routing",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      button:"Get a quote"
+    },
+    {
+      title: "Freight Brokerage",
+      imageSrc: "/F Broker.jpg",
+      altText: "Freight Brokerage",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      button:"Get a quote"
+    },
+    {
+      title: "Broker & Forwarder Enterprise",
+      imageSrc: "/broker-forwarder-enterprise.jpg",
+      altText: "Broker & Forwarder Enterprise",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      button:"Get a quote"
+    },
+    {
+      title: "White-Glove",
+      imageSrc: "/white-glove.jpg",
+      altText: "White-Glove",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      button:"Get a quote"
+    },
+    {
+      title: "Cross Docking & Transloading",
+      imageSrc: "/cdt.jpg",
+      altText: "Cross Docking & Transloading",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      button:"Get a quote"
+    },
+    {
+      title: "Cross Border",
+      imageSrc: "/cross-border.jpg",
+      altText: "Cross Border",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      button:"Get a quote"
+    },
+    {
+      title: "Air, Land, and Ocean",
+      imageSrc: "/air-land-ocean.jpg",
+      altText: "Air, Land, and Ocean",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      button:"Get a quote"
+    },
+    
+  ];
+
+  // function YourComponent() {
+  //   // Define a function to handle the button click
+  //   const handleButtonClick = (buttonText) => {
+  //     // Do something when the button is clicked
+  //     console.log(`Button clicked: ${buttonText}`);
+  //   };
+
   return (
-    <div className="services-page">
-      <header className="header">
-        {/* Navbar component */}
+    <div className="App">
+      <header className="nav">
+        <div
+          style={{
+            backgroundColor: "red",
+            height: "50px",
+            width: "50px",
+          }}
+        >
+          logo
+        </div>
+        <nav className="nav__container__actions">
+          <ul style={navStyle}>
+            <li style={navItemStyle}>
+              <Link activeClass="active" smooth spy to="about">
+                ABOUT
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </header>
-      <section className="services-section">
-        <h2>Services</h2>
-        <img src="/logistic-services.jpg" alt="Logistic Services" />
-        <div className="tagline">
-          <h3>Your Reliable Logistic Services Partner</h3>
-          <p>We provide efficient supply chain solutions for businesses of all sizes.</p>
+      <section id="home">Services</section>
+      <section className="list-services">
+      <div className="scrollable-container">
+      <Stack direction="column" spacing={2}>
+        {servicesData.map((x, i) => (
+          // <div>{x.imageSrc}</div>
+          <div>
+          {x.imageSrc}
+          <h3>{x.title}</h3>
+          <ul>{x.description}</ul>
+          {/* <button onClick={() => handleButtonClick(x.button)}>{x.button}</button> */}
+          </div>
+          
+          
+        ))}
+        </Stack>
         </div>
-       
-        <div className="ftl-ltl-service">
-          <div className="service-image">
-            <img src="/ftl-ltl.jpg" alt="FTL & LTL" />
-          </div>
-          <div className="service-content">
-              <h3>FTL & LTL</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <button>Learn More</button>
-          </div>
-        </div>
-        <div className="drayage-service">
-          <div className="service-image">
-            <img src="/drayage.jpg" alt="Drayage" />
-          </div>
-          <div className="service-content">
-              <h3>Drayage</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <button>Learn More</button>
-          </div>
-        </div>
-        <div className="warehousing-service">
-          <div className="service-image">
-            <img src="/warehousing.jpg" alt="Warehousing" />
-          </div>
-          <div className="service-content">
-              <h3>Warehousing</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <button>Learn More</button>
-          </div>
-        </div>
-        <div className="transportation-management-service">
-          <div className="service-image">
-            <img src="/transportation-management.jpg" alt="Transportation-Management" />
-          </div>
-          <div className="service-content">
-              <h3>Transportation-Management</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <button>Learn More</button>
-          </div>
-        </div>
-        <div className="routing-service">
-          <div className="service-image">
-            <img src="/routing-glove.jpg" alt="Routing" />
-          </div>
-          <div className="service-content">
-              <h3>Routing</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <button>Learn More</button>
-          </div>
-        </div>
-        <div className="freight-brokerage-service">
-          <div className="service-image">
-            <img src="/F Broker.jpg" alt="Freight Brokerage" />
-          </div>
-          <div className="service-content">
-            {/*<div className="service-header">*/}
-              <h3>Freight Brokerage</h3>
-            {/*</div>*/}
-            {/*<div className="service-description">*/}
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            {/*</div>*/}
-            {/*<div className="service-cta">*/}
-              <button>Learn More</button>
-            {/*</div>*/}
-          </div>
-        </div>
-        <div className="broker-forwarder-enterprise-service">
-          <div className="service-image">
-            <img src="/broker-forwarder-enterprise.jpg" alt="Broker & Forwarder Enterprise" />
-          </div>
-          <div className="service-content">
-              <h3>Broker & Forwarder Enterprise</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <button>Learn More</button>
-          </div>
-        </div>
-        <div className="white-glove-service">
-          <div className="service-image">
-            <img src="/white-glove.jpg" alt="White Glove" />
-          </div>
-          <div className="service-content">
-              <h3>White Glove</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <button>Learn More</button>
-          </div>
-        </div>
-        <div className="cross-docking-transloading-service">
-          <div className="service-image">
-            <img src="/routing-glove.jpg" alt="Cross Docking & Transloading" />
-          </div>
-          <div className="service-content">
-              <h3>Cross Docking & Transloading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <button>Learn More</button>
-          </div>
-        </div>
-        <div className="cross-border-service">
-          <div className="service-image">
-            <img src="/cross-border.jpg" alt="Cross Border" />
-          </div>
-          <div className="service-content">
-              <h3>Cross Border</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <button>Learn More</button>
-          </div>
-        </div>
-        <div className="air-land-ocean-service">
-          <div className="service-image">
-            <img src="/air-land-ocean.jpg" alt="Air, Land, and Ocean" />
-          </div>
-          <div className="service-content">
-              <h3>Air, Land, and Ocean</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <button>Learn More</button>
-          </div>
-        </div>
+      </section>
 
-        <section className="sets-us-apart">
-        <h1>What Sets Us Apart</h1>
-        <div className="divider">
-          <div className="divider-column">
-            <h3>COMPREHENSIVE</h3>
-            <ul>
-              <h4>ELEVATED OFFERINGS</h4>
-              <li>Whether it’s project-based, seasonal, or a more regular need, 
-                we can offer support with the greatest attention to detail.</li>
-              <h4>EXTENSIVE NETWORK</h4>
-              <li>Access to 250,000 trailers, 750 full-service secure yards, and 200+ trailer facilities.</li>
-            </ul>
-          </div>
-          <div className="divider-column">
-            <h3>ACCOUNTABLE</h3>
-            <ul>
+      
+      <section className="sets-us-apart-container">
+  <div className="upperhalf">
+    <h1>What Sets us apart</h1>
+    <p>bla blah bla blah</p>
+  </div>
+  <div className="lowerhalf-container">
+    <div className="box">
+      <div className="lowerhalf">
+        <h3>COMPREHENSIVE</h3>
+        <ul>
+          <li>
+            <h4>ELEVATED OFFERINGS</h4>
+            <p>
+              Whether it’s project-based, seasonal, or a more regular need, we can offer support with the greatest attention to detail.
+            </p>
+          </li>
+          </ul>
+          <ul>
+          <li>
+            <h4>EXTENSIVE NETWORK</h4>
+            <p>
+              Access to 250,000 trailers, 750 full-service secure yards, and 200+ trailer facilities.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div className="box">
+      <div className="lowerhalf">
+        <h3>ACCOUNTABLE</h3>
+        <ul>
+          <li>
             <h4>BACKED BY EXPERTS</h4>
-              <li>We have a large team of dedicated experts who can communicate with all players of the 
-                supply chain: shippers, receivers, carriers, cross-dock facilities and warehouse facilities.</li>
-              <h4>HANDS-ON COORDINATION</h4>
-              <li>We understand your account intimately and work hard to cater to your specific needs.</li>
-            </ul>
-          </div>
-          <div className="divider-column">
-            <h3>Title 3</h3>
-            <ul>
-              <li>Point 1</li>
-              <li>Point 2</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-        <footer className="footer-section">
-        <div className="footer-item">
-          <h3>Company</h3>
-          <img src="/company-logo.png" alt="Company Logo" />
-          <p>About the company...</p>
-        </div>
-        <div className="footer-item">
-          <h3>Contact Us</h3>
-          <p>Phone: +1 123-456-7890</p>
-          <p>Email: contact@example.com</p>
-        </div>
-        <div className="footer-item">
-          <h3>Quick Links</h3>
-          <a href="#">Home</a>
-          <a href="#">Shippers</a>
-          <a href="#">Carriers</a>
-          <a href="#">Services</a>
-          <a href="#">Industries</a>
-        </div>
-        <div className="footer-item">
-          <h3>Social Media</h3>
-          <a href="#">Facebook</a>
-          <a href="#">Twitter</a>
-          <a href="#">LinkedIn</a>
-        </div>
-      </footer>
+            <p>
+              We have a large team of dedicated experts who can communicate with all players of the supply chain: shippers, receivers, carriers, cross-dock facilities and warehouse facilities.
+            </p>
+          </li>
+          </ul>
+          <ul>
+          <li>
+            <h4>HANDS-ON COORDINATION</h4>
+            <p>
+              We understand your account intimately and work hard to cater to your specific needs.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div className="box">
+      <div className="lowerhalf">
+        <h3>Title 3</h3>
+        <ul>
+          <li>Point 1</li></ul>
+          <ul><li>Point 2</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-        {/* Repeat the structure for other services */}
-      </section>
+        {/* <Typography
+          variant="h4"
+          component="h1"
+          sx={{ fontSize: "2rem", marginBottom: "0.5rem", color: "#007bff" }}
+        >
+          What Sets Us Apart
+        </Typography>
+        <Grid container spacing={2} sx={{ textAlign: "center" }}>
+          <Grid item xs={12} md={4}>
+            <Paper elevation={3}>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontSize: "2rem",
+                  marginBottom: "1rem",
+                  backgroundColor: "#f3d9d9",
+                }}
+              >
+                COMPREHENSIVE
+              </Typography>
+              <List>
+                <ListItem>
+                  <ListItemText
+                    primary="ELEVATED OFFERINGS"
+                    secondary="Whether it’s project-based, seasonal, or a more regular need, we can offer support with the greatest attention to detail."
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary="EXTENSIVE NETWORK"
+                    secondary="Access to 250,000 trailers, 750 full-service secure yards, and 200+ trailer facilities."
+                  />
+                </ListItem>
+              </List>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Paper elevation={3}>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontSize: "2rem",
+                  marginBottom: "1rem",
+                  backgroundColor: "#f3d9d9",
+                }}
+              >
+                ACCOUNTABLE
+              </Typography>
+              <List>
+                <ListItem>
+                  <ListItemText
+                    primary="BACKED BY EXPERTS"
+                    secondary="We have a large team of dedicated experts who can communicate with all players of the supply chain: shippers, receivers, carriers, cross-dock facilities and warehouse facilities."
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary="HANDS-ON COORDINATION"
+                    secondary="We understand your account intimately and work hard to cater to your specific needs."
+                  />
+                </ListItem>
+              </List>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Paper elevation={3}>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontSize: "2rem",
+                  marginBottom: "1rem",
+                  backgroundColor: "#f3d9d9",
+                }}
+              >
+                Title 3
+              </Typography>
+              <List>
+                <ListItem>
+                  <ListItemText primary="Point 1" />
+                </ListItem>
+                <ListItem>
+                  <ListItemText primary="Point 2" />
+                </ListItem>
+              </List>
+            </Paper>
+          </Grid>
+        </Grid>*/}
+       
+      <Box
+        component="footer"
+        sx={{
+          backgroundColor: (theme) =>
+            theme.palette.mode === "light"
+              ? theme.palette.grey[200]
+              : theme.palette.grey[800],
+          p: 6,
+        }}
+      >
+        <Container maxWidth="lg">
+          <Grid container spacing={5}>
+            <Grid item xs={12} sm={4}>
+              <img src="Logo-FCW.png" alt="Company Logo" />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Typography variant="h6" color="text.primary" gutterBottom>
+                About Us
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                We are XYZ company, dedicated to providing the best service to
+                our customers.
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Typography variant="h6" color="text.primary" gutterBottom>
+                Contact Us
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                123 Main Street, Anytown, USA
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Email: info@example.com
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Phone: +1 234 567 8901
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Typography variant="h6" color="text.primary" gutterBottom>
+                Follow Us
+              </Typography>
+              <Link href="https://www.facebook.com/" color="inherit">
+                <Facebook />
+              </Link>
+              <Link
+                href="https://www.instagram.com/"
+                color="inherit"
+                sx={{ pl: 1, pr: 1 }}
+              >
+                <Instagram />
+              </Link>
+              <Link href="https://www.twitter.com/" color="inherit">
+                <Twitter />
+              </Link>
+            </Grid>
+          </Grid>
+          <Box mt={5}>
+            <Typography variant="body2" color="text.secondary" align="center">
+              {"Copyright © "}
+              <Link color="inherit" href="https://your-website.com/">
+                Your Website
+              </Link>{" "}
+              {new Date().getFullYear()}
+              {"."}
+            </Typography>
+          </Box>
+        </Container>
+      </Box>
     </div>
   );
 };
-
 export default Services;
