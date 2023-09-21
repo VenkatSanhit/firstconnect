@@ -3,6 +3,10 @@
   text-align: center;
   
 }
+.nav{
+color:#020240;
+background-color: #020240;
+}
 
 section {
   display: grid;
@@ -13,14 +17,17 @@ section {
 }
 #home {
   margin-top: -80px;
-  background-image: url('../public/1659565076144.jpg');
+  color: #fff; /* Text color */
+  background-image: url('port-truck.jpeg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
   display:flex
+
 }
+
 #about {
 width: 100vw;
   height: 100vh;
@@ -31,7 +38,7 @@ width: 100vw;
   width: 100vw;
   height: 100vh;
   display:flex;
-  background-color: #3b3b3c;
+  background-color: #020240;
 }
 
 #projects,
@@ -71,6 +78,56 @@ width: 100vw;
   flex-flow: row nowrap;
   padding-left: 50px;
   flex: 1;
+}
+
+
+/* // links // */
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff9900;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 120px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #444;
 }
 
 .active {

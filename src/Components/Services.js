@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./Services.css";
 import Fullpage, {
   FullPageSections,
@@ -97,7 +97,7 @@ const Services = () => {
     },
     {
       title: "Freight Brokerage",
-      imageSrc: "/F Broker.jpg",
+      imageSrc: "/advisor.png",
       altText: "Freight Brokerage",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       button:"Get a quote"
@@ -140,24 +140,17 @@ const Services = () => {
     
   ];
 
-  // function YourComponent() {
-  //   // Define a function to handle the button click
-  //   const handleButtonClick = (buttonText) => {
-  //     // Do something when the button is clicked
-  //     console.log(`Button clicked: ${buttonText}`);
-  //   };
 
   return (
     <div className="App">
       <header className="nav">
         <div
-          style={{
-            backgroundColor: "red",
-            height: "50px",
-            width: "50px",
-          }}
         >
-          logo
+          <img
+              src="First-connect-Logo.png"
+              alt="Company Logo"
+              style={{ maxWidth: '100%', height: 'auto', marginLeft: 60}}
+            />
         </div>
         <nav className="nav__container__actions">
           <ul style={navStyle}>
@@ -169,24 +162,45 @@ const Services = () => {
           </ul>
         </nav>
       </header>
-      <section id="home">Services</section>
-      <section className="list-services">
+      <section id="services">Services</section>
+      
+<section className="list-services">
+  <div className="scrollable-container">
+    {servicesData.map((service, i) => (
+      <div key={i} className="service">
+        <div className="service-content">
+          <div className="image-container">
+            <img src={service.imageSrc} alt={service.altText} />
+          </div>
+          <div className="text-container">
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+            <button>More Details</button>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+
+      {/* <section className="list-services">
       <div className="scrollable-container">
       <Stack direction="column" spacing={2}>
         {servicesData.map((x, i) => (
-          // <div>{x.imageSrc}</div>
-          <div>
-          {x.imageSrc}
+          <div key={i} className="service">
+          <img src={x.imageSrc} alt={x.altText} />
           <h3>{x.title}</h3>
           <ul>{x.description}</ul>
-          {/* <button onClick={() => handleButtonClick(x.button)}>{x.button}</button> */}
+          <button>More Details</button>
           </div>
           
           
         ))}
         </Stack>
         </div>
-      </section>
+      </section> */}
 
       
       <section className="sets-us-apart-container">
@@ -248,164 +262,75 @@ const Services = () => {
     </div>
   </div>
 </section>
-
-        {/* <Typography
-          variant="h4"
-          component="h1"
-          sx={{ fontSize: "2rem", marginBottom: "0.5rem", color: "#007bff" }}
-        >
-          What Sets Us Apart
-        </Typography>
-        <Grid container spacing={2} sx={{ textAlign: "center" }}>
-          <Grid item xs={12} md={4}>
-            <Paper elevation={3}>
-              <Typography
-                variant="h5"
-                sx={{
-                  fontSize: "2rem",
-                  marginBottom: "1rem",
-                  backgroundColor: "#f3d9d9",
-                }}
-              >
-                COMPREHENSIVE
-              </Typography>
-              <List>
-                <ListItem>
-                  <ListItemText
-                    primary="ELEVATED OFFERINGS"
-                    secondary="Whether it’s project-based, seasonal, or a more regular need, we can offer support with the greatest attention to detail."
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemText
-                    primary="EXTENSIVE NETWORK"
-                    secondary="Access to 250,000 trailers, 750 full-service secure yards, and 200+ trailer facilities."
-                  />
-                </ListItem>
-              </List>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Paper elevation={3}>
-              <Typography
-                variant="h5"
-                sx={{
-                  fontSize: "2rem",
-                  marginBottom: "1rem",
-                  backgroundColor: "#f3d9d9",
-                }}
-              >
-                ACCOUNTABLE
-              </Typography>
-              <List>
-                <ListItem>
-                  <ListItemText
-                    primary="BACKED BY EXPERTS"
-                    secondary="We have a large team of dedicated experts who can communicate with all players of the supply chain: shippers, receivers, carriers, cross-dock facilities and warehouse facilities."
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemText
-                    primary="HANDS-ON COORDINATION"
-                    secondary="We understand your account intimately and work hard to cater to your specific needs."
-                  />
-                </ListItem>
-              </List>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Paper elevation={3}>
-              <Typography
-                variant="h5"
-                sx={{
-                  fontSize: "2rem",
-                  marginBottom: "1rem",
-                  backgroundColor: "#f3d9d9",
-                }}
-              >
-                Title 3
-              </Typography>
-              <List>
-                <ListItem>
-                  <ListItemText primary="Point 1" />
-                </ListItem>
-                <ListItem>
-                  <ListItemText primary="Point 2" />
-                </ListItem>
-              </List>
-            </Paper>
-          </Grid>
-        </Grid>*/}
        
-      <Box
-        component="footer"
-        sx={{
-          backgroundColor: (theme) =>
-            theme.palette.mode === "light"
-              ? theme.palette.grey[200]
-              : theme.palette.grey[800],
-          p: 6,
-        }}
-      >
-        <Container maxWidth="lg">
-          <Grid container spacing={5}>
-            <Grid item xs={12} sm={4}>
-              <img src="Logo-FCW.png" alt="Company Logo" />
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <Typography variant="h6" color="text.primary" gutterBottom>
-                About Us
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                We are XYZ company, dedicated to providing the best service to
-                our customers.
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <Typography variant="h6" color="text.primary" gutterBottom>
-                Contact Us
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                123 Main Street, Anytown, USA
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Email: info@example.com
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Phone: +1 234 567 8901
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <Typography variant="h6" color="text.primary" gutterBottom>
-                Follow Us
-              </Typography>
-              <Link href="https://www.facebook.com/" color="inherit">
-                <Facebook />
-              </Link>
-              <Link
-                href="https://www.instagram.com/"
-                color="inherit"
-                sx={{ pl: 1, pr: 1 }}
-              >
-                <Instagram />
-              </Link>
-              <Link href="https://www.twitter.com/" color="inherit">
-                <Twitter />
-              </Link>
-            </Grid>
-          </Grid>
-          <Box mt={5}>
-            <Typography variant="body2" color="text.secondary" align="center">
-              {"Copyright © "}
-              <Link color="inherit" href="https://your-website.com/">
-                Your Website
-              </Link>{" "}
-              {new Date().getFullYear()}
-              {"."}
+       <Box
+      component="footer"
+      sx={{
+        backgroundColor: (theme) =>
+          theme.palette.mode === 'light'
+            ? theme.palette.grey[200]
+            : theme.palette.grey[800],
+        p: 6,
+      }}
+    >
+      <Container maxWidth="lg">
+        <Box display="flex" justifyContent="center" alignItems="center" flexWrap="wrap">
+          <Box flexBasis={{ xs: '100%', sm: '25%' }} mb={{ xs: 2, sm: 0 }}>
+            <img
+              src="Logo-FCW.png"
+              alt="Company Logo"
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
+          </Box>
+          <Box flexBasis={{ xs: '100%', sm: '25%' }} px={2}>
+            <Typography variant="h6" gutterBottom style={{ color: '#ff5733' }}>
+              About Us
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
+              We are XYZ company, dedicated to providing the best service to our customers.
             </Typography>
           </Box>
-        </Container>
-      </Box>
+          <Box flexBasis={{ xs: '100%', sm: '25%' }} px={2}>
+            <Typography variant="h6" gutterBottom style={{ color: '#ff5733' }}>
+              Contact Us
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
+              123 Main Street, Anytown, USA
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
+              Email: info@example.com
+            </Typography>
+            <Typography variant="body2" color="textSecondary">
+              Phone: +1 234 567 8901
+            </Typography>
+          </Box>
+          <Box flexBasis={{ xs: '100%', sm: '25%' }} px={2}>
+            <Typography variant="h6" gutterBottom style={{ color: '#ff5733' }}>
+              Follow Us
+            </Typography>
+            <Link href="https://www.facebook.com/" color="inherit" style={{ marginRight: '1rem' }}>
+              <FacebookIcon fontSize="large" />
+            </Link>
+            <Link href="https://www.instagram.com/" color="inherit" style={{ marginRight: '1rem' }}>
+              <InstagramIcon fontSize="large" />
+            </Link>
+            <Link href="https://www.twitter.com/" color="inherit">
+              <TwitterIcon fontSize="large" />
+            </Link>
+          </Box>
+        </Box>
+        <Box mt={5} style={{ borderTop: '1px solid #555', paddingTop: '1rem' }}>
+          <Typography variant="body2" color="textSecondary" align="center">
+            {"Copyright © "}
+            <Link color="inherit" href="https://your-website.com/">
+              Your Website
+            </Link>{" "}
+            {new Date().getFullYear()}
+            {"."}
+          </Typography>
+        </Box>
+      </Container>
+    </Box>
     </div>
   );
 };

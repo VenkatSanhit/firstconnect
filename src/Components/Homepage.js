@@ -27,6 +27,7 @@ const Homepage = () => {
     margin: 0,
     padding: 0,
   };
+    
 
   const navItemStyle = {
     marginLeft: '20px', // Add space between nav items
@@ -42,7 +43,7 @@ const Homepage = () => {
         <div
         >
           <img
-              src="Logo-FCW.png"
+              src="First-connect-Logo.png"
               alt="Company Logo"
               style={{ maxWidth: '100%', height: 'auto', marginLeft: 60}}
             />
@@ -69,12 +70,32 @@ const Homepage = () => {
                 CONTACT ME
               </Link>
             </li>
-          </ul>
+
+            
+            <li style={navItemStyle}><a href="#Shippers">Shippers</a></li>
+            <li style={navItemStyle}><a href="#Carriers">Carriers</a></li>
+            <li style={navItemStyle}><a href="/Services">Services</a></li>
+            <li style={navItemStyle}><a href="/Industries">Industries</a></li>
+            <li style={navItemStyle} className="dropdown">
+            <a href="#">Company</a>
+            <div className="dropdown-content">
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+          </div>
+        </li>
+
+        </ul>
         </nav>
       </header>
       <section id="home">
-        Home
-        </section>
+      <section id="home">
+  <li>Navigating Excellence Beyond Borders</li>
+  <li>Your Cargo, Our Commitment</li>
+  <li>Connecting Logistics To Precision</li>
+</section>
+
+     </section>
       <section id="about">
       <div class="fullPage">
   <div class="fullPageTop">
@@ -233,30 +254,30 @@ const Homepage = () => {
       component="footer"
       sx={{
         backgroundColor: (theme) =>
-          theme.palette.mode === "light"
+          theme.palette.mode === 'light'
             ? theme.palette.grey[200]
             : theme.palette.grey[800],
         p: 6,
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={4}>
-          <Grid item xs={12} sm={3}>
+        <Box display="flex" justifyContent="center" alignItems="center" flexWrap="wrap">
+          <Box flexBasis={{ xs: '100%', sm: '25%' }} mb={{ xs: 2, sm: 0 }}>
             <img
               src="Logo-FCW.png"
               alt="Company Logo"
               style={{ maxWidth: '100%', height: 'auto' }}
             />
-          </Grid>
-          <Grid item xs={12} sm={3}>
+          </Box>
+          <Box flexBasis={{ xs: '100%', sm: '25%' }} px={2}>
             <Typography variant="h6" gutterBottom style={{ color: '#ff5733' }}>
               About Us
             </Typography>
             <Typography variant="body2" color="textSecondary">
               We are XYZ company, dedicated to providing the best service to our customers.
             </Typography>
-          </Grid>
-          <Grid item xs={12} sm={3}>
+          </Box>
+          <Box flexBasis={{ xs: '100%', sm: '25%' }} px={2}>
             <Typography variant="h6" gutterBottom style={{ color: '#ff5733' }}>
               Contact Us
             </Typography>
@@ -269,8 +290,8 @@ const Homepage = () => {
             <Typography variant="body2" color="textSecondary">
               Phone: +1 234 567 8901
             </Typography>
-          </Grid>
-          <Grid item xs={12} sm={3}>
+          </Box>
+          <Box flexBasis={{ xs: '100%', sm: '25%' }} px={2}>
             <Typography variant="h6" gutterBottom style={{ color: '#ff5733' }}>
               Follow Us
             </Typography>
@@ -283,8 +304,8 @@ const Homepage = () => {
             <Link href="https://www.twitter.com/" color="inherit">
               <TwitterIcon fontSize="large" />
             </Link>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
         <Box mt={5} style={{ borderTop: '1px solid #555', paddingTop: '1rem' }}>
           <Typography variant="body2" color="textSecondary" align="center">
             {"Copyright © "}
@@ -296,65 +317,8 @@ const Homepage = () => {
           </Typography>
         </Box>
       </Container>
-      {/* <Container maxWidth="lg">
-        <Grid container spacing={5}>
-        <Grid item xs={12} sm={4}>
-          <img src="Logo-FCW.png" alt="Company Logo" />
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" color="text.primary" gutterBottom>
-              About Us
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              We are XYZ company, dedicated to providing the best service to our
-              customers.
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" color="text.primary" gutterBottom>
-              Contact Us
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              123 Main Street, Anytown, USA
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Email: info@example.com
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Phone: +1 234 567 8901
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" color="text.primary" gutterBottom>
-              Follow Us
-            </Typography>
-            <Link href="https://www.facebook.com/" color="inherit">
-              <Facebook />
-            </Link>
-            <Link
-              href="https://www.instagram.com/"
-              color="inherit"
-              sx={{ pl: 1, pr: 1 }}
-            >
-              <Instagram />
-            </Link>
-            <Link href="https://www.twitter.com/" color="inherit">
-              <Twitter />
-            </Link>
-          </Grid>
-        </Grid>
-        <Box mt={5}>
-          <Typography variant="body2" color="text.secondary" align="center">
-            {"Copyright © "}
-            <Link color="inherit" href="https://your-website.com/">
-              Your Website
-            </Link>{" "}
-            {new Date().getFullYear()}
-            {"."}
-          </Typography>
-        </Box>
-      </Container> */}
     </Box>
+      
     </div>
     
   );

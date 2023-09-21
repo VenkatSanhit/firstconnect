@@ -11,8 +11,9 @@ section {
   font-size: 32px;
   font-weight: bold;
 }
-#home {
+#services {
   margin-top: -80px;
+  margin-bottom: 30px ;
   background-image: url('../public/1659565076144.jpg');
   background-position: center;
   background-size: cover;
@@ -20,9 +21,11 @@ section {
   width: 100vw;
   height: 100vh;
   display:flex
+  
 }
 
-/* CSS */
+
+
 /* CSS */
 .list-services {
   /* Your other styles for the section */
@@ -39,6 +42,47 @@ section {
   overflow: auto; /* Add scrollbars if needed */
   border: 1px solid #ccc; /* Add a border for styling */
   padding: 10px; /* Add padding for spacing */
+}
+
+/* .service {
+  margin-bottom: 10px;
+  padding: 8px; /* Add padding around each service */
+  /* border: 1px solid #ddd;  */
+  /* background-color: #f9f9f9;   */
+
+.service {
+  margin-bottom: 20px;
+  padding: 20px; /* Add padding around each service */
+  border: 1px solid #ddd; /* Add a border for separation */
+  background-color: #f9f9f9; /* Add a background color */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center vertically within the service div */
+}
+
+/* Style the image container */
+.image-container {
+  flex: 0 0 auto; /* Prevent the image container from growing */
+  margin-right: 20px; /* Add spacing between image and text */
+  align-items: start;
+}
+
+
+/* Style the text container */
+.text-container {
+  flex: 1; /* Allow the text container to grow and take available space */
+}
+
+/* Style the button */
+.service button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.service button:hover {
+  background-color: #0056b3;
 }
 
 

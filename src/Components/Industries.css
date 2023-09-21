@@ -1,125 +1,76 @@
-/* Inside src/components/Industries.css */
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  
+}
 
-.industries-page {
-    background-color: #fff; /* Set the desired background color */
-    color: #333; /* Text color */
-    padding: 2rem;
-  }
-  
-  .industries-section {
-    text-align: center;
-  }
-  
-  .industries-section h2 {
-    font-size: 3rem;
-    padding-top: 3rem;
-  }
-  
-  .industries-section img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .tagline h3 {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-  }
-  
-  .tagline p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  
+section {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-size: 32px;
+  font-weight: bold;
+}
+#industries {
+  margin-top: -80px;
+  margin-bottom: 30px ;
+  background-image: url('../public/1659565076144.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display:flex
+}
 
-  .split {
-    display: flex;
-    justify-content: space-between;
-    padding: auto;
-  }
-  
-  .split-column {
-    flex: 1;
-    margin: 1rem;
-  }
-  
-  /* .split-column {
-    text-align: center;
-    align-items: flex-start;
-    justify-content: space-between;
-    display: flex;
-    flex: 1;
-  }*/
+#industries h1{
+margin-top: 0;
+}
 
-  .split-column img{
-    width: 300px;
-    Height: 150px;
-  } 
-
-  .split-column h3{
-    font-size: 1.5rem;
-    margin-bottom: 0.2rem;
-    margin-top: 0.2rem;
-  }
-  
-  .split-column ul{
-    font-size: 1.2rem;
-    margin-top: 0rem;
-    color: rgb(2, 12, 12);
-    background-color: #3169e3;
-    list-style: none;
-  }
-
-  .split-column li {
-    font-size: 1.2rem;
-    margin: 0;
-    text-align: left;
-  }
-
-  .split-column button {
-    align-self: flex-start;
-    padding: 0.5rem 1rem;
-    background-color: #007bff; /* Button background color */
-    color: #fff; /* Button text color */
-    border: none;
-    cursor: pointer;
-  }
-  
-  .split-column button:hover {
-    background-color: #0056b3; /* Button background color on hover */
-  }
+.sets-us-apart-container{
+  margin-bottom: 30px;
+}
 
 
-  .meat-industry{
-    padding: 8px;
-  }
+.industry-container {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .meat-industry img{
-    width: 300px;
-    Height: 150px;/* Adjust the image size as needed */
-  }
+.industry-box {
+  flex-basis: 48%; /* Adjust the width as needed */
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
 
-  .meat-industry-content h3{
-    font-size: 1.5rem;
-    margin-bottom: 0.2rem;
-    margin-top: 0.2rem;
-  }
-  
-  .meat-industry-content ul{
-    font-size: 1.2rem;
-    margin-top: 0rem;
-    color: rgb(2, 12, 12);
-    background-color: #3169e3;
-  }
+.industry-img {
+  max-width: 100%;
+  height: auto;
+}
 
-  .meat-industry-content button {
-    align-self: flex-start;
-    padding: 0.5rem 1rem;
-    background-color: #007bff; /* Button background color */
-    color: #fff; /* Button text color */
-    border: none;
-    cursor: pointer;
-  }
-  
-  .meat-industry-content button:hover {
-    background-color: #0056b3; /* Button background color on hover */
-  }
+/* .image-container {
+  position: relative;
+  display: inline-block;
+  margin: 10px; 
+} */
+
+.attribution {
+  position: absolute;
+  bottom: 5px; /* Adjust bottom position as needed */
+  right: 5px; /* Adjust right position as needed */
+  background-color: rgba(0, 0, 0, 0.7); /* Background color for attribution */
+  color: #ffffff; /* Text color for attribution */
+  padding: 3px 5px;
+  font-size: 12px;
+  border-radius: 2px;
+  z-index: 1; /* Ensure the attribution text appears above the image */
+}
+
+
+
+.industry-description {
+  margin-top: 10px;
+} 
+
