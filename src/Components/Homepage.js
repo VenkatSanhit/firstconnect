@@ -89,11 +89,14 @@ const Homepage = () => {
         </nav>
       </header>
       <section id="home">
-      <section id="home">
-  <li>Navigating Excellence Beyond Borders</li>
+      
+        <ul className='tagline'>
+        <li>Navigating Excellence Beyond Borders</li>
   <li>Your Cargo, Our Commitment</li>
   <li>Connecting Logistics To Precision</li>
-</section>
+        </ul>
+       
+
 
      </section>
       <section id="about">

@@ -3,10 +3,7 @@
   text-align: center;
   
 }
-.nav{
-color:#020240;
-background-color: #020240;
-}
+
 
 section {
   display: grid;
@@ -24,7 +21,7 @@ section {
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
-  display:flex
+  /* display:flex */
 
 }
 
@@ -33,6 +30,8 @@ width: 100vw;
   height: 100vh;
   display:flex;
 }
+
+
 
 #SandI {
   width: 100vw;
@@ -424,3 +423,13 @@ h2 {
   padding-right: 20%;
 }
 
+.tagline {
+  list-style: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.tagline li {
+  margin-bottom: 10px; /* Adjust the spacing between list items */
+  display: block;
+}

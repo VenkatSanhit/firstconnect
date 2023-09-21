@@ -12,8 +12,8 @@ const App = () => {
     <div className="app" >
       {/* <Navbar /> */}
       <Homepage /> 
-      <Services />  
-      <Industries/>
+      {/* <Services />   */}
+      {/* <Industries/> */}
       {/* Your content here */}
     </div>
   );
