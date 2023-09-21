@@ -5,7 +5,6 @@ import Fullpage, {
   FullpageSection,
   FullpageNavigation,
 } from "@ap.cx/react-fullpage";
-import Navbar from "./Navbar.js";
 import { Link } from "react-scroll";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
@@ -22,6 +21,8 @@ import { Box } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import Navbar from "./Navbar.js";
+
 import {
   Grid,
   Typography,
@@ -152,15 +153,7 @@ const Services = () => {
               style={{ maxWidth: '100%', height: 'auto', marginLeft: 60}}
             />
         </div>
-        <nav className="nav__container__actions">
-          <ul style={navStyle}>
-            <li style={navItemStyle}>
-              <Link activeClass="active" smooth spy to="about">
-                ABOUT
-              </Link>
-            </li>
-          </ul>
-        </nav>
+       <Navbar hh={false}/>
       </header>
       <section id="services">Services</section>
       

@@ -5,7 +5,7 @@ import Fullpage, {
   FullpageSection,
   FullpageNavigation,
 } from "@ap.cx/react-fullpage";
-import Navbar from "./Navbar.js";
+
 import { Link } from "react-scroll";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
@@ -31,6 +31,7 @@ import {
   ListItem,
   ListItemText,
 } from "@mui/material";
+import Navbar from "./Navbar.js";
 
 const Industries = () => {
   const fstyle = {
@@ -139,15 +140,7 @@ const Industries = () => {
               style={{ maxWidth: '100%', height: 'auto', marginLeft: 60}}
             />
         </div>
-        <nav className="nav__container__actions">
-          <ul style={navStyle}>
-            <li style={navItemStyle}>
-              <Link activeClass="active" smooth spy to="about">
-                ABOUT
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <Navbar hh={false}/>
       </header>
       <section id="industries"><h1>Industries</h1></section>
 

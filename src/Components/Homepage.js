@@ -48,7 +48,7 @@ const Homepage = () => {
               style={{ maxWidth: '100%', height: 'auto', marginLeft: 60}}
             />
         </div>
-        <nav className="nav__container__actions">
+        {/* <nav className="nav__container__actions">
           <ul style={navStyle}>
             <li style={navItemStyle}>
               <Link activeClass="active" smooth spy to="about">
@@ -74,8 +74,8 @@ const Homepage = () => {
             
             <li style={navItemStyle}><a href="#Shippers">Shippers</a></li>
             <li style={navItemStyle}><a href="#Carriers">Carriers</a></li>
-            <li style={navItemStyle}><a href="/Services">Services</a></li>
-            <li style={navItemStyle}><a href="/Industries">Industries</a></li>
+            <li style={navItemStyle}><a href="/services">Services</a></li>
+            <li style={navItemStyle}><a href="/industries">Industries</a></li>
             <li style={navItemStyle} className="dropdown">
             <a href="#">Company</a>
             <div className="dropdown-content">
@@ -86,15 +86,16 @@ const Homepage = () => {
         </li>
 
         </ul>
-        </nav>
+        </nav> */}
+        <Navbar hh={true}/>
       </header>
       <section id="home">
       
-        <ul className='tagline'>
+        <ol className='tagline'>
         <li>Navigating Excellence Beyond Borders</li>
   <li>Your Cargo, Our Commitment</li>
   <li>Connecting Logistics To Precision</li>
-        </ul>
+        </ol>
        
 
 

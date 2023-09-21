@@ -18,114 +18,74 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-
+import { Link } from 'react-scroll';
 
 const drawerWidth = 240;
 const navItems = ['Shippers', 'Carriers', 'Industries', 'Services'];
-const drawer = (
-  <Box sx={{ textAlign: 'center' }}>
-    <Typography variant="h6" sx={{ my: 2 }}>
-      MUI
-    </Typography>
-    <Divider />
-    <List>
-      {navItems.map((item) => (
-        <ListItem key={item} disablePadding>
-          <ListItemButton sx={{ textAlign: 'center' }}>
-            <ListItemText primary={item} />
-          </ListItemButton>
-        </ListItem>
-      ))}
-    </List>
-  </Box>
-);
+
 
 
 // const container = window !== undefined ? () => window().document.body : undefined;
 
 
-const Navbar = () => {
+const Navbar = (hh) => {
+  const navItemStyle = {
+    marginLeft: '20px', // Add space between nav items
+  };
+  const navStyle = {
+    display: 'flex',
+    listStyleType: 'none',
+    margin: 0,
+    padding: 0,
+  };
+  
   return (
-//     <Box sx={{ 
-//       display: 'flex' 
-//       }}>
-//       <CssBaseline />
-//       <AppBar component="nav">
-//         <Toolbar>
-//           <IconButton
-//             color="inherit"
-//             aria-label="open drawer"
-//             edge="start"
-//             // onClick={handleDrawerToggle}
-//             sx={{ mr: 2, display: { sm: 'none' } }}
-//           >
-//             <MenuIcon />
-//           </IconButton>
-//           <Typography
-//             variant="h6"
-//             component="div"
-//             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-//           >
-//             MUI
-//           </Typography>
-//           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-//             {navItems.map((item) => (
-//               <Button key={item} sx={{ color: '#fff' }}>
-//                 {item}
-//               </Button>
-//             ))}
-//           </Box>
-//           <FormControl >
-//   <InputLabel id="demo-simple-select-label">Company</InputLabel>
-//   <Select
-//     labelId="demo-simple-select-label"
-//     id="demo-simple-select"
-//     value={10}
-//     label="Company"
-//     onChange={() => {
-//       console.log('hello');
-//     }}
-//   >
-//     <MenuItem value={10}>Ten</MenuItem>
-//     <MenuItem value={20}>Twenty</MenuItem>
-//     <MenuItem value={30}>Thirty</MenuItem>
-//   </Select>
-// </FormControl>
-//         </Toolbar>
-        
-//       </AppBar>
-//       <nav>
-//         <Drawer
-//           // container={container}
-//           variant="temporary"
-//           // open={mobileOpen}
-//           // onClose={handleDrawerToggle}
-//           ModalProps={{
-//             keepMounted: true, // Better open performance on mobile.
-//           }}
-//           sx={{
-//             display: { xs: 'block', sm: 'none' },
-//             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-//           }}
-//         >
-//           {drawer}
-//         </Drawer>
-//       </nav>
-//       <Box component="main" sx={{ p: 3 }}>
-//         <Toolbar />
-        
-//       </Box>
-//     </Box>
+<nav className="nav__container__actions">
+          <ul style={navStyle} onClick={()=>(
+            console.log(hh)
+          )}>
+           {hh ? (
+  <div>
+    <li style={navItemStyle}>
+      <Link activeClass="active" smooth spy to="about">
+        ABOUT
+      </Link>
+    </li>
+    <li style={navItemStyle}>
+      <Link activeClass="active" smooth spy to="SandI">
+        Services and Industries
+      </Link>
+    </li>
+    <li style={navItemStyle}>
+      <Link activeClass="active" smooth spy to="testimonials">
+        Testimonials
+      </Link>
+    </li>
+    <li style={navItemStyle}>
+      <Link activeClass="active" smooth spy to="contact">
+        CONTACT ME
+      </Link>
+    </li>
+  </div>
+) : null}
 
-<div 
-style={{height: '200px',
-width: '100%',
-backgroundColor: 'red',
-position: 'fixed',
-}}
->
-  hi
-</div>
+
+            
+            <li style={navItemStyle}><a href="#Shippers">Shippers</a></li>
+            <li style={navItemStyle}><a href="#Carriers">Carriers</a></li>
+            <li style={navItemStyle}><a href="/services">Services</a></li>
+            <li style={navItemStyle}><a href="/industries">Industries</a></li>
+            <li style={navItemStyle} className="dropdown">
+            <a href="#">Company</a>
+            <div className="dropdown-content">
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+          </div>
+        </li>
+
+        </ul>
+        </nav>
 
   );
 };
