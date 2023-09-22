@@ -44,7 +44,7 @@ const Navbar = (hh) => {
           <ul style={navStyle} onClick={()=>(
             console.log(hh)
           )}>
-           {hh ? (
+           {hh['hh'] ? (
   <div>
     <li style={navItemStyle}>
       <Link activeClass="active" smooth spy to="about">
