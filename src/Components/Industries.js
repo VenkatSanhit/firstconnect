@@ -16,7 +16,7 @@ import { TextField, Container, Stack } from "@mui/material";
 import question_form from "./question_form";
 // import Typography from "@mui/material/Typography";
 // import Grid from "@mui/material/Grid";
-import { Facebook, Instagram, Twitter } from "@mui/icons-material";
+import { CenterFocusStrong, Facebook, Instagram, Twitter } from "@mui/icons-material";
 import { Box } from "@mui/material";
 // import { Container, Grid, Typography, Link, Box } from '@material-ui/core';
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -32,6 +32,8 @@ import {
   ListItemText,
 } from "@mui/material";
 import Navbar from "./Navbar.js";
+import Footer from './Footer.js';
+import { auto, left } from "@popperjs/core";
 
 const Industries = () => {
   const fstyle = {
@@ -62,67 +64,82 @@ const Industries = () => {
   const industrieslist = [
     {
       imageSrc: 'fruitesandvegetables.png',
+      Title: 'Vegetables And Fruits',
       altText: 'Vegetables And Fruits',
-      figcaption:"mikan933-Flaticon",
-      description: 'Description of Vegetables And Fruits.',
+      highlight:'From Farm to Table: Your Fresh Produce Experts',
+      description: 'At FC Logistics, we handle it all - planning, transportation, storage, and safe delivery of fruits and vegetables, nationwide. Our experienced team understands the importance of precise temperature control, ensuring your produce arrives at its best. We continually train our professionals to meet evolving standards, offering you unmatched shipping expertise. With Controlled Atmosphere and innovative drying techniques, we extend the shelf life of your vegetables, guaranteeing freshness.',
     },
     {
-      imageSrc: 'Meat.jpg',
+      imageSrc: 'proteins.png',
+      Title: 'Meat',
       altText: 'Meat',
-      description: 'Description of Meat.',
+      highlight:'Safe and Efficient Meat Shipping',
+      description: "Ensuring germ-free meat and poultry requires freezing prior to shipping, making precise temperature control crucial and challenging.In the USA, our food shipping relies on trucks. Our warehouses securely store eggs, poultry, and meat before their final journey, guaranteeing safe delivery through meticulous control measures.We prioritize temperature control, protection from impurities, swift transit, and team expertise.",  
     },
     {
-      imageSrc: 'Dairy-Products.jpg',
+      imageSrc: 'dairy-products.png',
+      Title: 'Milk and Diary products',
       altText: 'Dairy Products',
-      description: 'Description of Dairy-Products.',
+      highlight:'Mastering the Art of Dairy Logistics',
+      description: 'Dairy products constitute a substantial share of agriculture shipments in the USA. Navigating the shipment of dairy goods can be a complex task, one that requires finesse and expertise.At FC Logistics, we excel in ensuring the safest and most efficient milk and its associated product deliveries through our adept operational strategies and cutting-edge monitoring technologies.Our method for transporting involves the use of reefers - temperature-controlled refrigerator units. We deploy a variety of vehicles, including small trucks, intermodal containers, and semi-trailers, all uniquely tailored for the efficient transfer of products with a limited shelf life..',
     },
     {
       imageSrc: 'Grain-And-Seeds.jpg',
+      Title: 'Vegetables And Fruits',
       altText: 'Grain-And-Seeds',
       description: 'Description of Grain-And-Seeds.',
     },
     {
       imageSrc: 'Groceries.jpg',
+      Title: 'Vegetables And Fruits',
       altText: 'Groceries',
       description: 'Description of Groceries.',
     },
     {
       imageSrc: 'Steel.jpg',
+      Title: 'Vegetables And Fruits',
       altText: 'Steel',
       description: 'Description of Steel.',
     },
     {
       imageSrc: 'Lumber.jpg',
+      Title: 'Vegetables And Fruits',
       altText: 'Lumber',
       description: 'Description of Lumber.',
     },
     {
       imageSrc: 'Pharmaceutical.jpg',
+      Title: 'Vegetables And Fruits',
       altText: 'Pharmaceutical',
       description: 'Description of Pharmaceutical.',
     },
     {
       imageSrc: 'Iso-Tanks.jpg',
+      Title: 'Vegetables And Fruits',
       altText: 'Iso Tanks',
       description: 'Description of Iso Tanks.',
     },
     {
       imageSrc: 'Stone & Granite.jpg',
+      Title: 'Vegetables And Fruits',
       altText: 'Stone & Granite',
       description: 'Description of Stone & Granite.',
     },
     {
       imageSrc: 'Hazmat.jpg',
+      Title: 'Vegetables And Fruits',
       altText: 'Hazmat',
       description: 'Description of Hazmat.',
     },
     {
       imageSrc: 'Dry-Goods.jpg',
+      Title: 'Vegetables And Fruits',
       altText: 'Dry-Goods',
       description: 'Description of Dry-Goods.',
     },
     {
       imageSrc: 'Furniture.jpg',
+      Title: 'Vegetables And Fruits',
       altText: 'Furniture',
       description: 'Description of Furniture.',
     },
@@ -164,8 +181,9 @@ const Industries = () => {
               alt={industry.altText}
               style={{ maxWidth: '100%', height: 'auto' }}
             />
-            <div className="attribution">{industry.figcaption}</div>
-            <Typography variant="body2" style={{ marginTop: '10px' }}>
+            <div className="title" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>{industry.Title}</div>
+            <div className="highlight" style={{ fontWeight: 'bold', fontSize: '1rem' , marginTop: '10px' }}>{industry.highlight}</div>
+            <Typography variant="body2" style={{ marginTop: '3px', textAlign:'center'}}>
               {industry.description}
             </Typography>
           </Paper>
@@ -285,75 +303,8 @@ const Industries = () => {
   </div>
 </section>
 
-   {/* Footer */}
-      <Box
-      component="footer"
-      sx={{
-        backgroundColor: (theme) =>
-          theme.palette.mode === 'light'
-            ? theme.palette.grey[200]
-            : theme.palette.grey[800],
-        p: 6,
-      }}
-    >
-      <Container maxWidth="lg">
-        <Box display="flex" justifyContent="center" alignItems="center" flexWrap="wrap">
-          <Box flexBasis={{ xs: '100%', sm: '25%' }} mb={{ xs: 2, sm: 0 }}>
-            <img
-              src="Logo-FCW.png"
-              alt="Company Logo"
-              style={{ maxWidth: '100%', height: 'auto' }}
-            />
-          </Box>
-          <Box flexBasis={{ xs: '100%', sm: '25%' }} px={2}>
-            <Typography variant="h6" gutterBottom style={{ color: '#ff5733' }}>
-              About Us
-            </Typography>
-            <Typography variant="body2" color="textSecondary">
-              We are XYZ company, dedicated to providing the best service to our customers.
-            </Typography>
-          </Box>
-          <Box flexBasis={{ xs: '100%', sm: '25%' }} px={2}>
-            <Typography variant="h6" gutterBottom style={{ color: '#ff5733' }}>
-              Contact Us
-            </Typography>
-            <Typography variant="body2" color="textSecondary">
-              123 Main Street, Anytown, USA
-            </Typography>
-            <Typography variant="body2" color="textSecondary">
-              Email: info@example.com
-            </Typography>
-            <Typography variant="body2" color="textSecondary">
-              Phone: +1 234 567 8901
-            </Typography>
-          </Box>
-          <Box flexBasis={{ xs: '100%', sm: '25%' }} px={2}>
-            <Typography variant="h6" gutterBottom style={{ color: '#ff5733' }}>
-              Follow Us
-            </Typography>
-            <Link href="https://www.facebook.com/" color="inherit" style={{ marginRight: '1rem' }}>
-              <FacebookIcon fontSize="large" />
-            </Link>
-            <Link href="https://www.instagram.com/" color="inherit" style={{ marginRight: '1rem' }}>
-              <InstagramIcon fontSize="large" />
-            </Link>
-            <Link href="https://www.twitter.com/" color="inherit">
-              <TwitterIcon fontSize="large" />
-            </Link>
-          </Box>
-        </Box>
-        <Box mt={5} style={{ borderTop: '1px solid #555', paddingTop: '1rem' }}>
-          <Typography variant="body2" color="textSecondary" align="center">
-            {"Copyright © "}
-            <Link color="inherit" href="https://your-website.com/">
-              Your Website
-            </Link>{" "}
-            {new Date().getFullYear()}
-            {"."}
-          </Typography>
-        </Box>
-      </Container>
-    </Box>
+   <div><Footer /></div>
+
       </div>
 
 
