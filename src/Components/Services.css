@@ -223,3 +223,60 @@ section {
 .card-image {
   width: 100%; /* Make the image fill the container */
 }
+
+/* service css*/
+.service-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between cards */
+  padding: 20px; /* Add padding to create a gap from the screen */
+}
+
+.service-card {
+  flex: 1 1 calc(100% - 20px); /* Adjust flex properties to fill the row and consider the gap */
+  display: flex;
+  padding: 20px;
+  border: 1px solid #ccc; /* Add border for a box-like appearance */
+  transition: transform 0.3s ease-in-out; /* Add transition for a smooth hover effect */
+}
+
+.service-card:hover {
+  transform: scale(1.05); /* Scale the card on hover for a 3D effect */
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-content h3 {
+  margin: 0 0 10px;
+}
+
+.card-content p {
+  margin: 0 0 10px;
+}
+
+.card-content button {
+  padding: 10px 20px;
+  background-color: #007BFF; /* Adjust button styles as needed */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.card-content button:hover {
+  background-color: #0056b3; /* Adjust button hover color as needed */
+}
+
+.card-content button:active {
+  background-color: #003366; /* Adjust button active color as needed */
+}
+
+.card-image-container {
+  width: 30%; /* Adjust the image container width to 30% */
+  overflow: hidden; /* Hide any overflow of the image */
+}
+
+.card-image {
+  width: 100%; /* Make the image fill the container */
+}
