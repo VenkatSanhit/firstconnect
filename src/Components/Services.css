@@ -39,7 +39,7 @@ section {
 .scrollable-container {
   width: 100%; /* Set the width to 100% */
   height: 100%; /* Set the height to 100% */
-  overflow: auto; /* Add scrollbars if needed */
+  /*overflow: auto; /* Add scrollbars if needed */
   border: 1px solid #ccc; /* Add a border for styling */
   padding: 10px; /* Add padding for spacing */
 }
@@ -63,7 +63,7 @@ section {
 .image-container {
   flex: 0 0 auto; /* Prevent the image container from growing */
   margin-right: 20px; /* Add spacing between image and text */
-  align-items: start;
+  
 }
 
 
@@ -86,32 +86,81 @@ section {
 }
 
 
+
+
+
+
+/* Container styles */
 .sets-us-apart-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center content horizontally */
+  background-color: #5faadc;
+  padding: 40px 0;
 }
 
+/* Upper half styles */
 .upperhalf {
-  margin-top: 20px; /* Adjust as needed for the desired space */
   text-align: center;
+  
+
 }
 
+.upperhalf h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.upperhalf p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Lower half container styles */
 .lowerhalf-container {
   display: flex;
-  justify-content: space-between; /* Spread the boxes evenly */
-  gap: 40px; /* Adjust as needed for the space between boxes */
-  max-width: 1200px; /* Set a maximum width for the container */
-  width: 100%; /* Make sure it takes the full width of the screen */
+  justify-content: space-between;
+  margin-top: 40px;
 }
 
+/* Box styles */
 .box {
-  border: 2px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: calc(33.33% - 40px); /* Adjust box width for 3 boxes with gaps */
-  box-sizing: border-box; /* Include padding in box size calculation */
+  width: 30%; /* Adjust as needed */
+  transition: transform 0.2s;
 }
 
-.lowerhalf {
-  text-align: center;
+.box:hover {
+  transform: translateY(-5px);
+}
+
+/* Header styles */
+.lowerhalf h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* List styles */
+.lowerhalf ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lowerhalf li {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.lowerhalf h4 {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Paragraph styles */
+.lowerhalf p {
+  font-size: 16px;
+  color: #666;
 }

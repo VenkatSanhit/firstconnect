@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Navbar from './Components/Navbar';
+// import Navbar from './Components/Navbar';
 import Homepage from './Components/Homepage';
 import Services from './Components/Services'; 
 import Industries from './Components/Industries';

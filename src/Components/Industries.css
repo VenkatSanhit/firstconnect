@@ -13,14 +13,29 @@ section {
 }
 #industries {
   margin-top: -80px;
-  margin-bottom: 30px ;
-  background-image: url('../public/1659565076144.jpg');
+  margin-bottom: 30px;
+  color: #ffffff;
+  background-image: url('../public/warehouse-truck.jpeg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
-  display:flex
+  display: flex;
+  position: relative; /* Add relative positioning to create overlay */
+}
+
+
+/* Create a semi-transparent overlay */
+#industries::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity (last value) as needed */
+  z-index: -1; /* Place the overlay behind the content */
 }
 
 #industries h1{
@@ -74,3 +89,24 @@ margin-top: 0;
   margin-top: 10px;
 } 
 
+.parallax-container {
+  background-image: url('../public/warehouse-truck.jpeg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+.parallax-content {
+  height: 100%; /* Match the height of the container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff; /* Text color on top of the background image */
+}
+
+/* Add more styles to your content as needed */

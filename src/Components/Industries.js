@@ -34,6 +34,15 @@ import {
 import Navbar from "./Navbar.js";
 import Footer from './Footer.js';
 import { auto, left } from "@popperjs/core";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import CardMedia from '@mui/material/CardMedia';
+
+
+const cardContentStyle = {
+  padding: '16px',
+};
 
 const Industries = () => {
   const fstyle = {
@@ -84,67 +93,110 @@ const Industries = () => {
       description: 'Dairy products constitute a substantial share of agriculture shipments in the USA. Navigating the shipment of dairy goods can be a complex task, one that requires finesse and expertise.At FC Logistics, we excel in ensuring the safest and most efficient milk and its associated product deliveries through our adept operational strategies and cutting-edge monitoring technologies.Our method for transporting involves the use of reefers - temperature-controlled refrigerator units. We deploy a variety of vehicles, including small trucks, intermodal containers, and semi-trailers, all uniquely tailored for the efficient transfer of products with a limited shelf life..',
     },
     {
-      imageSrc: 'Grain-And-Seeds.jpg',
-      Title: 'Vegetables And Fruits',
+      imageSrc: 'Seed-bag.png',
+      Title: 'Grains and Seeds',
       altText: 'Grain-And-Seeds',
-      description: 'Description of Grain-And-Seeds.',
+      highlight:"Delivering the Harvest Safely",
+      description: 'When it comes to transporting grains and seeds, you need a reliable, efficient, and compliant transport service. At First Connect Worldwide, we are industry leaders in shipping grains and seeds, utilizing a combination of trucks, vessels, and trains to ensure your agricultural products reach their destination safely.Our highly-trained team is well-versed in handling large volumes of grains and seeds. We understand the unique challenges of transporting wheat and other grains over long distances, and we take special safety measures to ensure the secure delivery of your valuable cargo. When it comes to your harvest, trust us to get it there safely and on time.',
     },
     {
-      imageSrc: 'Groceries.jpg',
-      Title: 'Vegetables And Fruits',
+      imageSrc: 'groceries.png',
+      Title: 'Groceries',
       altText: 'Groceries',
-      description: 'Description of Groceries.',
+      highlight:"Efficient Grocery Logistics, Tailored to Your Needs",
+      description: 'At First Connect Worldwide, we offer an extensive array of services that encompass storage, distribution, and last-mile logistics. When it comes to distributing groceries – from factories to warehouses to distribution centers – we employ a variety of transportation options, including truckloads, less than truckloads, and intermodal solutions. You have the flexibility to choose the service that aligns with your specific requirements.Our commitment is to provide fully personalized and scalable services to our valued customers. We excel in delivering groceries across long distances, allowing you to concentrate on the healthy growth of your business. Let us shoulder the logistical burden, so you can focus on what matters most.',
     },
     {
-      imageSrc: 'Steel.jpg',
-      Title: 'Vegetables And Fruits',
+      imageSrc: 'rolled-steel.png',
+      Title: 'Steel',
       altText: 'Steel',
-      description: 'Description of Steel.',
+      highlight:"Reliable Steel Transportation for Diverse Industries",
+      description: 'Steel transportation plays a vital role in various sectors, such as shipbuilding, mechanical engineering, and construction. This industry has witnessed substantial growth in recent years, and the transportation of steel is no exception.First Connect Worldwide has emerged as a key player, offering enhanced, efficient, and consistent transportation services throughout the USA and Canada. We facilitate the transportation of a wide range of materials, including both finished and semi-finished products.Whether you require the transportation of metal sheets, pipes, steel coils, fittings, or metal cords, we are your trusted partner, ready to provide top-notch service!',
     },
     {
-      imageSrc: 'Lumber.jpg',
-      Title: 'Vegetables And Fruits',
+      imageSrc: 'lumber.png',
+      Title: 'Lumber',
       altText: 'Lumber',
-      description: 'Description of Lumber.',
+      highlight:'Expert Lumber Shipping Services Tailored to Your Needs',
+      description: "Lumber shipping is a task best entrusted to seasoned professionals. At First Connect Worldwide, we collaborate with skilled experts who oversee every facet of lumber transport. Whether you require secure services for the transportation of sizable lumber hauls or are seeking LTL (Less Than Truckload) lumber loads, our team is dedicated to delivering professional results, and we're just a call away!Transporting lumber demands meticulous attention to detail at every stage of dispatch. Our well-trained truck drivers are well-versed in the safety protocols required for this task. As a result, they ensure a seamless and professional lumber shipping experience, leaving you with peace of mind.",
     },
     {
-      imageSrc: 'Pharmaceutical.jpg',
-      Title: 'Vegetables And Fruits',
+      imageSrc: 'Pharmaceutical.png',
+      Title: 'Pharmaceutical',
       altText: 'Pharmaceutical',
-      description: 'Description of Pharmaceutical.',
+      highlight:"Pharmaceutical Shipping Excellence: Safeguarding Product Integrity",
+      description: "Our operations underscore the critical significance of a seamless pharmaceutical shipping process that effectively manages, transports, and safeguards a diverse range of products. Our meticulous approach prevents cross-contamination and ensures the utmost product integrity throughout transit.Efficient inventory management is of paramount importance in the pharmaceutical sector, particularly concerning temperature control, stockout prevention, and product expiry avoidance.We dedicate ourselves to precise shipping preparation and supply chain management, prioritizing factors such as time, cost-efficiency, security, documentation, and environmental conditions encountered during the product's journey.",
     },
     {
-      imageSrc: 'Iso-Tanks.jpg',
-      Title: 'Vegetables And Fruits',
+      imageSrc: 'iso-Tanker.png',
+      Title: 'Iso Tanks',
       altText: 'Iso Tanks',
-      description: 'Description of Iso Tanks.',
+      highlight:"Efficient and Secure ISO Tank Shipping Solutions",
+      description: 'ISO tank containers are the optimal choice for bulk liquid, chemical, or foodstuff transportation. As the demand for intermodal shipping continues to rise, our ISO tank shipping services empower you with a highly efficient and expansive nationwide network, ensuring the safest transport of your valuable cargo.Our commitment to excellence is reflected in our industry-leading tank container logistics services, designed to meet the highest standards. Additionally, we provide specialized tank cleaning facilities dedicated to meticulously cleaning and sanitizing ISO tanks, ensuring the utmost safety and integrity when handling different substances. Trust us for your ISO tank shipping needs.',
     },
     {
-      imageSrc: 'Stone & Granite.jpg',
-      Title: 'Vegetables And Fruits',
+      imageSrc: 'stones.png',
+      Title: 'Stone & Granite',
       altText: 'Stone & Granite',
-      description: 'Description of Stone & Granite.',
+      highlight:"Stone Transportation Solutions for Heavy and Delicate Cargo",
+      description: 'Transporting heavy and solid materials like stone slabs, granite blocks, and finished products requires specialized handling and stringent safety measures. At First Connect Worldwide, we are well-equipped and fully prepared to meet these requirements, ensuring the safe and efficient transportation of these valuable cargo items.Our fleet of freight trucks and specially trained stone-carrying vehicles is optimized to improve productivity, facilitating the seamless movement of stone materials from quarries or production facilities to delivery centers, wholesalers, retailers, or construction sites. Additionally, we offer comprehensive warehousing solutions to safeguard against damage or loss during storage.',
     },
     {
-      imageSrc: 'Hazmat.jpg',
-      Title: 'Vegetables And Fruits',
+      imageSrc: 'hazardous-material.png',
+      Title: 'Hazmat',
       altText: 'Hazmat',
-      description: 'Description of Hazmat.',
+      highlight:"Safeguarding the World Through Expert Hazardous Material Shipping",
+      description: 'The transportation of hazardous materials is a critical responsibility aimed at protecting public safety and the environment. Our team of logistics experts rigorously adheres to the guidelines established by the Department of Transportation (DOT). From meticulous packaging and labeling to comprehensive documentation and declaration procedures, we ensure every detail is addressed.One of our primary safety measures is the strict segregation of incompatible hazardous materials. By expertly categorizing and isolating these substances, we prevent chemical reactions that could lead to accidents or the release of harmful substances..',
     },
     {
-      imageSrc: 'Dry-Goods.jpg',
-      Title: 'Vegetables And Fruits',
+      imageSrc: 'dry-goods.png',
+      Title: 'Dry-Goods',
       altText: 'Dry-Goods',
-      description: 'Description of Dry-Goods.',
+      highlight:"Delivering Dry Goods with Care and Efficiency",
+      description: 'Our dry goods carrier services specialize in the transportation of a wide range of products, including dry materials, textiles, clothing, electronics, appliances, furniture, and more. We understand that these items must remain dry throughout their journey, and we take every precaution to ensure their safe arrival.Our services extend to last-mile deliveries, particularly in urban areas, where we seamlessly transport dry products from distribution centers to their final destinations, be it homes or retail stores.We efficiently consolidate multiple items into a single shipment, making it a smart choice for your logistics needs.',
     },
     {
-      imageSrc: 'Furniture.jpg',
-      Title: 'Vegetables And Fruits',
+      imageSrc: 'furniture.png',
+      Title: 'Furniture',
       altText: 'Furniture',
-      description: 'Description of Furniture.',
+      highlight:"Seamless Furniture Logistics for Long-Distance Journeys",
+      description: 'Long-distance transportation poses unique challenges for furniture businesses, importers, and retailers. With our extensive experience in serving the furniture industry, we have honed our expertise to navigate these challenges effectively.Our specialized vehicles, including trucks, vans, and trailers, are equipped with soft pads, straps, and other securing methods to ensure the safe and damage-free transportation of your valuable furniture items. Additionally, we offer White Glove services to provide the utmost care and attention to detail, ensuring your furniture arrives in pristine condition, even on the longest journeys.',
     },
   
   ];
+  
+
+  const cardData = [
+    {
+      title: 'Drayage Experties',
+      image: '/static/images/cards/contemplative-reptile.jpg',
+      description: [
+        "Experts in Drayage with understanding of local, state, and federal regulations related to trucking and transportation which includes environmental regulations, safety regulations, and compliance with hours-of-service rules for drivers.",
+        "Familiarity with the operations of ports, rail yards, and intermodal terminals is crucial understanding the nderstand the layout, procedures, and protocols at these facilities to streamline cargo movement.",
+      ],
+    },
+
+    {
+      title: 'Customer & Quality Service',
+      image: '/static/images/cards/contemplative-reptile.jpg',
+      description:[
+        "Providing excellent customer service: Effective communication, transparency, and responsiveness to client needs are strengths that build trust and long-term relationships.",
+        "Maintaining high standards of quality control and ensuring that products are handled and transported safely is vital for 3PL providers.",
+      ],
+    },
+
+    {
+      title: 'Cost Efficiency & Flexibility',
+      image: '/static/images/cards/contemplative-reptile.jpg',
+      description:
+        [ 'First Connect Worldwide leverage their volume and expertise to negotiate favorable rates with carriers and suppliers, helping clients reduce logistics costs.',
+        ' offer tailored solutions to meet the unique requirements of their clients. They can adapt their services to accommodate different industries, types of products, and supply chain complexities.']
+    },
+  ];
+
+  
+
+
 
   return (
     <div className="App">
@@ -159,149 +211,102 @@ const Industries = () => {
         </div>
         <Navbar hh={false}/>
       </header>
-      <section id="industries"><h1>Industries</h1></section>
-
+      {/* <section id="industries"><h1>Industries</h1></section> */}
+<div class="parallax-container">
+  <div class="parallax-content">
+  
+    <h1>Your Title</h1>
+    <p>Your text content</p>
+  </div>
+</div>
       <Fragment>
       <Container style={{ display: 'flex', justifyContent: 'space-between', margintop: '10px' }}>
-      {/* First Column */}
-      <div style={{ flexBasis: '48%', display: 'flex', flexDirection: 'column' }}>
-        {industrieslist.slice(0, 6).map((industry, index) => (
-          <Paper
-            key={index}
-            elevation={3}
-            style={{
-              padding: '20px',
-              marginBottom: '20px',
-              textAlign: 'center',
-              backgroundColor: '#f0f0f0',
-            }}
-          >
-            <img
-              src={industry.imageSrc}
-              alt={industry.altText}
-              style={{ maxWidth: '100%', height: 'auto' }}
-            />
-            <div className="title" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>{industry.Title}</div>
-            <div className="highlight" style={{ fontWeight: 'bold', fontSize: '1rem' , marginTop: '10px' }}>{industry.highlight}</div>
-            <Typography variant="body2" style={{ marginTop: '3px', textAlign:'center'}}>
-              {industry.description}
-            </Typography>
-          </Paper>
-        ))}
-      </div>
+    
+     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+  {industrieslist.map((industry, index) => (
+    <div key={index + 2} style={{ flexBasis: '30%', padding: '10px', margin: '5px' }}>
+      <Paper
+        elevation={3}
+        style={{
+          padding: '20px',
+          textAlign: 'center',
+          backgroundColor: '#f0f0f0',
+        }}
+      >
+        <img
+          src={industry.imageSrc}
+          alt={industry.altText}
+          style={{ maxWidth: '100%', height: 'auto' }}
+        />
+        <div className="title" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>{industry.Title}</div>
+        <div className="highlight" style={{ fontWeight: 'bold', fontSize: '1rem', marginTop: '10px' }}>{industry.highlight}</div>
+        <Typography variant="body2" style={{ marginTop: '3px', textAlign: 'center' }}>
+          {industry.description}
+        </Typography>
+      </Paper>
+    </div>
+  ))}
+</div>
 
-      {/* Second Column */}
-      <div style={{ flexBasis: '48%', display: 'flex', flexDirection: 'column' }}>
-        {industrieslist.slice(7).map((industry, index) => (
-          <Paper
-            key={index + 2}
-            elevation={3}
-            style={{
-              padding: '20px',
-              marginBottom: '20px',
-              textAlign: 'center',
-              backgroundColor: '#f0f0f0',
-            }}
-          >
-            <img
-              src={industry.imageSrc}
-              alt={industry.altText}
-              style={{ maxWidth: '100%', height: 'auto' }}
-            />
-            <Typography variant="body2" style={{ marginTop: '10px' }}>
-              {industry.description}
-            </Typography>
-          </Paper>
-        ))}
-      </div>
+
     </Container>
-      {/* <Container style={{ display: 'flex', justifyContent: 'space-between' }}>
-      {industrieslist.map((industry, index) => (
-        <Paper
-          key={index}
-          elevation={3}
-          style={{
-            flexBasis: '48%', // Adjust the width as needed
-            padding: '20px',
-            marginBottom: '20px',
-            textAlign: 'center',
-          }}
-        >
-          <img
-            src={industry.imageSrc}
-            alt={industry.altText}
-            style={{ maxWidth: '100%', height: 'auto' }}
-          />
-          <Typography variant="body2" style={{ marginTop: '10px' }}>
-            {industry.description}
-          </Typography>
-        </Paper>
-        
-      ))}  
-    </Container> */}
     </Fragment>
 
 
-    {/* Whats sets us aprt */}
-      <section className="sets-us-apart-container">
-  <div className="upperhalf">
-    <h1>What Sets us apart</h1>
-    <p>bla blah bla blah</p>
-  </div>
-  <div className="lowerhalf-container">
-    <div className="box">
-      <div className="lowerhalf">
-        <h3>COMPREHENSIVE</h3>
-        <ul>
-          <li>
-            <h4>ELEVATED OFFERINGS</h4>
-            <p>
-              Whether it’s project-based, seasonal, or a more regular need, we can offer support with the greatest attention to detail.
-            </p>
-          </li>
-          </ul>
-          <ul>
-          <li>
-            <h4>EXTENSIVE NETWORK</h4>
-            <p>
-              Access to 250,000 trailers, 750 full-service secure yards, and 200+ trailer facilities.
-            </p>
-          </li>
-        </ul>
+    <Container maxWidth="md" style={{ marginBottom: '20px' }}>
+      <Typography variant="h4" align="center" gutterBottom>
+        What Sets Us Apart?
+      </Typography>
+      <div style={{ display: 'flex', justifyContent: "space-evenly" }}>
+        {cardData.map((card, index) => (
+          <Card key={index} sx={{ maxWidth: 345, flexBasis: '30%', margin: '0 auto', boxShadow: '0px 8px 10px rgba(0, 0, 0, 0.2)' }}>
+            <CardMedia
+              component="img"
+              alt={card.title}
+              height="140"
+              image={card.image}
+              title={card.title}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                {card.title}
+              </Typography>
+              <Typography variant="body2" color="text.secondary" style={{ textAlign: "center" }}>
+                <ol style={{ paddingLeft: '1rem' }} >
+                  <p>
+                    {card.description[0]}
+                  </p>
+                  <p>
+                    {card.description[1]}
+                  </p>
+                </ol>
+              </Typography>
+            </CardContent>
+          </Card>
+        ))}
       </div>
-    </div>
-    <div className="box">
-      <div className="lowerhalf">
-        <h3>ACCOUNTABLE</h3>
-        <ul>
-          <li>
-            <h4>BACKED BY EXPERTS</h4>
-            <p>
-              We have a large team of dedicated experts who can communicate with all players of the supply chain: shippers, receivers, carriers, cross-dock facilities and warehouse facilities.
-            </p>
-          </li>
-          </ul>
-          <ul>
-          <li>
-            <h4>HANDS-ON COORDINATION</h4>
-            <p>
-              We understand your account intimately and work hard to cater to your specific needs.
-            </p>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div className="box">
-      <div className="lowerhalf">
-        <h3>Title 3</h3>
-        <ul>
-          <li>Point 1</li></ul>
-          <ul><li>Point 2</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+    </Container>
+
+    {/* <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        sx={{ height: 140 }}
+        image="/static/images/cards/contemplative-reptile.jpg"
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+        Scalability
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        We scale our services to meet the changing needs of their clients.
+        Whether a business is experiencing rapid growth or seasonal fluctuations, First Connect Logistics can adapt to accommodate these changes.
+        </Typography>
+      </CardContent>
+    </Card> */}
+
+
+
+
 
    <div><Footer /></div>
 

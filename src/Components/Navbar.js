@@ -69,9 +69,24 @@ const Navbar = (hh) => {
   </div>
 ) : null}
 
-
+      <div className="nav-right-items">
+      <ul style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center' }}>
+      <li style={navItemStyle}><a href="#Shippers">Shippers</a></li>
+      <li style={navItemStyle}><a href="#Carriers">Carriers</a></li>
+      <li style={navItemStyle}><a href="/services">Services</a></li>
+      <li style={navItemStyle}><a href="/industries">Industries</a></li>
+      <li style={navItemStyle} className="dropdown">
+        <a href="#">Company</a>
+        <div className="dropdown-content">
+          <a href="#">Contact Us</a>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+        </div>
+      </li>
+      </ul>
+    </div>
             
-            <li style={navItemStyle}><a href="#Shippers">Shippers</a></li>
+            {/* <li style={navItemStyle}><a href="#Shippers">Shippers</a></li>
             <li style={navItemStyle}><a href="#Carriers">Carriers</a></li>
             <li style={navItemStyle}><a href="/services">Services</a></li>
             <li style={navItemStyle}><a href="/industries">Industries</a></li>
@@ -82,7 +97,7 @@ const Navbar = (hh) => {
             <a href="#">About Us</a>
             <a href="#">Careers</a>
           </div>
-        </li>
+        </li> */}
 
         </ul>
         </nav>

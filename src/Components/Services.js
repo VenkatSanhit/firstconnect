@@ -11,6 +11,7 @@ import { Carousel } from "react-responsive-carousel";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { TextField, Container, Stack } from "@mui/material";
+import Modal from 'react-modal';
 // import question_form from './question_form.js';
 import question_form from "./question_form";
 // import Typography from "@mui/material/Typography";
@@ -23,16 +24,49 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import Navbar from "./Navbar.js";
 import Footer from './Footer.js';
-
+import { styled } from '@mui/material/styles';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogContent from '@mui/material/DialogContent';
+import DialogActions from '@mui/material/DialogActions';
+import CloseIcon from '@mui/icons-material/Close';
+import DialogContentText from '@mui/material/DialogContentText';
+import Slide from '@mui/material/Slide';
 import {
   Grid,
-  Typography,
-  Button,
-  Paper,
   List,
   ListItem,
   ListItemText,
+  Typography,
+  Button,
+  Paper,
+  
+  IconButton,
 } from "@mui/material";
+
+
+// const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+//   '& .MuiDialogContent-root': {
+//     padding: theme.spacing(2),
+//   },
+//   '& .MuiDialogActions-root': {
+//     padding: theme.spacing(1),
+//   },
+// }));
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
+Modal.setAppElement('body ');
 
 const Services = () => {
   const fstyle = {
@@ -60,6 +94,17 @@ const Services = () => {
     triggerOnce: true, // This ensures the callback is triggered only once when the element is in view
   });
 
+  const [open, setOpen] = React.useState(false);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+
+
+
   const servicesData = [
     {
       title: "FTL & LTL",
@@ -67,6 +112,7 @@ const Services = () => {
       altText: "FTL & LTL",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       button:"Get a quote",
+      modaltext: "hey thi is me"
 
     },
     {
@@ -74,14 +120,16 @@ const Services = () => {
       imageSrc: "/drayage.jpg",
       altText: "Drayage",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      button:"Get a quote"
+      button:"Get a quote",
+      modaltext: "hey thi is me"
     },
     {
       title: "warehousing",
       imageSrc: "/warehousing.jpg",
       altText: "Warehousing",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      button:"Get a quote"
+      button:"Get a quote",
+      modaltext: "hey thi is me"
     },
     {
       title: "Transportation-Management",
@@ -137,7 +185,8 @@ const Services = () => {
       imageSrc: "/air-land-ocean.jpg",
       altText: "Air, Land, and Ocean",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      button:"Get a quote"
+      button:"Get a quote",
+      modaltext:"this is me at last"
     },
     
   ];
@@ -156,10 +205,11 @@ const Services = () => {
         </div>
        <Navbar hh={false}/>
       </header>
-      <section id="services">Services</section>
-      
+       
+      <section id="services">Services</section>    
 <section className="list-services">
-  <div className="scrollable-container">
+   <div className="scrollable-container"> 
+
     {servicesData.map((service, i) => (
       <div key={i} className="service">
         <div className="service-content">
@@ -169,13 +219,23 @@ const Services = () => {
           <div className="text-container">
             <h3>{service.title}</h3>
             <p>{service.description}</p>
-            <button>More Details</button>
+            <p>{service.modaltext}</p>
+
+            <div>
+      {/* <button onClick={openModal}>Open Modal</button> */}
+    </div>
+
+
           </div>
         </div>
       </div>
     ))}
   </div>
+
+  
+
 </section>
+
 
 
 
