@@ -11,7 +11,7 @@ section {
   font-size: 32px;
   font-weight: bold;
 }
-#services {
+/* #services {
   margin-top: -80px;
   margin-bottom: 30px ;
   background-image: url('../public/1659565076144.jpg');
@@ -50,26 +50,28 @@ section {
   /* border: 1px solid #ddd;  */
   /* background-color: #f9f9f9;   */
 
-.service {
-  margin-bottom: 20px;
-  padding: 20px; /* Add padding around each service */
-  border: 1px solid #ddd; /* Add a border for separation */
-  background-color: #f9f9f9; /* Add a background color */
-  display: flex; /* Use flexbox for layout */
-  align-items: center; /* Center vertically within the service div */
-}
-
 /* Style the image container */
 .image-container {
   flex: 0 0 auto; /* Prevent the image container from growing */
   margin-right: 20px; /* Add spacing between image and text */
-  
+  align-self: flex-start; /* Align the image to the top */
 }
-
 
 /* Style the text container */
 .text-container {
   flex: 1; /* Allow the text container to grow and take available space */
+  display: flex;
+  flex-direction: column; /* Arrange text content in a column */
+}
+
+/* Optional: Style the heading and description */
+.text-container h3 {
+  margin: 0; /* Remove default margin for the heading */
+  font-size: 1.2em; /* Adjust heading font size */
+}
+
+.text-container p {
+  margin: 0 0 10px 0; /* Adjust margin for the description */
 }
 
 /* Style the button */
@@ -83,7 +85,7 @@ section {
 
 .service button:hover {
   background-color: #0056b3;
-}
+} */
 
 
 
@@ -163,4 +165,61 @@ section {
 .lowerhalf p {
   font-size: 16px;
   color: #666;
+}
+
+/* service css*/
+.service-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between cards */
+  padding: 20px; /* Add padding to create a gap from the screen */
+}
+
+.service-card {
+  flex: 1 1 calc(100% - 20px); /* Adjust flex properties to fill the row and consider the gap */
+  display: flex;
+  padding: 20px;
+  border: 1px solid #ccc; /* Add border for a box-like appearance */
+  transition: transform 0.3s ease-in-out; /* Add transition for a smooth hover effect */
+}
+
+.service-card:hover {
+  transform: scale(1.05); /* Scale the card on hover for a 3D effect */
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-content h3 {
+  margin: 0 0 10px;
+}
+
+.card-content p {
+  margin: 0 0 10px;
+}
+
+.card-content button {
+  padding: 10px 20px;
+  background-color: #007BFF; /* Adjust button styles as needed */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.card-content button:hover {
+  background-color: #0056b3; /* Adjust button hover color as needed */
+}
+
+.card-content button:active {
+  background-color: #003366; /* Adjust button active color as needed */
+}
+
+.card-image-container {
+  width: 30%; /* Adjust the image container width to 30% */
+  overflow: hidden; /* Hide any overflow of the image */
+}
+
+.card-image {
+  width: 100%; /* Make the image fill the container */
 }

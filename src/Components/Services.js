@@ -17,13 +17,21 @@ import question_form from "./question_form";
 // import Typography from "@mui/material/Typography";
 // import Grid from "@mui/material/Grid";
 import { Facebook, Instagram, Twitter } from "@mui/icons-material";
-import { Box } from "@mui/material";
 // import { Container, Grid, Typography, Link, Box } from '@material-ui/core';
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import Navbar from "./Navbar.js";
 import Footer from './Footer.js';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import { useTheme } from '@mui/material/styles';
+import SkipNextIcon from '@mui/icons-material/SkipNext';
+
+import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { styled } from '@mui/material/styles';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
@@ -69,6 +77,7 @@ const customStyles = {
 Modal.setAppElement('body ');
 
 const Services = () => {
+  const theme = useTheme();
   const fstyle = {
     height: "100vh",
     width: "100%",
@@ -190,7 +199,9 @@ const Services = () => {
     },
     
   ];
-
+  const handleCardClick = (description) => {
+    alert(description);
+  };
 
   return (
     <div className="App">
@@ -205,57 +216,31 @@ const Services = () => {
         </div>
        <Navbar hh={false}/>
       </header>
-       
-      <section id="services">Services</section>    
-<section className="list-services">
-   <div className="scrollable-container"> 
+      <section id="services">Services</section>
+      
 
-    {servicesData.map((service, i) => (
-      <div key={i} className="service">
-        <div className="service-content">
-          <div className="image-container">
-            <img src={service.imageSrc} alt={service.altText} />
-          </div>
-          <div className="text-container">
+      <div className="service-cards-container">
+      {servicesData.map((service, i) => (
+        <Card
+          key={i}
+          
+          className="service-card"
+          onClick={() => handleCardClick(service.description)}
+        >
+          <CardMedia
+            component="img"
+            className="card-image"
+            image={service.imageSrc}
+            alt={service.altText}
+          />
+          <Box className="card-content">
             <h3>{service.title}</h3>
             <p>{service.description}</p>
-            <p>{service.modaltext}</p>
-
-            <div>
-      {/* <button onClick={openModal}>Open Modal</button> */}
+            <button>{service.button}</button>
+          </Box>
+        </Card>
+      ))}
     </div>
-
-
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
-
-  
-
-</section>
-
-
-
-
-      {/* <section className="list-services">
-      <div className="scrollable-container">
-      <Stack direction="column" spacing={2}>
-        {servicesData.map((x, i) => (
-          <div key={i} className="service">
-          <img src={x.imageSrc} alt={x.altText} />
-          <h3>{x.title}</h3>
-          <ul>{x.description}</ul>
-          <button>More Details</button>
-          </div>
-          
-          
-        ))}
-        </Stack>
-        </div>
-      </section> */}
-
       
       <section className="sets-us-apart-container">
   <div className="upperhalf">

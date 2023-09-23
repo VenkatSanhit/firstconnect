@@ -5,6 +5,7 @@ import Homepage from './Components/Homepage';
 import Services from './Components/Services'; 
 import Industries from './Components/Industries';
 import Button from '@mui/material/Button';
+import ContactForm from './Components/Form'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import firebase from "firebase/app";
 // import "firebase/firestore";
@@ -26,6 +27,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // const firestore = firebase.firestore();
 // const settings = { /* your settings... */ timestampsInSnapshots: true };
 // firestore.settings(settings);
+
 const App = () => {
   return (
 
