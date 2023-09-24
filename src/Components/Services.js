@@ -205,17 +205,9 @@ const Services = () => {
 
   return (
     <div className="App">
-      <header className="nav">
-        <div
-        >
-          <img
-              src="First-connect-Logo.png"
-              alt="Company Logo"
-              style={{ maxWidth: '100%', height: 'auto', marginLeft: 60}}
-            />
-        </div>
+     
        <Navbar hh={false}/>
-      </header>
+  
       <section id="services">Services</section>
       
 

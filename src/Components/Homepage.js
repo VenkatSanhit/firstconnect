@@ -34,59 +34,10 @@ const Homepage = () => {
   const [ref, inView] = useInView({
     triggerOnce: true, // This ensures the callback is triggered only once when the element is in view
   });
-
+ 
   return (
     <div className="App">
-      <header className="nav">
-        <div
-        >
-          <img
-              src="First-connect-Logo.png"
-              alt="Company Logo"
-              style={{ maxWidth: '100%', height: 'auto', marginLeft: 60}}
-            />
-        </div>
-        {/* <nav className="nav__container__actions">
-          <ul style={navStyle}>
-            <li style={navItemStyle}>
-              <Link activeClass="active" smooth spy to="about">
-                ABOUT
-              </Link>
-            </li>
-            <li style={navItemStyle}>
-              <Link activeClass="active" smooth spy to="SandI">
-                Services and Industries
-              </Link>
-            </li>
-            <li style={navItemStyle}>
-              <Link activeClass="active" smooth spy to="testimonials">
-                Testimonials
-              </Link>
-            </li>
-            <li style={navItemStyle}>
-              <Link activeClass="active" smooth spy to="contact">
-                CONTACT ME
-              </Link>
-            </li>
-
-            
-            <li style={navItemStyle}><a href="#Shippers">Shippers</a></li>
-            <li style={navItemStyle}><a href="#Carriers">Carriers</a></li>
-            <li style={navItemStyle}><a href="/services">Services</a></li>
-            <li style={navItemStyle}><a href="/industries">Industries</a></li>
-            <li style={navItemStyle} className="dropdown">
-            <a href="#">Company</a>
-            <div className="dropdown-content">
-            <a href="#">Contact Us</a>
-            <a href="#">About Us</a>
-            <a href="#">Careers</a>
-          </div>
-        </li>
-
-        </ul>
-        </nav> */}
-        <Navbar hh={true}/>
-      </header>
+     <Navbar hh={true}/>
       <section id="home">
       
         <ol className='tagline'>
