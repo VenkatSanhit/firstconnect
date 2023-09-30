@@ -65,11 +65,11 @@ margin-top: 0;
   height: auto;
 }
 
-/* .image-container {
+.image-container {
   position: relative;
   display: inline-block;
   margin: 10px; 
-} */
+}
 
 .attribution {
   position: absolute;

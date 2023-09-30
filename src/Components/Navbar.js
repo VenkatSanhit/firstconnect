@@ -12,7 +12,7 @@ const NavBar = (hh) => {
     <nav className="navbar">
 
       <div className="navbar-logo">
-        <img src="logo.png" alt="Logo" />
+        <img src="firstconnect.png" alt="Logo" />
       </div>
       {/* {hh['hh'] ? (
   <div>
@@ -44,17 +44,17 @@ const NavBar = (hh) => {
         <a href="/services">Services</a>
         <a href="/industries">Industries</a>
         <a href="/">Company</a>
-        <div className="dropdown">
-          <div className="dropdown-toggle" onClick={toggleMenu}>
+        {/* <div className="dropdown"> */}
+          {/* <div className="dropdown-toggle" onClick={toggleMenu}>
             Dashboard
-          </div>
+          </div> */}
           <div className={`dropdown-menu ${isMenuOpen ? 'open' : ''}`}>
             <a href="/">Contact us</a>
             <a href="/">About us</a>
             <a href="/">Career</a>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </nav>
   );
 };

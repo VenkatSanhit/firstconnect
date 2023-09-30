@@ -1,43 +1,73 @@
 .App {
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   
 }
 
 
 section {
-  display: grid;
+  display: grid; 
   place-items: center;
   height: 100vh;
   font-size: 32px;
   font-weight: bold;
 }
+
 #home {
   margin-top: -80px;
   color: #fff; /* Text color */
-  background-image: url('../public/skunks.ai_A_cargo_Truck_loaded_with_freight_containers_passing__c369eaa8-8d13-47cf-8727-25d2bdb6bda1\ \(1\).png');
+  background-image: linear-gradient(rgba(10, 10, 10, 0.45), rgba(10, 10, 10, 0.45)), url('../public/road-bridge-blur-port-wallpaper-preview.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
-  /* display:flex */
-
-}
-
-#about {
-width: 100vw;
-  height: 100vh;
+  
+  /* margin-r: 70%; */
   display:flex;
+  align-self:flex-start;
+  /* text-align: left; */
 }
 
+.tagline {
+  float: left;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 62.5px;
+  letter-spacing: -0.5px;
+  margin-top: 40%;
+
+
+}
+
+.tagline p {
+  box-sizing: border-box;
+  margin-right: 65%;
+  width: 80%;
+  height: 80%;
+  margin-top: 3%;
+  margin-left: 10%;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.tagline button {
+  box-sizing: border-box;
+  margin-right: 65%;
+  /* margin-left: 10%; */
+  text-align: center;
+}
 
 
 #SandI {
   width: 100vw;
   height: 100vh;
   display:flex;
-  background-color: #020240;
+  /* background-color: #c9ddf0; */
+  background-color: #ffffff;
 }
 
 #projects,
@@ -150,8 +180,12 @@ li:hover {
 }
 
 
+#about {
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  }
 
-/* Apply these styles to your HTML structure */
 /* Apply these styles to your HTML structure */
 .fullPage {
   height: 98vh; /* Make it occupy the full viewport height */
@@ -159,34 +193,187 @@ li:hover {
   flex-direction: column; /* Arrange children vertically */
   gap: 16px; /* Add spacing between the elements */
   padding: 16px; /* Add padding to the container */
+  /* background-color: #ffffff; */
+  /* background-color: #c9ddf0; */
+  background-color:#2b76c3;
 }
 
 .fullPageTop {
   flex: 1; /* Take up half of the available space */
-  background-color: #f0f0f0; /* Light gray background */
-  border-radius: 8px; /* Add rounded corners for a smoother look */
+  background-color: #ffffff; 
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-bottom: 20PX;
+  margin-top: 10px;
+  /* background-color: #c9ddf0; */
+  border-radius: 16px; /* Add rounded corners for a smoother look */
   padding: 16px; /* Add padding inside the box */
+}
+
+.about-content h1{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #2b76c3;
+
+ }
+
+.about-content p{
+ font-size: 20px;
+ font-weight: normal;
+ text-align: justify;
+ padding-left: 3%;
+ padding-right: 3%;
+ 
 }
 
 .fullPageBottom {
-  flex: 1; /* Take up half of the available space */
+  flex: 1; 
   display: flex;
-  gap: 16px; /* Add spacing between the child elements */
+  gap: 16px; 
 }
 
+/* left */
 .fullPageLeft {
-  flex: 1; /* Take up half of the available space */
-  background-color: #f5f5f5; /* Lighter gray background */
-  border-radius: 8px; /* Add rounded corners for a smoother look */
-  padding: 16px; /* Add padding inside the box */
+  flex: 1; 
+  background-color: #ffffff; 
+  border-radius: 8px; 
+  padding: 16px; 
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  /* background-color: #b9babbc3; */
+  /* background-color:  #c9ddf0; */
 }
 
+.carrier {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.left-image {
+  max-width: 25%;
+  max-height: 100%;
+  margin-right: 16px;
+}
+
+.left-image img {
+  max-width: 250%;
+  max-height: 100%; 
+
+} 
+
+.text-content {
+  flex: 1; /* Takes up the remaining space */
+}
+
+
+.carrier h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #2b76c3;
+  margin-top: 0%;
+  margin-bottom: 2px;
+}
+
+.carrier p {
+  font-size: 20px;
+  font-weight: normal;
+  text-align: justify;
+  padding-left: 3%;
+  padding-right: 3%;
+  color: #000;
+}
+
+/* right */
 .fullPageRight {
-  flex: 1; /* Take up half of the available space */
-  background-color: #f5f5f5; /* Lighter gray background */
+  flex: 1; 
+  background-color: #ffffff; 
   border-radius: 8px; /* Add rounded corners for a smoother look */
   padding: 16px; /* Add padding inside the box */
+  display: flex; 
+  align-items: center;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  /* background-color:  #2b76c3; */
+  /* background-color: #c9ddf0; */
 }
+ 
+
+.shipper {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+
+.leftr-image {
+  max-width: 25%;
+  max-height: 100%;
+  margin-right: 50px;
+}
+
+.leftr-image img {
+  max-width: 250%;
+  max-height: 100%; 
+
+}
+
+
+.text-content {
+  flex: 1; 
+}
+
+.shipper h1{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #2b76c3;
+  margin-top: 0%;
+  margin-bottom: 2px;
+ }
+
+
+.shipper p{
+ font-size: 20px;
+ font-weight: normal;
+ text-align: justify;
+ padding-left: 3%;
+ padding-right: 3%;
+ color:#000;
+}
+
+
+
+
+/* .left-image {
+  max-width: 25%; 
+  margin-right: 16px; 
+} */
+
+/* .carrier h1{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color:#2b76c3;
+ }
+
+.carrier p{
+ font-size: 20px;
+ font-weight: normal;
+ text-align: justify;
+ padding-left: 3%;
+ padding-right: 3%;
+ color: #000;
+} */
 
 
 /* Container styling */
@@ -196,32 +383,74 @@ li:hover {
   align-items: center; /* Center vertically */
   width: 100%;
   height: 100vh;
+  width: 100vw;
   gap: 20px; /* Add spacing between the boxes */
   flex-direction: column;
+  /* background-color: #c9ddf0; */
+  background-color: ffffff;
 }
 
 
 /* Box styling */
-.services,
-.industries {
-  background-color: #f0f0f0; /* Light gray background */
+.services{
+  background-color:  #c9ddf0; 
+  /* background-color:#ffffff; */
   padding: 20px;
   text-align: center;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */
   border-radius: 8px; /* Add rounded corners for a smoother look */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   flex: 1; /* Each box takes equal vertical space */
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-bottom: 10PX;
+  margin-top: 30px;
 }
 
+.industries {
+  background-color:  #c9ddf0; 
+  /* background-color:#ffffff; */
+  padding: 20px;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  border-radius: 8px; /* Add rounded corners for a smoother look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  flex: 1; /* Each box takes equal vertical space */
+  /* margin-left: 100px;
+  margin-right: 100px; */
+  
+}
+
+.services h1,
+.industries h1{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(11, 11, 11);
+}
+
+.services p,
+.industries p{
+  font-size: 20px;
+ font-weight: normal;
+ text-align: justify;
+ padding-left: 5%;
+ padding-right: 5%;
+ color: #ffffff;
+}
 
 /* Button styling (adjust as needed) */
 .cta-button {
-  background-color: #007bff; /* Blue button color */
-  color: #fff;
+  background-color:#007bff ; /* Blue button color */
+  color:  #fff ;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
@@ -248,7 +477,7 @@ li:hover {
 }
 
 .carousel .slide {
-  background: #fff !important;
+  background: #fafafa !important;
   color: black;
   height: 100%;
 }
@@ -387,7 +616,7 @@ li:hover {
 }
 
 .testiLowerhalf {
-  background-color: #ffffff; /* White background color for the lower half */
+  background-color: #2b76c3; /* White background color for the lower half */
   padding: 20px; /* Add padding inside the lower half */
   border-radius: 8px; /* Add rounded corners for a smoother look */
 }
