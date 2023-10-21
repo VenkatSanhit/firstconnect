@@ -1,6 +1,7 @@
 .App {
   /* font-family: sans-serif; */
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Poppins','sans'; */
+  font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
   
 }
@@ -30,10 +31,29 @@ section {
   /* text-align: left; */
 }
 
+.parallax-container {
+  background-image: url('../public/road-bridge-blur-port-wallpaper-preview.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+.parallax-content {
+  height: 100%; /* Match the height of the container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff; /* Text color on top of the background image */
+}
+
 .tagline {
   float: left;
   color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
   font-size: 50px;
   font-weight: 500;
   line-height: 62.5px;
@@ -59,6 +79,8 @@ section {
   margin-right: 65%;
   /* margin-left: 10%; */
   text-align: center;
+  background-color: #5cbdf1;
+  color: #000;
 }
 
 
@@ -66,8 +88,11 @@ section {
   width: 100vw;
   height: 100vh;
   display:flex;
-  /* background-color: #c9ddf0; */
-  background-color: #ffffff;
+  /* background-color: #656666; */
+  /* background-color: #faf8ea; */
+  background-color: #f8f8f5;
+  /* background-color: #2b76c3; */
+  /* background-color: #accbe8; */
 }
 
 #projects,
@@ -195,12 +220,22 @@ li:hover {
   padding: 16px; /* Add padding to the container */
   /* background-color: #ffffff; */
   /* background-color: #c9ddf0; */
-  background-color:#2b76c3;
+  /* background-color: #accbe8; */
+  /* background-color:#faf8ea; */
+  background-color:#f8f8f5;
+  /* background-color: #516067; */ 
+  /* background-color: #3a7590; */
+  
 }
 
 .fullPageTop {
   flex: 1; /* Take up half of the available space */
-  background-color: #ffffff; 
+  /* background-color: #ffffff;  */
+  /* background-color: #accbe8; */
+  /* background-color: #3a7590; */
+  /* background-color: #1d1300; */
+  /* background-color: #747474;  */
+  background-color: #0e0e0e;
   margin-left: 45px;
   margin-right: 45px;
   margin-bottom: 20PX;
@@ -211,17 +246,24 @@ li:hover {
 }
 
 .about-content h1{
-  font-size: 40px;
+  font-size: 38px;
   font-weight: bold;
   text-align: center;
-  color: #2b76c3;
-
+  /* color: #2b76c3; */
+  /* color: #294b5b; */
+  color: #ffffff;
+  margin-top: 3px;
+  margin-bottom: 0;
  }
 
 .about-content p{
- font-size: 20px;
+ font-size: 18px;
+ color: #ffffff;
+ /* color: #000; */
+ /* color: #faf8ea; */
  font-weight: normal;
  text-align: justify;
+ margin-top: 3px;
  padding-left: 3%;
  padding-right: 3%;
  
@@ -244,6 +286,8 @@ li:hover {
   margin-left: 40px;
   margin-right: 20px;
   margin-bottom: 20px;
+  border-radius: 20px;
+  /* background-color: #faf8ea; */
   /* background-color: #b9babbc3; */
   /* background-color:  #c9ddf0; */
 }
@@ -251,9 +295,12 @@ li:hover {
 .carrier {
   display: flex;
   align-items: center;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
+  /* background-color: #faf8ea; */
+  background-color:#f8f8f5;
   border-radius: 8px;
-  padding: 3px;
+  padding: 2px;
+  border-radius: 20px;
 }
 
 .left-image {
@@ -265,6 +312,7 @@ li:hover {
 .left-image img {
   max-width: 250%;
   max-height: 100%; 
+  border-radius: 20px;
 
 } 
 
@@ -274,21 +322,26 @@ li:hover {
 
 
 .carrier h1 {
-  font-size: 40px;
+  font-size: 36px;
   font-weight: bold;
   text-align: center;
-  color: #2b76c3;
+  color: #000;
+  /* color: #1976D2 ; */
+  /* color: #516067; */
+  /* color: #3a7590; */
   margin-top: 0%;
   margin-bottom: 2px;
 }
 
 .carrier p {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   text-align: justify;
   padding-left: 3%;
   padding-right: 3%;
-  color: #000;
+  /* color: #516067; */
+  color: #000 ;
+ 
 }
 
 /* right */
@@ -301,6 +354,8 @@ li:hover {
   align-items: center;
   margin-right: 40px;
   margin-bottom: 20px;
+  border-radius: 20px;
+  /* background-color: #faf8ea; */
   /* background-color:  #2b76c3; */
   /* background-color: #c9ddf0; */
 }
@@ -309,21 +364,25 @@ li:hover {
 .shipper {
   display: flex;
   align-items: center;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
+  /* background-color: #faf8ea; */
+  background-color:#f8f8f5;
   border-radius: 8px;
-  padding: 3px;
+  padding: 2px;
+  border-radius: 20px;
 }
 
 
 .leftr-image {
   max-width: 25%;
   max-height: 100%;
-  margin-right: 50px;
+  margin-right: 16px;
 }
 
 .leftr-image img {
   max-width: 250%;
   max-height: 100%; 
+  border-radius: 20px;
 
 }
 
@@ -333,22 +392,25 @@ li:hover {
 }
 
 .shipper h1{
-  font-size: 40px;
+  font-size: 36px;
   font-weight: bold;
   text-align: center;
-  color: #2b76c3;
+  /* color: #2b76c3; */
+  /* color: #3a7590; */
+  color: #000 ;
   margin-top: 0%;
   margin-bottom: 2px;
  }
 
 
 .shipper p{
- font-size: 20px;
+ font-size: 18px;
  font-weight: normal;
  text-align: justify;
  padding-left: 3%;
  padding-right: 3%;
- color:#000;
+ /* color: #3a7590; */
+ color: #000 ;
 }
 
 
@@ -384,7 +446,7 @@ li:hover {
   width: 100%;
   height: 100vh;
   width: 100vw;
-  gap: 20px; /* Add spacing between the boxes */
+  gap: 8px; /* Add spacing between the boxes */
   flex-direction: column;
   /* background-color: #c9ddf0; */
   background-color: ffffff;
@@ -393,12 +455,16 @@ li:hover {
 
 /* Box styling */
 .services{
-  background-color:  #c9ddf0; 
+  /* background-color:#768b9f; */
+  /* background-color:  #4a5e71;  */
   /* background-color:#ffffff; */
+  /* background-color: #516067; */
+  /* background-color: #3a7590; */
+  background-color: #0e0e0e;
   padding: 20px;
   text-align: center;
   height: 100vh;
-  width: 100vw;
+  width: 90vw;
   display: flex;
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */
@@ -409,15 +475,20 @@ li:hover {
   margin-right: 45px;
   margin-bottom: 10PX;
   margin-top: 30px;
+  border-radius: 20px;
 }
 
 .industries {
-  background-color:  #c9ddf0; 
+  /* background-color:  #4a5e71;  */
   /* background-color:#ffffff; */
+  /* background-color:  #768b9f; */
+  /* background-color: #516067; */
+  /* background-color: #3a7590; */
+  background-color: #0e0e0e;
   padding: 20px;
   text-align: center;
   height: 100vh;
-  width: 100vw;
+  width: 90vw;
   display: flex;
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */
@@ -426,15 +497,17 @@ li:hover {
   flex: 1; /* Each box takes equal vertical space */
   /* margin-left: 100px;
   margin-right: 100px; */
+  margin-bottom: 10px;
+  border-radius: 20px;
   
 }
 
 .services h1,
 .industries h1{
-  font-size: 40px;
+  font-size: 38px;
   font-weight: bold;
   text-align: center;
-  color: rgb(11, 11, 11);
+  color: #ffffff;
 }
 
 .services p,
@@ -449,8 +522,22 @@ li:hover {
 
 /* Button styling (adjust as needed) */
 .cta-button {
-  background-color:#007bff ; /* Blue button color */
-  color:  #fff ;
+  /* background-color:#007bff ;  */
+  /* background-color: #3a7590; */
+  /* background: #5cbdf1;*/
+  color:  #ffffff ; 
+  background-color: #0e0e0e;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cta-button-L {
+  /* background-color:#007bff ;  */
+  /* background-color: #fff; */
+  background-color: #fff;
+  color:  #0e0e0e;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
@@ -476,9 +563,10 @@ li:hover {
   margin-top: 3% !important;
 }
 
+
 .carousel .slide {
-  background: #fafafa !important;
-  color: black;
+  background: #fff !important;
+  /* color: #3a7590; */
   height: 100%;
 }
 
@@ -488,7 +576,7 @@ li:hover {
 }
 
 .myCarousel {
-  background: #fafafa;
+  background: #f8f8f5;
   margin-top: -6%;
   width: 54%;
   margin-left: auto;
@@ -497,8 +585,9 @@ li:hover {
   padding-bottom: 8%;
   padding-left: 5%;
   padding-right: 5%;
-  border: 1px solid #ddd;
+  border: 1px solid #f8f8f5;
   height: 286px;
+  
 }
 
 .carousel .control-dots {
@@ -508,7 +597,7 @@ li:hover {
 }
 
 .myCarousel h3 {
-  color: #222;
+  color: #000;
   font-weight: 100;
   letter-spacing: 0.2px;
   margin-bottom: 4px;
@@ -522,44 +611,45 @@ li:hover {
   margin-top: 0;
   padding-top: 0;
   font-weight: 500;
-  color: #787878;
+  /* color: #fff; */
+  color: #000;
   font-size: 14px;
 }
 
 .myCarousel p {
   font-weight: 100 !important;
   line-height: 29px !important;
-  color: #222;
+  color: #000;
   font-size: 15px;
-  font-family: sans-serif;
+  font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
   max-height: 67px;
 }
 
 .myCarousel p:before {
   content: "“";
-  color: #aaa;
+  color: #000;
   font-size: 26px;
-  font-family: monospace;
+  font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
 }
 
 .myCarousel p:after {
   content: "”";
-  color: #aaa;
+  color: #000;
   font-size: 26px;
-  font-family: monospace;
+  font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
   line-height: 0;
 }
 
 .carousel .control-dots .dot {
   box-shadow: none !important;
-  background: #454545 !important;
+  background: #0e0e0e !important;
   outline: 0;
 }
-
+/* background: #f8f8f5; */
 .carousel.carousel-slider .control-arrow {
-  background: #000 !important;
+  background: #0e0e0e !important;
   height: 50px !important;
   position: absolute;
   top: 35% !important;
@@ -580,7 +670,7 @@ li:hover {
     display: none !important;
   }
   .myCarousel {
-    background: #fafafa;
+    background: #f8f8f5;
     margin-top: -9%;
     width: 88%;
     margin-left: auto;
@@ -605,23 +695,22 @@ li:hover {
   align-items: center; /* Align the content vertically */
   gap: 20px; /* Add spacing between the two divs */
   padding: 20px; /* Add padding around the content */
-  background-color: #f0f0f0; /* Light gray background color */
+  background-color: #ffffff; /* Light gray background color */
   border-radius: 8px; /* Add rounded corners for a smoother look */
+  margin-bottom: 0;
 }
 
 .testiUpperhalf {
-  background-color: #ffffff; /* White background color for the upper half */
+  background-color: #f8f8f5; /* White background color for the upper half */
   padding: 20px; /* Add padding inside the upper half */
   border-radius: 8px; /* Add rounded corners for a smoother look */
 }
 
 .testiLowerhalf {
-  background-color: #2b76c3; /* White background color for the lower half */
+  background-color: #0e0e0e; /* White background color for the lower half */
+  color: #ffffff;
   padding: 20px; /* Add padding inside the lower half */
   border-radius: 8px; /* Add rounded corners for a smoother look */
-}
-
-.testiLowerhalf {
   display: flex; /* Display items side by side */
   justify-content: space-around; /* Add space between items */
 }
@@ -644,7 +733,9 @@ h2 {
 
 #contact{
   height: 50%;
-  /* display: flex; /* Use flexbox to control the spacing */
+  margin-top: 0px;
+  background-color: #fff;
+    /* display: flex; /* Use flexbox to control the spacing */
   /*justify-content: space-around; Space the items evenly horizontally */
 }
 

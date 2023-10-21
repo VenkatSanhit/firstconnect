@@ -104,7 +104,7 @@ const Industries = () => {
       Title: 'Groceries',
       altText: 'Groceries',
       highlight:"Efficient Grocery Logistics, Tailored to Your Needs",
-      description: 'At First Connect Worldwide, we offer an extensive array of services that encompass storage, distribution, and last-mile logistics. When it comes to distributing groceries – from factories to warehouses to distribution centers – we employ a variety of transportation options, including truckloads, less than truckloads, and intermodal solutions. You have the flexibility to choose the service that aligns with your specific requirements.Our commitment is to provide fully personalized and scalable services to our valued customers. We excel in delivering groceries across long distances, allowing you to concentrate on the healthy growth of your business. Let us shoulder the logistical burden, so you can focus on what matters most.',
+      description: 'At First Connect Worldwide, we offer an extensive array of services that encompass storage, distribution, and last-mile logistics. When it comes to distributing groceries – from factories to warehouses to distribution centers – we employ a variety of transportation options, including truckloads, less than truckloads, and intermodal solutions. You have the flexibility to choose the service that aligns with your specific requirements.Our commitment is to provide fully personalized and scalable services to our valued customers. We excel in delivering groceries across long distances, allowing you to concentrate on the healthy growth of your business.',
     },
     {
       imageSrc: 'rolled-steel.png',
@@ -169,7 +169,7 @@ const Industries = () => {
   const cardData = [
     {
       title: 'Drayage Experties',
-      image: '/static/images/cards/contemplative-reptile.jpg',
+      image: 'drayage expert.jpg',
       description: [
         "Experts in Drayage with understanding of local, state, and federal regulations related to trucking and transportation which includes environmental regulations, safety regulations, and compliance with hours-of-service rules for drivers.",
         "Familiarity with the operations of ports, rail yards, and intermodal terminals is crucial understanding the nderstand the layout, procedures, and protocols at these facilities to streamline cargo movement.",
@@ -178,7 +178,7 @@ const Industries = () => {
 
     {
       title: 'Customer & Quality Service',
-      image: '/static/images/cards/contemplative-reptile.jpg',
+      image: 'service.jpg',
       description:[
         "Providing excellent customer service: Effective communication, transparency, and responsiveness to client needs are strengths that build trust and long-term relationships.",
         "Maintaining high standards of quality control and ensuring that products are handled and transported safely is vital for 3PL providers.",
@@ -187,7 +187,7 @@ const Industries = () => {
 
     {
       title: 'Cost Efficiency & Flexibility',
-      image: '/static/images/cards/contemplative-reptile.jpg',
+      image: 'efficient.jpg',
       description:
         [ 'First Connect Worldwide leverage their volume and expertise to negotiate favorable rates with carriers and suppliers, helping clients reduce logistics costs.',
         ' offer tailored solutions to meet the unique requirements of their clients. They can adapt their services to accommodate different industries, types of products, and supply chain complexities.']
@@ -206,52 +206,59 @@ const Industries = () => {
       {/* <section id="industries"><h1>Industries</h1></section> */}
 <div class="parallax-container">
   <div class="parallax-content">
-  
-    <h1>Your Title</h1>
-    <p>Your text content</p>
+  <div className='tagline'>
+        {/* <ol className='tagline'> */}
+        <p >Navigating Excellence, Beyond Borders.<br/>Your Cargo, Our Commitment.<br/>Connecting Logistics To Precision.</p>
+  </div>
   </div>
 </div>
       <Fragment>
-      <Container style={{ display: 'flex', justifyContent: 'space-between', margintop: '10px' }}>
+      <Container maxWidth="xl" style={{ display: 'flex', justifyContent: 'space-between', margintop: '10px', backgroundColor: '#fff', marginBottom: '30px'}}>
     
-     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly'}}>
   {industrieslist.map((industry, index) => (
-    <div key={index + 2} style={{ flexBasis: '30%', padding: '10px', margin: '5px' }}>
+    <div key={index + 2} style={{flexBasis: '30%', padding: '10px', margin: '5px' }}>
       <Paper
         elevation={3}
         style={{
           padding: '20px',
           textAlign: 'center',
-          backgroundColor: '#f0f0f0',
+          // backgroundColor: '#3a7590',
+          backgroundColor:'#fff',
+          borderRadius: '20px'
         }}
       >
         <img
           src={industry.imageSrc}
           alt={industry.altText}
-          style={{ maxWidth: '100%', height: 'auto' }}
+          style={{ width: '30%', height: '30%' }}
         />
-        <div className="title" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>{industry.Title}</div>
-        <div className="highlight" style={{ fontWeight: 'bold', fontSize: '1rem', marginTop: '10px' }}>{industry.highlight}</div>
-        <Typography variant="body2" style={{ marginTop: '3px', textAlign: 'center' }}>
+        <div className="title" style={{ fontWeight: 'bold', fontSize: '1.5rem', color: '#000' }}>{industry.Title}</div>
+        <div className="highlight" style={{ fontWeight: 'bold', fontSize: '1.2rem', marginTop: '10px', color:'#000' }}>{industry.highlight}</div>
+        <Typography variant="body2" style={{ marginTop: '3px', textAlign: 'center', color: '#000', fontSize: '1rem' }}>
           {industry.description}
         </Typography>
       </Paper>
     </div>
   ))}
 </div>
-
-
     </Container>
     </Fragment>
 
+    <div>
+    <Button variant="contained" disableElevation>
+    <a href="/ContactForm" style={{ color: '#000', textDecoration: 'none', fontWeight: 'bold' }}>Get a Quote</a>
+    </Button>
+    </div>
 
-    <Container maxWidth="md" style={{ marginBottom: '20px' }}>
+
+    {/* <Container maxWidth="md" style={{ marginBottom: '20px' }}>
       <Typography variant="h4" align="center" gutterBottom>
         What Sets Us Apart?
       </Typography>
       <div style={{ display: 'flex', justifyContent: "space-evenly" }}>
         {cardData.map((card, index) => (
-          <Card key={index} sx={{ maxWidth: 345, flexBasis: '30%', margin: '0 auto', boxShadow: '0px 8px 10px rgba(0, 0, 0, 0.2)' }}>
+          <Card key={index} sx={{ maxWidth: 500, flexBasis: '30%', margin: '0 auto', boxShadow: '0px 8px 10px rgba(0, 0, 0, 0.2)' }}>
             <CardMedia
               component="img"
               alt={card.title}
@@ -277,7 +284,54 @@ const Industries = () => {
           </Card>
         ))}
       </div>
-    </Container>
+    </Container> */}
+
+
+<Container maxWidth="xl" style={{ marginBottom: '20px' , marginTop:'40px'}}>
+  <Typography gutterBottom variant="h4" align="center" style={{fontWeight: 'bold', fontSize:'50px'}} >
+    What Sets Us Apart?
+  </Typography>
+  <div style={{ display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
+ 
+    {cardData.map((card, index) => (
+      <Card
+        key={index}
+        sx={{
+          // maxWidth: 400, 
+          flexBasis: '420px',
+          // flexBasis: 'calc(33.33% - 20px)', // Adjust the basis to create equal spacing
+          margin: '10px', // Add margin for spacing
+          boxShadow: '0px 8px 10px rgba(0, 0, 0, 0.2)',
+        }}
+      >
+        <CardMedia
+          component="img"
+          alt={card.title}
+          height="200"
+          width="100"         
+          image={card.image}
+          title={card.title}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div" color='#000'  style={{ fontWeight: 'bold', fontSize: '1.5rem'}} >
+            {card.title}
+          </Typography>
+          <Typography variant="body2" color="text.secondary" style={{ textAlign: 'center', color: '#000', fontSize: '1rem'}} >
+            <ol style={{ paddingLeft: '1rem' }}>
+              <p>{card.description[0]}</p>
+              <p>{card.description[1]}</p>
+            </ol> 
+          </Typography>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</Container>
+
+
+
+
+
 
     {/* <Card sx={{ maxWidth: 345 }}>
       <CardMedia

@@ -43,18 +43,17 @@ const NavBar = (hh) => {
         <a href="/">Carriers</a>
         <a href="/services">Services</a>
         <a href="/industries">Industries</a>
-        <a href="/">Company</a>
-        {/* <div className="dropdown"> */}
-          {/* <div className="dropdown-toggle" onClick={toggleMenu}>
-            Dashboard
-          </div> */}
-          <div className={`dropdown-menu ${isMenuOpen ? 'open' : ''}`}>
-            <a href="/">Contact us</a>
-            <a href="/">About us</a>
-            <a href="/">Career</a>
+        
+        <div className="dropdown">
+        <a><div className="company-link" onClick={toggleMenu}>Company</div></a>
+        <div className={`dropdown-content ${isMenuOpen ? 'open' : ''}`}>
+          <a href="/">Contact us</a>
+          <a href="/">About us</a>
+          <a href="/">Career</a>
           </div>
+          {/* </div> */}
         </div>
-      {/* </div> */}
+      </div>
     </nav>
   );
 };
