@@ -16,7 +16,7 @@ import Modal from 'react-modal';
 import question_form from "./question_form";
 // import Typography from "@mui/material/Typography";
 // import Grid from "@mui/material/Grid";
-import { Facebook, Instagram, Twitter } from "@mui/icons-material";
+import { CenterFocusStrong, Facebook, Instagram, Twitter } from "@mui/icons-material";
 // import { Container, Grid, Typography, Link, Box } from '@material-ui/core';
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -117,91 +117,174 @@ const Services = () => {
   const servicesData = [
     {
       title: "FTL & LTL",
-      imageSrc: "/ftl-ltl.jpg",
+      imageSrc: "ftl-ltl.png",
       altText: "FTL & LTL",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      button:"Get a quote",
-      modaltext: "hey thi is me"
-
+      description: [
+        "First Connect Worldwide offers FTL shipping, an ideal choice that has an endless schedule and routing options. Full truckload shipping has the elements that are exactly what the name suggests; serves clients who need a dependable and monetary method to transport their homegrown shipments.",
+        "On the other hand, consolidation is the most widely recognized choice of modest shipments and Less than truckload shipment usually opts when goods can’t fill an entire truck. LTL shipments typically range from a few hundred to a few thousand pounds of truckload.",
+        "• Multiple shipments consolidated into a single truckload in LTL & Entire truckload dedicated to a single shipment in FTL.",
+        "• LTL is suitable for smaller shipments and FTL is suitable for larger shipments that occupy the entire trailer.",
+        "• LTL takes longer time to transport due to multiple stops for pickups and deliveries whereas FTL has faster transit times as the truck goes directly from pickup to delivery.",
+        "• LTL is priced based on factors such as weight, dimensions, density, and freight class but FTL price is based on factors such as distance, equipment required, and additional services.",
+        "• LTL is ideal for businesses with smaller shipments and cost-consciousness and FTL is ideal for time-sensitive shipments and when specific handling requirements are needed.",
+      ],
+      button:"Get a quote"
     },
     {
       title: "Drayage",
-      imageSrc: "/drayage.jpg",
+      imageSrc: "drayage.png",
       altText: "Drayage",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: ["First Connect Worldwide provides efficient and reliable drayage services to seamlessly move your cargo within a localized area or between nearby transportation hubs. Our drayage solutions are designed to ensure the smooth transition of goods from one point to another, covering short distances and connecting to various modes of transportation.",
+      "Our drayage services offer several advantages:",
+      "•	Local Expertise: We have a deep understanding of local routes, regulations, and terminals, allowing us to expedite your cargo's movement.",
+      "•	Intermodal Connections: We seamlessly connect your cargo between different modes of transportation, ensuring the efficient flow of goods.",
+      "•	Container Transport: Our drayage services include container handling, ensuring the safe and timely transfer of cargo between containers and transportation modes.",
+      "•	Efficiency and Speed: We prioritize speed and efficiency in our drayage operations, enabling quicker cargo movements and reducing downtime.",
+      "•	Custom Solutions: Tailored drayage solutions are available to meet your specific needs, whether you're transporting goods to or from a port, rail yard, or other facilities.",
+      "•	Safety and Compliance: We adhere to all safety and compliance standards to ensure your cargo reaches its destination securely and in accordance with regulations.",
+        ],
       button:"Get a quote",
-      modaltext: "hey thi is me"
     },
     {
       title: "warehousing",
-      imageSrc: "/warehousing.jpg",
+      imageSrc: "warehouse.png",
       altText: "Warehousing",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: ["Businesses should consider factors such as presence at preferred locations, facility capabilities and capacity, security strategies, scalability, pricing structures, and the provider's experience and reputation in the industry. As a warehousing provider, we streamline our operations for manufacturers, distributors, and business owners with an all-in-one solution, from storage and inventory management to order fulfillment and distribution.",
+      "Affordability is a key consideration for choosing us and mark flexible pricing structure that aligns with your business needs. We also offer value-added services as a part of our affordable rates. This can incorporate order fulfillment, kitting, and assembly, labeling, packaging, bundling, or assembly work.",
+      ],
       button:"Get a quote",
-      modaltext: "hey thi is me"
     },
     {
-      title: "Transportation-Management",
-      imageSrc: "/transportation-management.jpg",
-      altText: "Transportation-Management",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: "Intermodal Transport",
+      imageSrc: "intermodal.png",
+      altText: "Intermodal Transport",
+      description: ["Our intermodal transportation services are characterized by our multi-channel transportation providers who are associated with a specific leg of the journey, typically crossing international borders in order to move cargo from one place in a country to another place in a different country. This approach allows us for efficient and seamless movement of goods across different modes, optimizing costs, transit times, and service quality. This process involves:",
+      "Origin Pickup",
+      "Rail or Barge Transport",
+      "Ocean or Air Transport",
+      "Destination Transfer",
+      "Final Delivery",
+      ],
       button:"Get a quote"
     },
     {
       title: "Routing",
-      imageSrc: "/routing.jpg",
+      imageSrc: "route.png",
       altText: "Routing",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: ["First Connect Worldwide offers cutting-edge routing services that determine the optimal route for transferring goods from the point of origin to the final destination.",
+      "We used to monitor shipments through the adoption of various tracking methodologies including GPS, barcodes, RFID tags, and efficient software. We prefer online tracking platforms or systems where clients can enter their shipment details to track the movement of their shipments. Furthermore, we propose world-class manual routing services with a unique methodology where the routing strategy integrates various transport modes and infrastructure to determine the most efficient and practical route for transporting the goods.", 
+      ],
       button:"Get a quote"
     },
     {
-      title: "Freight Brokerage",
-      imageSrc: "/advisor.png",
-      altText: "Freight Brokerage",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: "Flatbed Trucking",
+      imageSrc: "flat.png",
+      altText: "Flatbed Trucking",
+      description: ["First Connect Worldwide carefully engineered flatbed trucking solutions and advanced logistics technology and precise execution to deliver modified, client-driven flatbed trucking services. We oversee moves of fluctuating distance, adopting the same carefully tailored approach to each to execute without any blunder. This assessment helps determine the appropriate type and size of flatbed truck required for transportation.",
+      "We have the knowledge and abilities to evaluate your needs, plan the logistics, and guarantee legitimate load securing through Flatbed Trucking that includes:",
+      "•	Flatbed Trucking is used for transporting oversized, heavy, or irregularly shaped items.",
+      "•	Provides flexibility in loading and unloading cargo from the sides, rear, and top.",
+      "•	Flatbed trucks come in different sizes and weight capacities, depending on the truck's specifications and legal weight limits.",
+      "•	Specialized equipment, such as extendable trailers or removable gooseneck attachments, may be used for specific types of cargo.",
+      "•	Acquire additional permits and compliance with specific regulations for oversized or overweight loads.",
+      "•	Quicker loading and unloading times compared to enclosed trailers",],
       button:"Get a quote"
     },
     {
       title: "Broker & Forwarder Enterprise",
-      imageSrc: "/broker-forwarder-enterprise.jpg",
+      imageSrc: "enterprise.png",
       altText: "Broker & Forwarder Enterprise",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: ["Our Broker and Forwarder Enterprise Services encompass both brokerage and forwarding functions, providing end-to-end management of the logistics process where the broker serves as a liaison between shippers and carriers. We influence their network and industry skills to find reasonable carriers for the specific transportation needs of shippers.",
+      "Through our advanced technology and expertise, we offer supply chain visibility to our clients by managing various forwarding services through air freight, ocean freight, road transport, and intermodal solutions. While brokers essentially center around connecting shippers with carriers and negotiating rates, forwarders adopt a more comprehensive approach, managing the entire logistics process.",
+      "In addition, we as Freight Forwarders and Brokers can also offer services that include:",
+      "•	Customs entry clearance",
+      "•	Trade documentation",
+      "•	Insurance Maintenance",
+      "•	Supply chain management",
+      "•	The coordination of Customs exams",
+      "•	Customs bonds",
+      "•	Duty drawbacks and reconciliation",
+      "•	Advice and guidance with government audits",],
       button:"Get a quote"
     },
     {
       title: "White-Glove",
-      imageSrc: "/white-glove.jpg",
+      imageSrc: "whiteg.png",
       altText: "White-Glove",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: ["First Connect Worldwide complies with White Glove Services attribute special preference and extra bit attention to demand basically for goods such as fine art, luxury goods, high-end furniture, medical equipment, electronics, and other sensitive or high-value items. The term white glove indicates the immense level of care and handling of supply chain operations, that makes the difference between a good and a great service.",
+      "We offer premium services that go beyond the standard delivery process in terms of speed, convenience, protection of high-value goods, risk mitigation, removal of debris, assembly, and installation, these are all levels that are directed with primary importance, and white glove delivers on all these fronts."
+    ],
       button:"Get a quote"
     },
     {
       title: "Cross Docking & Transloading",
-      imageSrc: "/cdt.jpg",
+      imageSrc: "dock.png",
       altText: "Cross Docking & Transloading",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: ["We used to expedite the transportation cycle through cross-docking techniques and strategies in our logistics management and operations that included unloading incoming delivery vehicles and loading the materials directly into outbound delivery vehicles, omitting traditional warehouse logistical practices.",
+      "Cross-docking empowers us to execute faster order processing and delivery. Goods can be transferred directly from incoming shipments to outbound vehicles, prompting shorter lead times and improved client satisfaction. At First Connect Worldwide, we have the network, the viable experience, and the industry expertise - together with a robust communications infrastructure.",   
+    ],
       button:"Get a quote"
     },
-    {
-      title: "Cross Border",
-      imageSrc: "/cross-border.jpg",
-      altText: "Cross Border",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      button:"Get a quote"
-    },
-    {
-      title: "Air, Land, and Ocean",
-      imageSrc: "/air-land-ocean.jpg",
-      altText: "Air, Land, and Ocean",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      button:"Get a quote",
-      modaltext:"this is me at last"
-    },
+    // {
+    //   title: "Multimodal Transport",
+    //   imageSrc: "/cross-border.jpg",
+    //   altText: "Multimodal Transport",
+    //   description: ["First Connect Worldwide offers trusted dry van hauling services and prefers the consistency of dedicated loads. We assist our clients all over the country by repetitively moving items that are great fits for a traditional or expedited dry van trucking solution. Some of these items include heat-resistant raw materials, automotive and construction parts, paper and plastic household supplies, non-perishable food and drink, heat-resistant electronics, furniture and home décor, textiles, and retail-ready clothing.",
+    //   "We aggregate the fragmented truckload market into a simplified experience, even when spontaneous issues emerge. Here are some highlights of our dry van trucking strategies:",
+    //   "•	Comprehensive Transportation",
+    //   "•	Diverse Cargo Types",
+    //   "•	Efficient Route Planning",
+    //   "•	Tracking and Communication",
+    //   "•	Flexibility and Customization",
+    //   "•	Regulatory Compliance",
+    //   "•	Long-Haul and Short-Haul Capabilities.",],
+    //   button:"Get a quote"
+    // },
+  
+    // {
+    //   title: "Container Shipping",
+    //   imageSrc: "/air-land-ocean.jpg",
+    //   altText: "Container Shipping",
+    //   description: ["When it comes to container freight, First Connect Worldwide predominantly stands as a principal point of support, facilitating the movement of goods across vast distances and interfacing with businesses and clients globally.",
+    //   "Our functionality of container shipping thoroughly relies on standardized containers, efficient logistics, and a complex network of ports, vessels, freight forwarders, and other stakeholders. The operations are primarily rushed through multiple transshipments in which goods are stacked into containers at the origin port and then unloaded at the destination port.",
+    //   ],
+    //   button:"Get a quote",
+    // },
+
+
     
   ];
   const handleCardClick = (description) => {
     alert(description);
   };
+
+  const cardData = [
+    {
+      title: 'Drayage Experties',
+      image: 'drayage expert.jpg',
+      description: [
+        "Experts in Drayage with understanding of local, state, and federal regulations related to trucking and transportation which includes environmental regulations, safety regulations, and compliance with hours-of-service rules for drivers.",
+        "Familiarity with the operations of ports, rail yards, and intermodal terminals is crucial understanding the nderstand the layout, procedures, and protocols at these facilities to streamline cargo movement.",
+      ],
+    },
+
+    {
+      title: 'Customer & Quality Service',
+      image: 'service.jpg',
+      description:[
+        "Providing excellent customer service: Effective communication, transparency, and responsiveness to client needs are strengths that build trust and long-term relationships.",
+        "Maintaining high standards of quality control and ensuring that products are handled and transported safely is vital for 3PL providers.",
+      ],
+    },
+
+    {
+      title: 'Cost Efficiency & Flexibility',
+      image: 'efficient.jpg',
+      description:
+        [ 'First Connect Worldwide leverage their volume and expertise to negotiate favorable rates with carriers and suppliers, helping clients reduce logistics costs.',
+        ' offer tailored solutions to meet the unique requirements of their clients. They can adapt their services to accommodate different industries, types of products, and supply chain complexities.']
+    },
+  ];
 
   return (
     <div className="App">
@@ -209,7 +292,6 @@ const Services = () => {
        <Navbar hh={false}/>
   
       <section id="services">Services</section>
-      
 
       <div className="service-cards-container">
       {servicesData.map((service, i) => (
@@ -218,81 +300,69 @@ const Services = () => {
           
           className="service-card"
           onClick={() => handleCardClick(service.description)}
+          // sx={{ maxWidth: 345 }}
         >
           <CardMedia
             component="img"
             className="card-image"
             image={service.imageSrc}
             alt={service.altText}
+            sx={{ maxWidth: 200, maxHeight: 200, marginTop:4, marginLeft: 3, }}
           />
-          <Box className="card-content">
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
+          {/* <Box className="card-content"> */}
+          <CardContent>
+          <Typography gutterBottom variant="h4" sx={{ fontWeight: 'bold' }} component="div" style={{ color: '#0e0e0e' }}>
+          {service.title}
+          </Typography>
+            {/* <h3>{service.title}</h3> */}
+            <p style={{ textAlign: 'justify', marginRight: 40, marginLeft:20 }}>{service.description}</p>
             <button>{service.button}</button>
-          </Box>
+          </CardContent>
+          {/* </Box> */}
         </Card>
       ))}
     </div>
       
-      <section className="sets-us-apart-container">
-  <div className="upperhalf">
-    <h1>What Sets us apart</h1>
-    <p>bla blah bla blah</p>
+  <Container maxWidth="xl" style={{ marginBottom: '20px' , marginTop:'40px'}}>
+  <Typography gutterBottom variant="h4" align="center" style={{fontWeight: 'bold', fontSize:'40px'}} >
+    What Sets Us Apart?
+  </Typography>
+  <div style={{ display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
+ 
+    {cardData.map((card, index) => (
+      <Card
+        key={index}
+        sx={{
+          // maxWidth: 400, 
+          flexBasis: '420px',
+          // flexBasis: 'calc(33.33% - 20px)', // Adjust the basis to create equal spacing
+          margin: '10px', // Add margin for spacing
+          boxShadow: '0px 8px 10px rgba(0, 0, 0, 0.2)',
+        }}
+      >
+        <CardMedia
+          component="img"
+          alt={card.title}
+          height="200"
+          width="100"         
+          image={card.image}
+          title={card.title}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div" color='#000'  style={{ fontWeight: 'bold', fontSize: '1.5rem'}} >
+            {card.title}
+          </Typography>
+          <Typography variant="body2" color="text.secondary" style={{ textAlign: 'center', color: '#000', fontSize: '1rem'}} >
+            <ol style={{ paddingLeft: '1rem' }}>
+              <p>{card.description[0]}</p>
+              <p>{card.description[1]}</p>
+            </ol> 
+          </Typography>
+        </CardContent>
+      </Card>
+    ))}
   </div>
-  <div className="lowerhalf-container">
-    <div className="box">
-      <div className="lowerhalf">
-        <h3>COMPREHENSIVE</h3>
-        <ul>
-          <li>
-            <h4>ELEVATED OFFERINGS</h4>
-            <p>
-              Whether it’s project-based, seasonal, or a more regular need, we can offer support with the greatest attention to detail.
-            </p>
-          </li>
-          </ul>
-          <ul>
-          <li>
-            <h4>EXTENSIVE NETWORK</h4>
-            <p>
-              Access to 250,000 trailers, 750 full-service secure yards, and 200+ trailer facilities.
-            </p>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div className="box">
-      <div className="lowerhalf">
-        <h3>ACCOUNTABLE</h3>
-        <ul>
-          <li>
-            <h4>BACKED BY EXPERTS</h4>
-            <p>
-              We have a large team of dedicated experts who can communicate with all players of the supply chain: shippers, receivers, carriers, cross-dock facilities and warehouse facilities.
-            </p>
-          </li>
-          </ul>
-          <ul>
-          <li>
-            <h4>HANDS-ON COORDINATION</h4>
-            <p>
-              We understand your account intimately and work hard to cater to your specific needs.
-            </p>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div className="box">
-      <div className="lowerhalf">
-        <h3>Title 3</h3>
-        <ul>
-          <li>Point 1</li></ul>
-          <ul><li>Point 2</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+</Container>
        
 <div><Footer /></div>
     </div>

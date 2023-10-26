@@ -91,7 +91,7 @@ const Footer = () => {
     //     ? theme.palette.grey[200]
     //     : theme.palette.grey[800],
     // p: 6,
-    backgroundColor: '#3a7590', // Set background color to white
+    backgroundColor: '#f8f8f5', // Set background color to white
     p: 6,
   }}
 >
@@ -110,47 +110,47 @@ const Footer = () => {
         />
       </Box>
       <Box flexBasis={{ xs: '100%', sm: '25%' }} px={2}>
-        <Typography variant="h6" gutterBottom style={{ color: '#fff' }}>
+        <Typography variant="h6" gutterBottom style={{ color: '#000' }}>
           About Us
         </Typography>
-        <Typography variant="body2" color='#fff'>
+        <Typography variant="body2" color='#000'>
           First Connect Worldwide, a licensed Freight broker company, has been providing a full range of transportation and logistics services all around the USA.
         </Typography>
       </Box>
       <Box flexBasis={{ xs: '90%', sm: '20%' }} px={2}>
-        <Typography variant="h6" gutterBottom style={{ color: '#fff' }}>
+        <Typography variant="h6" gutterBottom style={{ color: '#000' }}>
           Contact Us
         </Typography>
-        <Typography variant="body2" color='#fff'>
+        <Typography variant="body2" color='#000'>
           24 Commerce St #434, Newark, NJ 07102, United States
         </Typography>
-        <Typography variant="body2" color='#fff'>
+        <Typography variant="body2" color='#000'>
           Email: info@firstconnectworldwide.com
         </Typography>
-        <Typography variant="body2" color='#fff'>
+        <Typography variant="body2" color='#000'>
           Phone: +1-908-888-0022
         </Typography>
       </Box>
       <Box flexBasis={{ xs: '80%', sm: '20%' }} px={2}>
-        <Typography variant="h6" gutterBottom style={{ color: '#fff' }}>
+        <Typography variant="h6" gutterBottom style={{ color: '#000' }}>
           Follow Us
         </Typography>
-        <Link href="https://www.linkedin.com/company/first-connect-worldwide-llc/" color='#fff' style={{ marginRight: '1rem' }}>
+        <Link href="https://www.linkedin.com/company/first-connect-worldwide-llc/" color='#000' style={{ marginRight: '1rem' }}>
           <LinkedInIcon fontSize="large" />
         </Link>
-        <Link href="https://www.facebook.com/" color='#fff' style={{ marginRight: '1rem' }}>
+        <Link href="https://www.facebook.com/" color='#000' style={{ marginRight: '1rem' }}>
           <FacebookIcon fontSize="large" />
         </Link>
-        <Link href="https://www.instagram.com/firstconnectworldwide_official/" color='#fff' style={{ marginRight: '1rem' }}>
+        <Link href="https://www.instagram.com/firstconnectworldwide_official/" color='#000' style={{ marginRight: '1rem' }}>
           <InstagramIcon fontSize="large" />
         </Link>
-        <Link href="https://twitter.com/firstconne34166" color='#fff'>
+        <Link href="https://twitter.com/firstconne34166" color='#000'>
           <TwitterIcon fontSize="large" />
         </Link>
       </Box>
     </Box>
-    <Box mt={5} style={{ borderTop: '1px solid #fff', paddingTop: '1rem' }}>
-      <Typography variant="body2" color='#fff' align="center">
+    <Box mt={5} style={{ borderTop: '1px solid #000', paddingTop: '1rem' }}>
+      <Typography variant="body2" color='#000' align="center">
         {"Copyright © "}
         <Link color="inherit" href="https://your-website.com/">
           First Connect 

@@ -37,7 +37,7 @@ section {
 }
 
 .scrollable-container {
-  width: 100%; /* Set the width to 100% */
+  width: 90%; /* Set the width to 100% */
   height: 100%; /* Set the height to 100% */
   /*overflow: auto; /* Add scrollbars if needed */
   border: 1px solid #ccc; /* Add a border for styling */
@@ -50,156 +50,84 @@ section {
   /* border: 1px solid #ddd;  */
   /* background-color: #f9f9f9;   */
 
-/* Style the image container */
-.image-container {
-  flex: 0 0 auto; /* Prevent the image container from growing */
-  margin-right: 20px; /* Add spacing between image and text */
-  align-self: flex-start; /* Align the image to the top */
-}
 
-/* Style the text container */
-.text-container {
-  flex: 1; /* Allow the text container to grow and take available space */
-  display: flex;
-  flex-direction: column; /* Arrange text content in a column */
-}
-
-/* Optional: Style the heading and description */
-.text-container h3 {
-  margin: 0; /* Remove default margin for the heading */
-  font-size: 1.2em; /* Adjust heading font size */
-}
-
-.text-container p {
-  margin: 0 0 10px 0; /* Adjust margin for the description */
-}
-
-/* Style the button */
-.service button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
-.service button:hover {
-  background-color: #0056b3;
-} */
-
-
-
-
-
-
-/* Container styles */
-.sets-us-apart-container {
-  background-color: #5faadc;
-  padding: 40px 0;
-}
-
-/* Upper half styles */
-.upperhalf {
-  text-align: center;
+  .card-image {
+    flex: 0; /* Adjust the image container width to your desired size */
+    margin-right: 20px; /* Add spacing between image and text */
+    align-self: flex-start; /* Align the image to the top */
+  }
+  
+  .card-image img {
+    width: 5px;
+    height: 5px; /* Maintain the aspect ratio */
+  }
   
 
+
+/* Style the image container */
+.image-container {
+  /* flex: 1 1 10%;  */
+  margin-right: 20px; /* Add spacing between image and text */
+  align-self: flex-start; /* Align the image to the top */
+  width: 25%;
+  height: 25%;
+}
+.image-container {
+  width: 10%; /* Adjust the image container width to your desired size */
 }
 
-.upperhalf h1 {
-  font-size: 36px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.upperhalf p {
-  font-size: 18px;
-  color: #666;
-}
-
-/* Lower half container styles */
-.lowerhalf-container {
+.service-cards-container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between cards */
+  padding: 20px; /* Add padding to create a gap from the screen */
+}
+
+.service-card {
+  flex: 1 1 calc(100% - 20px); /* Adjust flex properties to fill the row and consider the gap */
+  display: flex;
+  border: 1px solid #ccc; /* Add border for a box-like appearance */
+  transition: transform 0.3s ease-in-out; /* Add transition for a smooth hover effect */
+}
+
+.service-card:hover {
+  transform: scale(1.05); /* Scale the card on hover for a 3D effect */
+}
+
+.card-content {
+  /* display: flex;
+  flex: 1; */
+  padding: 10px;
+  width: 90%;
+}
+
+
+.card-image {
+  width: '5%';
+  height: '5%';
+}
+
+.text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  margin-top: 40px;
 }
 
-/* Box styles */
-.box {
-  background-color: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 30%; /* Adjust as needed */
-  transition: transform 0.2s;
-}
-
-.box:hover {
-  transform: translateY(-5px);
-}
-
-/* Header styles */
-.lowerhalf h3 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-/* List styles */
-.lowerhalf ul {
-  list-style: none;
-  padding: 0;
-}
-
-.lowerhalf li {
-  font-size: 18px;
-  color: #444;
-  margin-bottom: 10px;
-}
-
-.lowerhalf h4 {
-  font-size: 20px;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-/* Paragraph styles */
-.lowerhalf p {
-  font-size: 16px;
-  color: #666;
-}
-
-/* service css*/
-.service-cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Adjust the gap between cards */
-  padding: 20px; /* Add padding to create a gap from the screen */
-}
-
-.service-card {
-  flex: 1 1 calc(100% - 20px); /* Adjust flex properties to fill the row and consider the gap */
-  display: flex;
-  padding: 20px;
-  border: 1px solid #ccc; /* Add border for a box-like appearance */
-  transition: transform 0.3s ease-in-out; /* Add transition for a smooth hover effect */
-}
-
-.service-card:hover {
-  transform: scale(1.05); /* Scale the card on hover for a 3D effect */
-}
-
-.card-content {
-  flex: 1;
-}
-
-.card-content h3 {
+h3 {
   margin: 0 0 10px;
 }
 
-.card-content p {
+.description {
+  white-space: pre-line;
+}
+
+
+p {
   margin: 0 0 10px;
 }
 
-.card-content button {
+button {
   padding: 10px 20px;
   background-color: #007BFF; /* Adjust button styles as needed */
   color: #fff;
@@ -207,76 +135,11 @@ section {
   cursor: pointer;
 }
 
-.card-content button:hover {
+button:hover {
   background-color: #0056b3; /* Adjust button hover color as needed */
 }
 
-.card-content button:active {
+button:active {
   background-color: #003366; /* Adjust button active color as needed */
 }
 
-.card-image-container {
-  width: 30%; /* Adjust the image container width to 30% */
-  overflow: hidden; /* Hide any overflow of the image */
-}
-
-.card-image {
-  width: 100%; /* Make the image fill the container */
-}
-
-/* service css*/
-.service-cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Adjust the gap between cards */
-  padding: 20px; /* Add padding to create a gap from the screen */
-}
-
-.service-card {
-  flex: 1 1 calc(100% - 20px); /* Adjust flex properties to fill the row and consider the gap */
-  display: flex;
-  padding: 20px;
-  border: 1px solid #ccc; /* Add border for a box-like appearance */
-  transition: transform 0.3s ease-in-out; /* Add transition for a smooth hover effect */
-}
-
-.service-card:hover {
-  transform: scale(1.05); /* Scale the card on hover for a 3D effect */
-}
-
-.card-content {
-  flex: 1;
-}
-
-.card-content h3 {
-  margin: 0 0 10px;
-}
-
-.card-content p {
-  margin: 0 0 10px;
-}
-
-.card-content button {
-  padding: 10px 20px;
-  background-color: #007BFF; /* Adjust button styles as needed */
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.card-content button:hover {
-  background-color: #0056b3; /* Adjust button hover color as needed */
-}
-
-.card-content button:active {
-  background-color: #003366; /* Adjust button active color as needed */
-}
-
-.card-image-container {
-  width: 30%; /* Adjust the image container width to 30% */
-  overflow: hidden; /* Hide any overflow of the image */
-}
-
-.card-image {
-  width: 100%; /* Make the image fill the container */
-}

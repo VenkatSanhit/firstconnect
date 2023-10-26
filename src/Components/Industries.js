@@ -288,7 +288,7 @@ const Industries = () => {
 
 
 <Container maxWidth="xl" style={{ marginBottom: '20px' , marginTop:'40px'}}>
-  <Typography gutterBottom variant="h4" align="center" style={{fontWeight: 'bold', fontSize:'50px'}} >
+  <Typography gutterBottom variant="h4" align="center" style={{fontWeight: 'bold', fontSize:'40px'}} >
     What Sets Us Apart?
   </Typography>
   <div style={{ display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
@@ -327,32 +327,6 @@ const Industries = () => {
     ))}
   </div>
 </Container>
-
-
-
-
-
-
-    {/* <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-        Scalability
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-        We scale our services to meet the changing needs of their clients.
-        Whether a business is experiencing rapid growth or seasonal fluctuations, First Connect Logistics can adapt to accommodate these changes.
-        </Typography>
-      </CardContent>
-    </Card> */}
-
-
-
-
 
    <div><Footer /></div>
 

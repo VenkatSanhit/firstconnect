@@ -224,8 +224,8 @@ const Homepage = () => {
       {/* <FormControl> */}
       <Stack spacing={2} direction="row" sx={{margin: 4}}>
         <div className='questiontag'>
-          <h1 style={{ color: '#5cbdf1' }}>Have any questions?</h1>
-          <h3 style={{ color: '#000' }}>We would love to help!</h3>
+          <h1 style={{ color: '#0585c1' }}>Have any questions?</h1>
+          <h3 style={{ color: '#0585c1' }}>We would love to help!</h3>
           <p style={{ fontWeight: 'normal' }}>USA:24 Commerce St #434, Newark, NJ 07102, United States</p>
 
         </div>
@@ -252,7 +252,7 @@ const Homepage = () => {
           sx={{mb:4}} // To allow multiline input for the message
           rows={4} // Specify the number of rows for the message input
         />
-        <Button variant="outlined" color="secondary" type="submit" style={{ backgroundColor: '#5cbdf1', color: '#000' }}>Submit</Button>
+        <Button variant="outlined" color="secondary" type="submit" style={{ backgroundColor: '#0585c1', color: '#000' }}>Submit</Button>
       </form>
       </Stack>
       {/* </FormControl> */}
