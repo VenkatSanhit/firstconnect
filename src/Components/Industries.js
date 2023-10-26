@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import "./Industries.css";
 import Fullpage, {
   FullPageSections,
@@ -30,6 +30,7 @@ import {
   List,
   ListItem,
   ListItemText,
+  Modal
 } from "@mui/material";
 import Navbar from "./Navbar.js";
 import Footer from './Footer.js';
@@ -38,7 +39,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import CardMedia from '@mui/material/CardMedia';
-
+import ContactForm from "./Form";
 
 const cardContentStyle = {
   padding: '16px',
@@ -196,7 +197,15 @@ const Industries = () => {
 
   
 
+  const [open, setOpen] = useState(false);
 
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <div className="App">
@@ -246,45 +255,23 @@ const Industries = () => {
     </Fragment>
 
     <div>
-    <Button variant="contained" disableElevation>
-    <a href="/ContactForm" style={{ color: '#000', textDecoration: 'none', fontWeight: 'bold' }}>Get a Quote</a>
-    </Button>
+      <Button
+        variant="contained"
+        disableElevation
+        onClick={handleOpen}
+      >
+        Get a Quote
+      </Button>
+      <Modal
+        open={open}
+        onClose={handleClose}
+      >
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: '#fff', padding: '20px' }}>
+          <ContactForm where={'quote'}/>
+        </div>
+      </Modal>
     </div>
 
-
-    {/* <Container maxWidth="md" style={{ marginBottom: '20px' }}>
-      <Typography variant="h4" align="center" gutterBottom>
-        What Sets Us Apart?
-      </Typography>
-      <div style={{ display: 'flex', justifyContent: "space-evenly" }}>
-        {cardData.map((card, index) => (
-          <Card key={index} sx={{ maxWidth: 500, flexBasis: '30%', margin: '0 auto', boxShadow: '0px 8px 10px rgba(0, 0, 0, 0.2)' }}>
-            <CardMedia
-              component="img"
-              alt={card.title}
-              height="140"
-              image={card.image}
-              title={card.title}
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                {card.title}
-              </Typography>
-              <Typography variant="body2" color="text.secondary" style={{ textAlign: "center" }}>
-                <ol style={{ paddingLeft: '1rem' }} >
-                  <p>
-                    {card.description[0]}
-                  </p>
-                  <p>
-                    {card.description[1]}
-                  </p>
-                </ol>
-              </Typography>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-    </Container> */}
 
 
 <Container maxWidth="xl" style={{ marginBottom: '20px' , marginTop:'40px'}}>

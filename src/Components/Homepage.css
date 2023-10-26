@@ -16,13 +16,13 @@ section {
 }
 
 #home {
-  margin-top: -80px;
+
   color: #fff; /* Text color */
-  background-image: linear-gradient(rgba(10, 10, 10, 0.45), rgba(10, 10, 10, 0.45)), url('../public/road-bridge-blur-port-wallpaper-preview.jpg');
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100vw;
+  width: 100vh;
   height: 100vh;
   
   /* margin-r: 70%; */
@@ -31,45 +31,31 @@ section {
   /* text-align: left; */
 }
 
-.parallax-container {
-  background-image: url('../public/road-bridge-blur-port-wallpaper-preview.jpg');
+
+
+
+.parallax-container1 {
+  background-image: url('../public/induCover.jpeg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100vh; /* Adjust the height as needed */
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
 }
 
-/* .parallax-content {
-  height: 100%; 
+.parallax-content1 {
+  height: 100%; /* Match the height of the container */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #fff;
-} */
-
-/* .tagline {
-  float: left;
-  color: #ffffff;
-  font-size: 50px;
-  font-weight: 500;
-  line-height: 62.5px;
-  letter-spacing: -0.5px;
-  margin-top: 40%;
-} */
-
+  color: #fff; /* Text color on top of the background image */
+}
 .tagline p {
   box-sizing: border-box;
-  margin-right: 65%;
-  width: 80%;
+
   height: 80%;
   margin-top: 3%;
   margin-left: 10%;
@@ -733,25 +719,30 @@ li:hover {
 }
 
 .testiLowerhalf {
-  background-color: #0e0e0e; /* White background color for the lower half */
-  color: #ffffff;
-  padding: 20px; /* Add padding inside the lower half */
-  border-radius: 8px; /* Add rounded corners for a smoother look */
-  display: flex; /* Display items side by side */
-  justify-content: space-around; /* Add space between items */
-  margin-bottom: 0px;
-}
-
-.testiLowerhalf {
-  display: flex; /* Display items side by side horizontally */
-  justify-content: space-between; /* Add space between items */
-  width: 100%; /* Make the container span the full width of the page */
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  display: flex;
+  justify-content: space-between; /* To evenly distribute items */
+  padding: 20px; /* Add some padding to improve spacing */
+  width: 100%; /* Occupy the whole page width */
+  box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .countUpItem {
-  flex: 1; /* Distribute available space equally among items */
-  text-align: center; /* Center the content horizontally */
+  text-align: center; /* Center-align text within each item */
+  flex: 1; /* Equal width for all items, dividing the available space equally */
 }
+
+h2 {
+  margin: 0; /* Remove default margin for the heading */
+  font-size: 24px; /* Adjust font size as needed */
+}
+
+
+/* Additional styling as needed */
+
+
+
 
 h2 {
   font-size: 18px; /* Adjust the heading font size */

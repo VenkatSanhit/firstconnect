@@ -1,15 +1,18 @@
 .navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
 }
 
 .navbar-logo img {
-  width: 100px; 
-  margin-left: 100px;
+  max-height: 50px;
 }
 
 .navbar-links {
@@ -18,46 +21,30 @@
 }
 
 .navbar-links a {
-  color: #fff;
   text-decoration: none;
-  margin-left: 20px;
+  color: #fff;
+  margin-right: 20px;
 }
 
-.menu-button {
-  display: none;
+.dropdown {
+  position: relative;
 }
-
-@media (max-width: 768px) {
-  .menu-button {
-    display: block;
-  }
-
-  .navbar-links {
-    display: none;
-  }
-}
-
-
-.dropdown-content {
-  display: none; 
-  position: absolute;
-  background-color: #413c3c;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-
-.company-link:hover + .dropdown-content,
-.company-link:focus + .dropdown-content {
-  display: block;
-}
-
 
 .company-link {
   cursor: pointer;
-  
 }
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%; /* Position the dropdown below the "Company" link */
+}
 
-
-
+.company-link:hover + .dropdown-content,
+.dropdown-content:hover {
+  display: block;
+}
