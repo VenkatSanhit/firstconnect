@@ -116,7 +116,7 @@ export const ContactForm = (where) =>
           }}
         >
         {(where['where'] == 'quote')?
-          (<Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          (<Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 0 }}>
             <Grid container spacing={2}>
               
              <Grid item xs={12} sm={6}>
@@ -141,7 +141,7 @@ export const ContactForm = (where) =>
             </Grid>
 
               
-                <Grid item xs={12}>
+                <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
@@ -151,7 +151,7 @@ export const ContactForm = (where) =>
                   autoComplete="company"
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
@@ -161,7 +161,7 @@ export const ContactForm = (where) =>
                   autoComplete="phone"
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} >
                 <TextField
                   required
                   fullWidth
@@ -171,7 +171,7 @@ export const ContactForm = (where) =>
                   autoComplete="email"
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} >
                 <TextField
                   required
                   fullWidth
@@ -181,7 +181,7 @@ export const ContactForm = (where) =>
                   autoComplete="address"
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
@@ -191,7 +191,7 @@ export const ContactForm = (where) =>
                   autoComplete="city"
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
@@ -201,7 +201,7 @@ export const ContactForm = (where) =>
                   autoComplete="state"
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
@@ -211,7 +211,7 @@ export const ContactForm = (where) =>
                   autoComplete="pickup"
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
@@ -221,7 +221,7 @@ export const ContactForm = (where) =>
                   autoComplete="dropoff"
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
@@ -231,7 +231,7 @@ export const ContactForm = (where) =>
                   autoComplete="capacity"
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
@@ -241,7 +241,7 @@ export const ContactForm = (where) =>
                   autoComplete="weight"
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
@@ -292,7 +292,7 @@ export const ContactForm = (where) =>
             </Grid>
 
               
-                <Grid item xs={12}>
+                <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
@@ -302,7 +302,7 @@ export const ContactForm = (where) =>
                   autoComplete="company"
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} >
                 <TextField
                   required
                   fullWidth
@@ -322,7 +322,7 @@ export const ContactForm = (where) =>
                   autoComplete="email"
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
@@ -332,7 +332,7 @@ export const ContactForm = (where) =>
                   autoComplete="address"
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
@@ -342,7 +342,7 @@ export const ContactForm = (where) =>
                   autoComplete="city"
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
@@ -352,7 +352,7 @@ export const ContactForm = (where) =>
                   autoComplete="state"
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6} >
                 <TextField
                   required
                   fullWidth

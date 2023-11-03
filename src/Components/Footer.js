@@ -91,7 +91,7 @@ const Footer = () => {
     //     ? theme.palette.grey[200]
     //     : theme.palette.grey[800],
     // p: 6,
-    backgroundColor: '#f8f8f5', // Set background color to white
+    backgroundColor: '#ffffff', // Set background color to white
     p: 6,
   }}
 >
@@ -157,9 +157,9 @@ const Footer = () => {
         </Link>{" "}
         {new Date().getFullYear()}
         {"."}
-        <Link color="inherit" href="https://your-website.com/">
-          Image Copyrights:
-        </Link>{" "}
+        <Link color="inherit" href="licence.pdf">
+          Image Copyrights:licence.pdf
+        </Link>{""}
       </Typography>
     </Box>
     

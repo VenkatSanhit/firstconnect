@@ -6,53 +6,57 @@
 
 
 .tagline {
-  float: left;
   color: #ffffff;
   font-size: 50px;
-  font-weight: 500;
+  /* font-weight: 500; */
   line-height: 62.5px;
-  letter-spacing: 0px;
 }
 
 .tagline button {
   box-sizing: border-box;
-  margin-right: 65%;
-  text-align: center;
+  margin-right: 85%;
+  
 }
 
 .tagline p {
-  box-sizing: border-box;
-  margin-right: 65%;
   width: 80%;
-  height: 80%;
-  margin-top: 3%;
-  margin-left: 10%;
-  margin-bottom: 0;
-  text-align: left;
-  align-self:flex-start;
 }
 
 
 
-section {
+/* section {
   display: grid;
   place-items: center;
   height: 100vh;
   font-size: 32px;
   font-weight: bold;
-}
-#industries {
+} */
+/* #industries {
   margin-top: -80px;
   margin-bottom: 30px;
+  color: #0e0e0e;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url('../public/road-bridge-blur-port-wallpaper-preview.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: relative; 
+  display:flex;
+  align-self:flex-start;
+} */
+
+#industries {
+  margin-bottom: 30px;
   color: #ffffff;
-  background-image: linear-gradient(rgba(10, 10, 10, 0.45), rgba(10, 10, 10, 0.45)),url('../public/induCover.jpeg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url('../public/road-bridge-blur-port-wallpaper-preview.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
   display: flex;
-  position: relative; /* Add relative positioning to create overlay */
+  position: relative; 
   display:flex;
   align-self:flex-start;
 }
@@ -64,19 +68,12 @@ section {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity (last value) as needed */
   z-index: -1; /* Place the overlay behind the content */
 }
 
-#industries h1{
-margin-top: 0;
-}
-
-.sets-us-apart-container{
-  margin-bottom: 30px;
-}
 
 
 .industry-container {
@@ -89,7 +86,7 @@ margin-top: 0;
   padding: 20px;
   margin-bottom: 20px;
   text-align: center;
-  background-color: #f0f0f0;
+  /* background-color: #0e0e0e; */
 }
 
 
@@ -119,12 +116,13 @@ margin-top: 0;
 } 
 
 .parallax-container {
-  background-image: url('../public/induCover.jpeg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url('../public/road-bridge-blur-port-wallpaper-preview.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh; /* Adjust the height as needed */
+  width: 99vw;
   overflow: hidden;
 }
 

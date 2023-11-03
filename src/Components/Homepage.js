@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Homepage.css";
 import Fullpage, {
   FullPageSections,
@@ -11,7 +11,14 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import { TextField, Button, Container, Stack, colors } from "@mui/material";
+import {
+  TextField,
+  Button,
+  Container,
+  Stack,
+  colors,
+  Modal,
+} from "@mui/material";
 // import question_form from './question_form.js';
 import question_form from "./question_form";
 import Typography from "@mui/material/Typography";
@@ -20,8 +27,19 @@ import { Facebook, Instagram, Twitter } from "@mui/icons-material";
 import { Box } from "@mui/material";
 // import { Container, Grid, Typography, Link, Box } from '@material-ui/core';
 import Footer from "./Footer.js";
+import ContactForm from "./Form";
 
 const Homepage = () => {
+  const fstyle = {
+    height: "100vh",
+    width: "100%",
+    backgroundColor: "red",
+    display: "flex",
+    justifyContent: "space-between", // Add this line to separate logo and nav
+    alignItems: "center", // Vertically center items
+    padding: "0 20px", // Add padding for spacing
+  };
+
   const navStyle = {
     display: "flex",
     listStyleType: "none",
@@ -37,12 +55,22 @@ const Homepage = () => {
     triggerOnce: true, // This ensures the callback is triggered only once when the element is in view
   });
 
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <div className="App">
       <Navbar hh={true} />
       <section id="home">
-        <div class="parallax-container1">
-          <div class="parallax-content1">
+        <div class="parallax-container">
+          <div class="parallax-content">
             <div className="tagline">
               <p>
                 Navigating Excellence, Beyond Borders.
@@ -51,18 +79,26 @@ const Homepage = () => {
                 <br />
                 Connecting Logistics To Precision.
               </p>
-              <Button variant="contained" disableElevation>
-                <a
-                  href="/ContactForm"
+              <Button variant="contained" disableElevation onClick={handleOpen}>
+                Get a Quote
+              </Button>
+              <Modal open={open} onClose={handleClose}>
+                <div
                   style={{
-                    color: "#000",
-                    textDecoration: "none",
-                    fontWeight: "bold",
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    backgroundColor: "#fff",
+                    padding: "20px",
                   }}
                 >
-                  Get a Quote
-                </a>
-              </Button>
+                  <ContactForm
+                    where={"quote"}
+                    style={{ transform: "scale(0.3)" }}
+                  />
+                </div>
+              </Modal>
             </div>
           </div>
         </div>
@@ -112,21 +148,32 @@ const Homepage = () => {
                     from different locations by gathering goods from diverse
                     locations, providing a seamless experience for customers.
                   </p>
-                  <button className="cta-button">
-                    <a
-                      href="/ContactForm"
+                  <Button
+                    variant="contained"
+                    disableElevation
+                    onClick={handleOpen}
+                  >
+                    Get a Quote
+                  </Button>
+                  <Modal open={open} onClose={handleClose}>
+                    <div
                       style={{
-                        color: "#ffffff",
-                        textDecoration: "none",
-                        fontWeight: "bold",
+                        position: "absolute",
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%, -50%)",
+                        backgroundColor: "#fff",
+                        padding: "20px",
                       }}
                     >
-                      GET A QUOTE
-                    </a>
-                  </button>
+                      <ContactForm
+                        where={"quote"}
+                        style={{ transform: "scale(0.3)" }}
+                      />
+                    </div>
+                  </Modal>
                 </div>
               </div>
-
             </div>
             <div class="fullPageRight">
               <div className="leftr-image">
@@ -149,22 +196,32 @@ const Homepage = () => {
                     warehouses, regional/national distribution centers in a
                     dedicated or shared environment.
                   </p>
-                  <button className="cta-button">
-                    <a
-                      href="/ContactForm"
+                  <Button
+                    variant="contained"
+                    disableElevation
+                    onClick={handleOpen}
+                  >
+                    Get a Quote
+                  </Button>
+                  <Modal open={open} onClose={handleClose}>
+                    <div
                       style={{
-                        color: "#ffffff",
-                        textDecoration: "none",
-                        fontWeight: "bold",
+                        position: "absolute",
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%, -50%)",
+                        backgroundColor: "#fff",
+                        padding: "20px",
                       }}
                     >
-                      GET A QUOTE
-                    </a>
-                  </button>
+                      <ContactForm
+                        where={"quote"}
+                        style={{ transform: "scale(0.3)" }}
+                      />
+                    </div>
+                  </Modal>
                 </div>
               </div>
-
-            
             </div>
           </div>
         </div>
@@ -249,8 +306,8 @@ const Homepage = () => {
           >
             <div>
               <div className="myCarousel">
-                <h3>Sakshi</h3>
-                <h4>SEO</h4>
+                <h3>Patricai</h3>
+                <h4>Drayage Coordinator</h4>
                 <p>
                   I recently used services from First Connect Worldwide for a
                   cross-country move, and overall, I was quite satisfied with
@@ -262,7 +319,7 @@ const Homepage = () => {
 
             <div>
               <div className="myCarousel">
-                <h3>Smith</h3>
+                <h3>Arnold</h3>
                 <h4>Logistics Coordinator</h4>
                 <p>
                   Pleasure to deal with the coordinator, he was efficient and
@@ -274,8 +331,8 @@ const Homepage = () => {
 
             <div>
               <div className="myCarousel">
-                <h3>Theo Sorel</h3>
-                <h4>Designer</h4>
+                <h3>Stephen</h3>
+                <h4>Frieght Manager</h4>
                 <p>
                   At Eco-Friendly Retailers, sustainability is at the core of
                   our business, and finding a drayage partner that shares our
@@ -311,7 +368,7 @@ const Homepage = () => {
         {/* <FormControl> */}
         <Stack spacing={2} direction="row" sx={{ margin: 4 }}>
           <div className="questiontag">
-            <h1 style={{ color: "#0585c1" }}>Have any questions?</h1>
+            <h1 style={{ color: "#89B4AE" }}>Have any questions?</h1>
             <h3 style={{ color: "#0585c1" }}>We would love to help!</h3>
             <p style={{ fontWeight: "normal" }}>
               USA:24 Commerce St #434, Newark, NJ 07102, United States
@@ -335,14 +392,26 @@ const Homepage = () => {
               sx={{ mb: 4 }} // To allow multiline input for the message
               rows={4} // Specify the number of rows for the message input
             />
-            <Button
-              variant="outlined"
-              color="secondary"
-              type="submit"
-              style={{ backgroundColor: "#0585c1", color: "#000" }}
-            >
+             <Button variant="contained" disableElevation onClick={handleOpen}>
               Submit
             </Button>
+            <Modal open={open} onClose={handleClose}>
+              <div
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  backgroundColor: "#fff",
+                  padding: "20px",
+                }}
+              >
+                <ContactForm
+                  where={"quote"}
+                  style={{ transform: "scale(0.3)" }}
+                />
+              </div>
+            </Modal>
           </form>
         </Stack>
         {/* </FormControl> */}

@@ -4,6 +4,54 @@
   
 }
 
+#services {
+  margin-top: -80px;
+  margin-bottom: 30px;
+  color: #0e0e0e;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url('../public/nature-road-truck-field-wallpaper-preview.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative; /* Add relative positioning to create overlay */
+  display:flex;
+  align-self:flex-start;
+}
+
+#services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity (last value) as needed */
+  z-index: -1; /* Place the overlay behind the content */
+}
+
+.parallax-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url('../public/road-bridge-blur-port-wallpaper-preview.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; /* Adjust the height as needed */
+  width: 99vw;
+  overflow: hidden;
+}
+
+.parallax-content {
+  height: 100%; /* Match the height of the container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff; /* Text color on top of the background image */
+}
+
 section {
   display: grid;
   place-items: center;
