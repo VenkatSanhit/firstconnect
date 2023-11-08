@@ -98,8 +98,9 @@ const Footer = () => {
   <Container maxWidth="lg">
     <Box display="flex" alignItems="center" flexWrap="wrap">
       <Box flexBasis={{ xs: '80%', sm: '20%' }} mb={{ xs: 2, sm: 0 }}>
+      <a href="https://www.firstconnectworldwide.com/">
         <img
-          src="firstconnect.png"
+          src="Logo FCW.png"
           alt="Company Logo"
           style={{
             maxWidth: '80%',
@@ -108,6 +109,7 @@ const Footer = () => {
             marginRight: '20px',
           }}
         />
+        </a>
       </Box>
       <Box flexBasis={{ xs: '100%', sm: '25%' }} px={2}>
         <Typography variant="h6" gutterBottom style={{ color: '#000' }}>
@@ -135,15 +137,15 @@ const Footer = () => {
         <Typography variant="h6" gutterBottom style={{ color: '#000' }}>
           Follow Us
         </Typography>
-        <Link href="https://www.linkedin.com/company/first-connect-worldwide-llc/" color='#000' style={{ marginRight: '1rem' }}>
+        <Link href="https://www.linkedin.com/company/usa-first-connect-worldwide-llc/" color='#000' style={{ marginRight: '1rem' }}>
           <LinkedInIcon fontSize="large" />
         </Link>
         <Link href="https://www.facebook.com/" color='#000' style={{ marginRight: '1rem' }}>
           <FacebookIcon fontSize="large" />
         </Link>
-        <Link href="https://www.instagram.com/firstconnectworldwide_official/" color='#000' style={{ marginRight: '1rem' }}>
+        {/* <Link href="https://www.instagram.com/firstconnectworldwide_official/" color='#000' style={{ marginRight: '1rem' }}>
           <InstagramIcon fontSize="large" />
-        </Link>
+        </Link> */}
         <Link href="https://twitter.com/firstconne34166" color='#000'>
           <TwitterIcon fontSize="large" />
         </Link>
@@ -152,10 +154,10 @@ const Footer = () => {
     <Box mt={5} style={{ borderTop: '1px solid #000', paddingTop: '1rem' }}>
       <Typography variant="body2" color='#000' align="center">
         {"Copyright © "}
-        <Link color="inherit" href="https://your-website.com/">
+        <Link color="inherit" href="https://www.firstconnectworldwide.com/">
           First Connect 
         </Link>{" "}
-        {new Date().getFullYear()}
+        {new Date().getFullYear() - 1}
         {"."}
         <Link color="inherit" href="licence.pdf">
           Image Copyrights:licence.pdf

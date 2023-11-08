@@ -120,32 +120,23 @@ const Services = () => {
   const servicesData = [
     {
       title: "FTL & LTL",
-      imageSrc: "ftl-ltl.png",
+      imageSrc: "ltl &ftl.jpg",
       altText: "FTL & LTL",
       description: [
-        "First Connect Worldwide offers FTL shipping, an ideal choice that has an endless schedule and routing options. Full truckload shipping has the elements that are exactly what the name suggests; serves clients who need a dependable and monetary method to transport their homegrown shipments.",
-        "On the other hand, consolidation is the most widely recognized choice of modest shipments and Less than truckload shipment usually opts when goods can’t fill an entire truck. LTL shipments typically range from a few hundred to a few thousand pounds of truckload.",
-        "• Multiple shipments consolidated into a single truckload in LTL & Entire truckload dedicated to a single shipment in FTL.",
-        "• LTL is suitable for smaller shipments and FTL is suitable for larger shipments that occupy the entire trailer.",
-        "• LTL takes longer time to transport due to multiple stops for pickups and deliveries whereas FTL has faster transit times as the truck goes directly from pickup to delivery.",
-        "• LTL is priced based on factors such as weight, dimensions, density, and freight class but FTL price is based on factors such as distance, equipment required, and additional services.",
-        "• LTL is ideal for businesses with smaller shipments and cost-consciousness and FTL is ideal for time-sensitive shipments and when specific handling requirements are needed.",
+        "First Connect Worldwide offers two primary shipping options: Full Truckload (FTL) and Less than Truckload (LTL) shipping services to cater to the diverse needs of our clients.", 
+        "FTL, as the name suggests, is the choice for those who require a dependable and cost-effective method to transport larger shipments that occupy an entire truck. With FTL, you have the flexibility of an endless schedule and routing options, making it an ideal choice for time-sensitive shipments with specific handling requirements.",
+        "On the other hand, LTL is the most common choice for smaller and more budget-conscious shipments. It is designed for situations where goods cannot fill an entire truck. LTL shipments typically range from a few hundred to a few thousand pounds. Multiple LTL shipments can be consolidated into a single truckload, allowing for efficient use of space and cost-effectiveness.",
+        "It's important to note that LTL shipments, due to multiple stops for pickups and deliveries, may have longer transit times, whereas FTL shipments offer faster delivery as the truck travels directly from pickup to delivery. The pricing structure also differs between the two options. LTL rates are based on factors such as weight, dimensions, density, and freight class, while FTL pricing is determined by factors like distance, equipment requirements, and additional services.",
+        "In summary, LTL is an excellent choice for businesses with smaller shipments and a focus on cost savings, while FTL is the preferred option for larger shipments with a need for efficient and timely transportation. At First Connect Worldwide, we provide tailored solutions to meet the unique requirements of each shipment, ensuring that our clients receive the best service for their specific needs.",
       ],
       button: "Get a quote",
     },
     {
       title: "Drayage",
-      imageSrc: "drayage.png",
+      imageSrc: "drayage2.avif",
       altText: "Drayage",
       description: [
-        "First Connect Worldwide provides efficient and reliable drayage services to seamlessly move your cargo within a localized area or between nearby transportation hubs. Our drayage solutions are designed to ensure the smooth transition of goods from one point to another, covering short distances and connecting to various modes of transportation.",
-        "Our drayage services offer several advantages:",
-        "•	Local Expertise: We have a deep understanding of local routes, regulations, and terminals, allowing us to expedite your cargo's movement.",
-        "•	Intermodal Connections: We seamlessly connect your cargo between different modes of transportation, ensuring the efficient flow of goods.",
-        "•	Container Transport: Our drayage services include container handling, ensuring the safe and timely transfer of cargo between containers and transportation modes.",
-        "•	Efficiency and Speed: We prioritize speed and efficiency in our drayage operations, enabling quicker cargo movements and reducing downtime.",
-        "•	Custom Solutions: Tailored drayage solutions are available to meet your specific needs, whether you're transporting goods to or from a port, rail yard, or other facilities.",
-        "•	Safety and Compliance: We adhere to all safety and compliance standards to ensure your cargo reaches its destination securely and in accordance with regulations.",
+        "First Connect Worldwide specializes in efficient and reliable drayage services, seamlessly moving cargo within short distances, whether locally or between nearby transportation hubs. Our comprehensive solutions are designed to facilitate a smooth transition of goods and enable connections to various transportation modes. With in-depth knowledge of local routes, regulations, and terminals, we expedite cargo movement. We excel in intermodal connections, ensuring a continuous flow of goods between different transportation modes. Our services encompass container handling, prioritizing safe and punctual cargo transfer. Efficiency and speed are our focus, reducing cargo movement times and minimizing downtime. We offer customized drayage solutions to meet unique requirements, whether to or from a port, rail yard, or other facilities. Safety and regulatory compliance are paramount, ensuring secure and legally compliant cargo delivery. At First Connect Worldwide, count on us for efficient cargo transportation with a commitment to safety and compliance.",
       ],
       button: "Get a quote",
     },
@@ -159,23 +150,23 @@ const Services = () => {
       ],
       button: "Get a quote",
     },
-    {
-      title: "Intermodal Transport",
-      imageSrc: "intermodal.png",
-      altText: "Intermodal Transport",
-      description: [
-        "Our intermodal transportation services are characterized by our multi-channel transportation providers who are associated with a specific leg of the journey, typically crossing international borders in order to move cargo from one place in a country to another place in a different country. This approach allows us for efficient and seamless movement of goods across different modes, optimizing costs, transit times, and service quality. This process involves:",
-        "Origin Pickup",
-        "Rail or Barge Transport",
-        "Ocean or Air Transport",
-        "Destination Transfer",
-        "Final Delivery",
-      ],
-      button: "Get a quote",
-    },
+    // {
+    //   title: "Intermodal Transport",
+    //   imageSrc: "intermodal.png",
+    //   altText: "Intermodal Transport",
+    //   description: [
+    //     "Our intermodal transportation services are characterized by our multi-channel transportation providers who are associated with a specific leg of the journey, typically crossing international borders in order to move cargo from one place in a country to another place in a different country. This approach allows us for efficient and seamless movement of goods across different modes, optimizing costs, transit times, and service quality. This process involves:",
+    //     "Origin Pickup",
+    //     "Rail or Barge Transport",
+    //     "Ocean or Air Transport",
+    //     "Destination Transfer",
+    //     "Final Delivery",
+    //   ],
+    //   button: "Get a quote",
+    // },
     {
       title: "Routing",
-      imageSrc: "route.png",
+      imageSrc: "routing.jpeg",
       altText: "Routing",
       description: [
         "First Connect Worldwide offers cutting-edge routing services that determine the optimal route for transferring goods from the point of origin to the final destination.",
@@ -185,36 +176,22 @@ const Services = () => {
     },
     {
       title: "Flatbed Trucking",
-      imageSrc: "flat.png",
+      imageSrc: "flatbed.jpg",
       altText: "Flatbed Trucking",
       description: [
-        "First Connect Worldwide carefully engineered flatbed trucking solutions and advanced logistics technology and precise execution to deliver modified, client-driven flatbed trucking services. We oversee moves of fluctuating distance, adopting the same carefully tailored approach to each to execute without any blunder. This assessment helps determine the appropriate type and size of flatbed truck required for transportation.",
-        "We have the knowledge and abilities to evaluate your needs, plan the logistics, and guarantee legitimate load securing through Flatbed Trucking that includes:",
-        "•	Flatbed Trucking is used for transporting oversized, heavy, or irregularly shaped items.",
-        "•	Provides flexibility in loading and unloading cargo from the sides, rear, and top.",
-        "•	Flatbed trucks come in different sizes and weight capacities, depending on the truck's specifications and legal weight limits.",
-        "•	Specialized equipment, such as extendable trailers or removable gooseneck attachments, may be used for specific types of cargo.",
-        "•	Acquire additional permits and compliance with specific regulations for oversized or overweight loads.",
-        "•	Quicker loading and unloading times compared to enclosed trailers",
+        "First Connect Worldwide specializes in providing client-driven flatbed trucking services, meticulously engineered and executed with advanced logistics technology. Our approach remains consistent regardless of the distance involved, ensuring flawless execution every time. We begin with a thorough assessment to determine the ideal type and size of flatbed truck required for transportation.",
+        "Our expertise lies in evaluating your specific needs, planning logistics, and ensuring secure load handling through our Flatbed Trucking services. This option is chosen for transporting oversized, heavy, or irregularly shaped items and offers unparalleled flexibility in loading and unloading cargo from various angles. Flatbed trucks come in different sizes and weight capacities, tailored to cargo specifications and legal limits. We employ specialized equipment as needed, including extendable trailers and gooseneck attachments. Additionally, we handle permit acquisition and ensure compliance with regulations for oversized or overweight loads. With Flatbed Trucking, we offer efficient loading and unloading times compared to enclosed trailers. At First Connect Worldwide, we are dedicated to delivering customized and efficient flatbed trucking solutions to meet your unique transportation needs.",
       ],
       button: "Get a quote",
     },
     {
       title: "Broker & Forwarder Enterprise",
-      imageSrc: "enterprise.png",
+      imageSrc: "Broker and Forwarder Enterprise Services.avif",
       altText: "Broker & Forwarder Enterprise",
       description: [
-        "Our Broker and Forwarder Enterprise Services encompass both brokerage and forwarding functions, providing end-to-end management of the logistics process where the broker serves as a liaison between shippers and carriers. We influence their network and industry skills to find reasonable carriers for the specific transportation needs of shippers.",
-        "Through our advanced technology and expertise, we offer supply chain visibility to our clients by managing various forwarding services through air freight, ocean freight, road transport, and intermodal solutions. While brokers essentially center around connecting shippers with carriers and negotiating rates, forwarders adopt a more comprehensive approach, managing the entire logistics process.",
-        "In addition, we as Freight Forwarders and Brokers can also offer services that include:",
-        "•	Customs entry clearance",
-        "•	Trade documentation",
-        "•	Insurance Maintenance",
-        "•	Supply chain management",
-        "•	The coordination of Customs exams",
-        "•	Customs bonds",
-        "•	Duty drawbacks and reconciliation",
-        "•	Advice and guidance with government audits",
+        "First Connect Worldwide's Broker and Forwarder Enterprise Services seamlessly combine the roles of brokerage and forwarding to provide comprehensive logistics management. Acting as a vital link between shippers and carriers, our brokers leverage their extensive network and industry expertise to identify cost-effective carriers that precisely match the transportation requirements of shippers.",
+        "Our advanced technology and deep-rooted expertise extend to managing various forwarding services encompassing air freight, ocean freight, road transport, and intermodal solutions. While brokers primarily focus on connecting shippers with carriers and rate negotiation, forwarders adopt a holistic approach, overseeing the entire logistics process.",
+        "In addition to these core functions, as Freight Forwarders and Brokers, we offer a spectrum of additional services, including customs entry clearance, trade documentation, insurance maintenance, supply chain management, coordination of customs exams, customs bonds, duty drawbacks, reconciliation, and expert guidance during government audits. Our integrated approach ensures that our clients benefit from end-to-end logistics solutions tailored to their specific needs.",
       ],
       button: "Get a quote",
     },
@@ -235,6 +212,17 @@ const Services = () => {
       description: [
         "We used to expedite the transportation cycle through cross-docking techniques and strategies in our logistics management and operations that included unloading incoming delivery vehicles and loading the materials directly into outbound delivery vehicles, omitting traditional warehouse logistical practices.",
         "Cross-docking empowers us to execute faster order processing and delivery. Goods can be transferred directly from incoming shipments to outbound vehicles, prompting shorter lead times and improved client satisfaction. At First Connect Worldwide, we have the network, the viable experience, and the industry expertise - together with a robust communications infrastructure.",
+      ],
+      button: "Get a quote",
+    },
+    {
+      title: "Dry Van Trucking Services",
+      imageSrc: "dock.png",
+      altText: "Dry Van Trucking Services",
+      description: [
+        "First Connect Worldwide is your trusted provider of dry van hauling services, with a strong preference for dedicated loads to ensure consistency in transportation. We proudly serve clients across the country, specializing in the repetitive movement of a wide range of items ideally suited for traditional or expedited dry van trucking solutions.",
+        "Our expertise covers the transportation of diverse cargo types, including heat-resistant raw materials, automotive and construction parts, paper and plastic household supplies, non-perishable food and beverages, heat-resistant electronics, furniture, home décor, textiles, and retail-ready clothing. We take pride in streamlining the fragmented truckload market to offer a simplified and reliable experience, even in the face of unforeseen challenges.",
+        "Our dry van trucking strategies are designed to meet your specific needs, offering comprehensive transportation, efficient route planning, real-time tracking and communication, flexibility for customization, unwavering regulatory compliance, and the capabilities for both long-haul and short-haul transportation. At First Connect Worldwide, we ensure the secure and efficient transport of your cargo, no matter the requirements",
       ],
       button: "Get a quote",
     },
@@ -345,12 +333,12 @@ const Services = () => {
             className="service-card"
             onClick={() => handleCardClick(service.description)}
             sx={{
-              backgroundColor: "#D6E5E3", 
+              backgroundColor: "#D6E5E3",
               borderRadius: "30px",
               // maxWidth: 345,
             }}
           >
-            <CardMedia
+            {/* <CardMedia
               component="img"
               className="card-image"
               image={service.imageSrc}
@@ -360,6 +348,16 @@ const Services = () => {
                 maxHeight: 200,
                 marginTop: 4,
                 marginLeft: 3,
+              }} */}
+
+            <CardMedia
+              component="img"
+              className="card-image"
+              image={service.imageSrc}
+              alt={service.altText}
+              sx={{
+                maxWidth: 300,
+                maxHeight: 900,
               }}
             />
             {/* <Box className="card-content"> */}
@@ -377,13 +375,14 @@ const Services = () => {
               <p
                 style={{
                   textAlign: "justify",
+                  textAlignLast: "center",
                   marginRight: 40,
                   marginLeft: 20,
                 }}
               >
                 {service.description}
               </p>
-              <Button variant="contained" disableElevation onClick={handleOpen}>
+              {/* <Button variant="contained" disableElevation onClick={handleOpen}>
                 Get a Quote
               </Button>
               <Modal open={open} onClose={handleClose}>
@@ -402,7 +401,7 @@ const Services = () => {
                     style={{ transform: "scale(0.3)" }}
                   />
                 </div>
-              </Modal>
+              </Modal> */}
             </CardContent>
             {/* </Box> */}
           </Card>

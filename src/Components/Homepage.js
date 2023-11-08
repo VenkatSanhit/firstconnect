@@ -148,7 +148,7 @@ const Homepage = () => {
                     from different locations by gathering goods from diverse
                     locations, providing a seamless experience for customers.
                   </p>
-                  <Button
+                  {/* <Button
                     variant="contained"
                     disableElevation
                     onClick={handleOpen}
@@ -171,7 +171,7 @@ const Homepage = () => {
                         style={{ transform: "scale(0.3)" }}
                       />
                     </div>
-                  </Modal>
+                  </Modal> */}
                 </div>
               </div>
             </div>
@@ -196,7 +196,7 @@ const Homepage = () => {
                     warehouses, regional/national distribution centers in a
                     dedicated or shared environment.
                   </p>
-                  <Button
+                  {/* <Button
                     variant="contained"
                     disableElevation
                     onClick={handleOpen}
@@ -219,7 +219,7 @@ const Homepage = () => {
                         style={{ transform: "scale(0.3)" }}
                       />
                     </div>
-                  </Modal>
+                  </Modal> */}
                 </div>
               </div>
             </div>
@@ -371,7 +371,7 @@ const Homepage = () => {
             <h1 style={{ color: "#89B4AE" }}>Have any questions?</h1>
             <h3 style={{ color: "#0585c1" }}>We would love to help!</h3>
             <p style={{ fontWeight: "normal" }}>
-              USA:24 Commerce St #434, Newark, NJ 07102, United States
+              24 Commerce St #434, Newark, NJ 07102, United States
             </p>
           </div>
           <form>

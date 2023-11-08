@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import './Navbar.css'; // Import your CSS file
+import React, { useState } from "react";
+import "./Navbar.css"; // Import your CSS file
 import ContactForm from "./Form";
-import {Modal} from "@mui/material";
+import { Modal, Button } from "@mui/material";
 
 function YourNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,11 +22,15 @@ function YourNavbar() {
 
   return (
     <nav className="navbar fixed-navbar">
-      <div className="navbar-logo">
-        <img src="firstconnect.png" alt="Logo" />
-      </div>
+      <a href="https://www.firstconnectworldwide.com/" className="navbar-logo">
+        <img src="Logo FCW.png" alt="Logo" />
+      </a>
+      {/* <div className="navbar-logo">
+        <img src="Logo FCW.png" alt="Logo" />
+        <a href="https://www.firstconnectworldwide.com/"></a>
+      </div> */}
       <div className="navbar-links">
-        <a href variant="contained" disableElevation onClick={handleOpen} >Shippers</a>
+        {/* <a href variant="contained" disableElevation onClick={handleOpen} >Shippers</a>
         <Modal open={open} onClose={handleClose}>
               <div
                 style={{
@@ -43,9 +47,9 @@ function YourNavbar() {
                   style={{ transform: "scale(0.3)" }}
                 />
               </div>
-            </Modal>
+            </Modal> */}
 
-        <a href variant="contained" disableElevation onClick={handleOpen}>Carriers</a>
+        {/* <a href variant="contained" disableElevation onClick={handleOpen}>Carriers</a>
         <Modal open={open} onClose={handleClose}>
               <div
                 style={{
@@ -62,18 +66,84 @@ function YourNavbar() {
                   style={{ transform: "scale(0.3)" }}
                 />
               </div>
-            </Modal>
+            </Modal> */}
 
         <a href="/services">Services</a>
         <a href="/industries">Industries</a>
-        <div className="dropdown">
+        <a href variant="contained" disableElevation onClick={handleOpen}>
+          Contact Us
+        </a>
+        <Modal open={open} onClose={handleClose}>
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              backgroundColor: "#fff",
+              padding: "20px",
+            }}
+          >
+            <ContactForm where={"quote"} style={{ transform: "scale(0.3)" }} />
+          </div>
+        </Modal>
+
+        <Button
+          variant="contained"
+          disableElevation
+          onClick={handleOpen}
+          className="get-quote-button"
+          style={{ marginRight: "40px" }}
+        >
+          Careers
+        </Button>
+        <Modal open={open} onClose={handleClose}>
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              backgroundColor: "#fff",
+              padding: "20px",
+            }}
+          >
+            <ContactForm where={"quote"} style={{ transform: "scale(0.3)" }} />
+          </div>
+        </Modal>
+
+        <Button
+          variant="contained"
+          disableElevation
+          onClick={handleOpen}
+          className="get-quote-button"
+          style={{ marginRight: "40px" }}
+        >
+          Get a Quote
+        </Button>
+
+        <Modal open={open} onClose={handleClose}>
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              backgroundColor: "#fff",
+              padding: "20px",
+            }}
+          >
+            <ContactForm where={"quote"} style={{ transform: "scale(0.3)" }} />
+          </div>
+        </Modal>
+
+        {/* <div className="dropdown">
           <a className="company-link" onClick={toggleMenu}>
             Company
-          </a>
-          <div className={`dropdown-content ${isMenuOpen ? 'open' : ''}`}>
-            <a href="/">Contact us</a>
-            <a href variant="contained" disableElevation onClick={handleOpen}>Career</a>
-            <Modal open={open} onClose={handleClose}>
+          </a> */}
+        {/* <div className={`dropdown-content ${isMenuOpen ? "open" : ""}`}> */}
+        {/* <a href variant="contained" disableElevation onClick={handleOpen}>Career</a> */}
+        {/* <Modal open={open} onClose={handleClose}>
               <div
                 style={{
                   position: "absolute",
@@ -89,11 +159,10 @@ function YourNavbar() {
                   style={{ transform: "scale(0.3)" }}
                 />
               </div>
-            </Modal>
-
-          </div>
-        </div>
+            </Modal> */}
       </div>
+      {/* </div> */}
+      {/* </div> */}
     </nav>
   );
 }
