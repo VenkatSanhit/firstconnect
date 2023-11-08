@@ -99,17 +99,17 @@ section {
   /* background-color: #f9f9f9;   */
 
 /* Icons */
-  /* .card-image {
+  .card-image {
     flex: 0; 
     margin-right: 20px; 
     align-self: flex-start; 
-  } */
-
-  .card-image {
-    flex: 0; /* Adjust the image container width to your desired size */
-    margin-right: 20px; /* Add spacing between image and text */
-    /* align-self: flex-start;  */
   }
+
+  /* .card-image {
+    flex: 0; 
+    margin-right: 20px;
+    align-self: flex-start; 
+  } */
   
   
   /* .card-image img {

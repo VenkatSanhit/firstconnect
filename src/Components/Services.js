@@ -120,10 +120,10 @@ const Services = () => {
   const servicesData = [
     {
       title: "FTL & LTL",
-      imageSrc: "ltl &ftl.jpg",
+      imageSrc: "ftl-ltl.png",
       altText: "FTL & LTL",
       description: [
-        "First Connect Worldwide offers two primary shipping options: Full Truckload (FTL) and Less than Truckload (LTL) shipping services to cater to the diverse needs of our clients.", 
+        "First Connect Worldwide offers two primary shipping options: Full Truckload (FTL) and Less than Truckload (LTL) shipping services to cater to the diverse needs of our clients.",
         "FTL, as the name suggests, is the choice for those who require a dependable and cost-effective method to transport larger shipments that occupy an entire truck. With FTL, you have the flexibility of an endless schedule and routing options, making it an ideal choice for time-sensitive shipments with specific handling requirements.",
         "On the other hand, LTL is the most common choice for smaller and more budget-conscious shipments. It is designed for situations where goods cannot fill an entire truck. LTL shipments typically range from a few hundred to a few thousand pounds. Multiple LTL shipments can be consolidated into a single truckload, allowing for efficient use of space and cost-effectiveness.",
         "It's important to note that LTL shipments, due to multiple stops for pickups and deliveries, may have longer transit times, whereas FTL shipments offer faster delivery as the truck travels directly from pickup to delivery. The pricing structure also differs between the two options. LTL rates are based on factors such as weight, dimensions, density, and freight class, while FTL pricing is determined by factors like distance, equipment requirements, and additional services.",
@@ -133,7 +133,7 @@ const Services = () => {
     },
     {
       title: "Drayage",
-      imageSrc: "drayage2.avif",
+      imageSrc: "drayage.png",
       altText: "Drayage",
       description: [
         "First Connect Worldwide specializes in efficient and reliable drayage services, seamlessly moving cargo within short distances, whether locally or between nearby transportation hubs. Our comprehensive solutions are designed to facilitate a smooth transition of goods and enable connections to various transportation modes. With in-depth knowledge of local routes, regulations, and terminals, we expedite cargo movement. We excel in intermodal connections, ensuring a continuous flow of goods between different transportation modes. Our services encompass container handling, prioritizing safe and punctual cargo transfer. Efficiency and speed are our focus, reducing cargo movement times and minimizing downtime. We offer customized drayage solutions to meet unique requirements, whether to or from a port, rail yard, or other facilities. Safety and regulatory compliance are paramount, ensuring secure and legally compliant cargo delivery. At First Connect Worldwide, count on us for efficient cargo transportation with a commitment to safety and compliance.",
@@ -166,7 +166,7 @@ const Services = () => {
     // },
     {
       title: "Routing",
-      imageSrc: "routing.jpeg",
+      imageSrc: "route.png",
       altText: "Routing",
       description: [
         "First Connect Worldwide offers cutting-edge routing services that determine the optimal route for transferring goods from the point of origin to the final destination.",
@@ -176,7 +176,7 @@ const Services = () => {
     },
     {
       title: "Flatbed Trucking",
-      imageSrc: "flatbed.jpg",
+      imageSrc: "flat.png",
       altText: "Flatbed Trucking",
       description: [
         "First Connect Worldwide specializes in providing client-driven flatbed trucking services, meticulously engineered and executed with advanced logistics technology. Our approach remains consistent regardless of the distance involved, ensuring flawless execution every time. We begin with a thorough assessment to determine the ideal type and size of flatbed truck required for transportation.",
@@ -344,10 +344,8 @@ const Services = () => {
               image={service.imageSrc}
               alt={service.altText}
               sx={{
-                maxWidth: 200,
-                maxHeight: 200,
-                marginTop: 4,
-                marginLeft: 3,
+                maxWidth: 300,
+                maxHeight: 900,
               }} */}
 
             <CardMedia
@@ -356,8 +354,10 @@ const Services = () => {
               image={service.imageSrc}
               alt={service.altText}
               sx={{
-                maxWidth: 300,
-                maxHeight: 900,
+                maxWidth: 200,
+                maxHeight: 200,
+                marginTop: 4,
+                marginLeft: 3,
               }}
             />
             {/* <Box className="card-content"> */}
