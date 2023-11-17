@@ -66,14 +66,18 @@
 .tagline {
   color: #ffffff;
   font-size: 50px;
-  /* font-weight: 500; */
+  font-weight: 500;
   line-height: 62.5px;
+  text-align: left;
+  margin-top: 10%; 
+  padding: 0;
+  width: 90%;
 }
 
 .tagline p {
 color: #ffffff;
 text-align: left;
-width: 80%;
+/* width: 70%; */
 }
 
 
@@ -81,19 +85,19 @@ width: 80%;
   width: 99vw;
   height: 100vh;
   display:flex;
-  background-color: #3b3b3c;
-  /* background-color: #f8f8f5; */
+  /* background-color: #3b3b3c; */
+  background-color: #CED4DA;
   /* background-color: #2b76c3; */
   /* background-color: #accbe8; */
 }
 
-#projects,
+/* #projects,
 #contact {
   color: #3b3b3c;
   background: #eaf2fa;
-}
+} */
 
-.nav {
+/* .nav {
   display: flex;
   align-items: center;
   position: -webkit-sticky;
@@ -124,7 +128,7 @@ width: 80%;
   flex-flow: row nowrap;
   padding-left: 50px;
   flex: 1;
-}
+} */
 
 
 /* // links // */
@@ -141,7 +145,7 @@ width: 80%;
 
 .nav-links a {
   text-decoration: none;
-  color: #D6E5E3;
+  color: #CED4DA;
   transition: color 0.3s;
 }
 
@@ -153,7 +157,7 @@ width: 80%;
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #D6E5E3;
+  background-color: #CED4DA;
   min-width: 120px;
   z-index: 1;
 }
@@ -163,7 +167,7 @@ width: 80%;
 }
 
 .dropdown-content a {
-  color: #D6E5E3;
+  color: #CED4DA;
   padding: 8px 12px;
   text-decoration: none;
   display: block;
@@ -222,9 +226,9 @@ li:hover {
   /* background-color: #ffffff;  */
   /* background-color: #accbe8; */
   /* background-color: #3a7590; */
-  /* background-color: #1d1300; */
+  background-color: #CED4DA;
   /* background-color: #747474;  */
-  background-color: #D6E5E3;
+  /* background-color: #D6E5E3; */
   /* background-color: #87CEFA; */
   /* background-color: #B9E2FC; */
   /* background-color: #5CA0CB; */
@@ -277,8 +281,9 @@ li:hover {
 /* left */
 .fullPageLeft {
   flex: 1; 
-  /* background-color: #D6E5E3;  */
-  background-color: #ffffff;
+  background-color: #CED4DA; 
+  /* background-color: #E9ECEF; */
+  /* background-color: #ffffff; */
   border-radius: 8px; 
   padding: 16px; 
   display: flex;
@@ -295,8 +300,8 @@ li:hover {
 .carrier {
   display: flex;
   align-items: center;
-  /* background-color: #ffffff; */
-  background-color: #D6E5E3;
+  background-color: #ffffff;
+  /* background-color: #D6E5E3; */
   /* background-color: #faf8ea; */
   /* background-color:#f8f8f5; */
   border-radius: 8px;
@@ -353,7 +358,8 @@ li:hover {
 /* right */
 .fullPageRight {
   flex: 1; 
-  background-color: #D6E5E3;
+  background-color: #CED4DA;
+  /* background-color: #E9ECEF; */
   border-radius: 8px; /* Add rounded corners for a smoother look */
   padding: 16px; /* Add padding inside the box */
   display: flex; 
@@ -469,12 +475,10 @@ li:hover {
 .services{
   /* background-color:#768b9f; */
   /* background-color:  #4a5e71;  */
-  background-color:#D6E5E3;
+  /* background-color:#D6E5E3; */
   /* background-color: #516067; */
-  /* background: linear-gradient(to bottom, #0e0e0e, #f8f8f5); */
-  /* background: linear-gradient(to bottom, #0e0e0e, #bfbfbd); */
-  /* background: linear-gradient(to bottom, #0e0e0e, #0585c1); */
-  /* background-color: #0e0e0e; */
+  /* background-color: #CED4DA; */
+  background-color: #E9ECEF;
   /* background-color: #3b3b3c; */
   padding: 20px;
   text-align: center;
@@ -498,8 +502,9 @@ li:hover {
 .industries {
   /* background-color:  #4a5e71;  */
   /* background-color:#ffffff; */
-  /* background-color:  #768b9f; */
-  background-color: #D6E5E3;
+  /* background-color:  #CED4DA; */
+  background-color: #E9ECEF;
+  /* background-color: #D6E5E3; */
   /* background-color: #3a7590; */
   /* background-color: #0e0e0e; */
   /* background: linear-gradient(to bottom, #0e0e0e, #0585c1); */
@@ -604,7 +609,7 @@ li:hover {
   /* color: #3a7590; */
   height: 100%;
   /* background: #f8f8f5; */
-  background: #D6E5E3;
+  background: #CED4DA;
 }
 
 .carousel .slide img {
@@ -613,7 +618,7 @@ li:hover {
 }
 
 .myCarousel {
-  background: #D6E5E3;
+  background: #CED4DA;
   margin-top: -6%;
   width: 54%;
   margin-left: auto;
@@ -733,20 +738,22 @@ li:hover {
   gap: 20px; /* Add spacing between the two divs */
   padding: 20px; /* Add padding around the content */
   /* background-color: #ffffff;  */
-  background-color: #D6E5E3;
+  background-color: #CED4DA;
   border-radius: 8px; /* Add rounded corners for a smoother look */
   margin-bottom: 0;
 }
 
 .testiUpperhalf {
-  background-color: #D6E5E3; /* White background color for the upper half */
+  background-color: #CED4DA; /* White background color for the upper half */
   padding: 20px; /* Add padding inside the upper half */
   border-radius: 8px; /* Add rounded corners for a smoother look */
 }
 
 .testiLowerhalf {
-  background-color: #0585c1; 
-  color: #fff; /* White text */
+  /* background-color: #DEE2E6;  */
+  background-color: #CED4DA;
+  /* color: #000;  */
+  color: #0585c1;
   display: flex;
   justify-content: space-between; /* To evenly distribute items */
   padding: 20px; /* Add some padding to improve spacing */

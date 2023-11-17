@@ -298,7 +298,8 @@ const Industries = () => {
                     // backgroundColor:"#A8DADC",
                     // backgroundColor:"#f8f8f5",
                     // backgroundColor:"#F8F8F5",
-                    backgroundColor: "#D6E5E3",
+                    // backgroundColor: "#D6E5E3",
+                    backgroundColor: "#CED4DA",
                     borderRadius: "20px",
                   }}
                 >

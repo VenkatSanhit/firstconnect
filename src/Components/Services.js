@@ -176,7 +176,7 @@ const Services = () => {
     },
     {
       title: "Flatbed Trucking",
-      imageSrc: "flat.png",
+      imageSrc: "flatbed.png",
       altText: "Flatbed Trucking",
       description: [
         "First Connect Worldwide specializes in providing client-driven flatbed trucking services, meticulously engineered and executed with advanced logistics technology. Our approach remains consistent regardless of the distance involved, ensuring flawless execution every time. We begin with a thorough assessment to determine the ideal type and size of flatbed truck required for transportation.",
@@ -186,7 +186,7 @@ const Services = () => {
     },
     {
       title: "Broker & Forwarder Enterprise",
-      imageSrc: "Broker and Forwarder Enterprise Services.avif",
+      imageSrc: "fbroker.png",
       altText: "Broker & Forwarder Enterprise",
       description: [
         "First Connect Worldwide's Broker and Forwarder Enterprise Services seamlessly combine the roles of brokerage and forwarding to provide comprehensive logistics management. Acting as a vital link between shippers and carriers, our brokers leverage their extensive network and industry expertise to identify cost-effective carriers that precisely match the transportation requirements of shippers.",
@@ -217,7 +217,7 @@ const Services = () => {
     },
     {
       title: "Dry Van Trucking Services",
-      imageSrc: "dock.png",
+      imageSrc: "dryvan.png",
       altText: "Dry Van Trucking Services",
       description: [
         "First Connect Worldwide is your trusted provider of dry van hauling services, with a strong preference for dedicated loads to ensure consistency in transportation. We proudly serve clients across the country, specializing in the repetitive movement of a wide range of items ideally suited for traditional or expedited dry van trucking solutions.",
@@ -326,14 +326,15 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="service-cards-container" color="#D6E5E3">
+      <div className="service-cards-container" color="#CED4DA">
         {servicesData.map((service, i) => (
           <Card
             key={i}
             className="service-card"
             onClick={() => handleCardClick(service.description)}
             sx={{
-              backgroundColor: "#D6E5E3",
+              // backgroundColor: "#D6E5E3",
+              backgroundColor: "#CED4DA",
               borderRadius: "30px",
               // maxWidth: 345,
             }}

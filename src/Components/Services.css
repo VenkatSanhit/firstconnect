@@ -52,6 +52,23 @@
   color: #fff; /* Text color on top of the background image */
 }
 
+.tagline {
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 62.5px;
+  text-align: left;
+  margin-top: 10%; 
+  padding: 0;
+  width: 90%;
+}
+
+.tagline p {
+color: #ffffff;
+text-align: left;
+/* width: 70%; */
+}
+
 section {
   display: grid;
   place-items: center;

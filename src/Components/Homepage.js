@@ -368,9 +368,9 @@ const Homepage = () => {
         {/* <FormControl> */}
         <Stack spacing={2} direction="row" sx={{ margin: 4 }}>
           <div className="questiontag">
-            <h1 style={{ color: "#89B4AE" }}>Have any questions?</h1>
+            <h1 style={{ color: "#6C757D" }}>Have any questions?</h1>
             <h3 style={{ color: "#0585c1" }}>We would love to help!</h3>
-            <p style={{ fontWeight: "normal" }}>
+            <p style={{ color: "#6C757D", fontWeight: "normal" }}>
               24 Commerce St #434, Newark, NJ 07102, United States
             </p>
           </div>
