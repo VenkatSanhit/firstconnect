@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,6 +13,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import database from '../firebase';
+import { useParams } from "react-router-dom";
+
 const initialFormValues = {
     fullName: "",
     email: "",
@@ -23,7 +25,15 @@ const initialFormValues = {
 const defaultTheme = createTheme();
 export const ContactForm = (where) => 
 {
-    const handleSubmit = (event) => {
+  const [word, setWord] = useState(false);
+  console.log(useParams());
+  let {search} = useParams();
+  if(typeof(search)==undefined || search==undefined){
+    search = ''
+  }
+  console.log(search);
+  
+  const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         // pushing data to realtime dataabse

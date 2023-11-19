@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Navbar.css"; // Import your CSS file
 import ContactForm from "./Form";
 import { Modal, Button } from "@mui/material";
+import { Co2Sharp } from "@mui/icons-material";
 
 function YourNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -82,15 +83,35 @@ function YourNavbar() {
           </div>
         </Modal>
 
-        <Button
+
+        {/* <a href="/ContactForm/career"
           variant="contained"
           disableElevation
-          onClick={handleOpen}
-          className="get-quote-button"
-          style={{ marginRight: "40px" }}
-        >
+          // onClick={handleOpen}
+          style={{
+            cursor: "pointer",
+            textDecoration: "none",
+            color: "#000",
+          }}>
           Careers
-        </Button>
+        </a> */}
+        
+        <Button
+  variant="contained"
+  disableElevation
+  component="a"
+  href="/ContactForm/career"
+  style={{
+    cursor: "pointer",
+    textDecoration: "none",
+    textAlign: "center",
+    color: "#fff",
+    padding: "8px 20px",
+  }}
+>
+  Careers
+</Button>
+
         <Modal open={open} onClose={handleClose}>
           <div
             style={{
