@@ -120,8 +120,8 @@ text-align: left;
   margin-top: 10px;
 } 
 
-.parallax-container {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url('../public/road-bridge-blur-port-wallpaper-preview.jpg');
+.parallax-containers {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url('../public/Industries.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

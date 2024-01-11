@@ -42,7 +42,7 @@
 }
 
 
-.parallax-container {
+.home-container {
   background-image:linear-gradient(rgba(10, 10, 10, 0.45), rgba(10, 10, 10, 0.45)), url('../public/nature-road-truck-field-wallpaper-preview.jpg');
   background-attachment: fixed;
   background-position: center;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Homepage.css";
 import Fullpage, {
   FullPageSections,
@@ -28,6 +28,7 @@ import { Box } from "@mui/material";
 // import { Container, Grid, Typography, Link, Box } from '@material-ui/core';
 import Footer from "./Footer.js";
 import ContactForm from "./Form";
+import { Helmet } from "react-helmet";
 
 const Homepage = () => {
   const fstyle = {
@@ -65,13 +66,89 @@ const Homepage = () => {
     setOpen(false);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="App">
+    <div className='App'>
+      <Helmet>
+        <meta name='description' content='Your meta description' />
+
+        <meta
+          name='description'
+          content='top logistic company, 3pl, best freight brokers, transportation services, USA &amp; CANADA,
+road freight, rail freight, logistic company in newark New Jersey'
+        />
+
+        <meta
+          name='abstract'
+          content='top logistic company, 3pl, best freight brokers, transportation services, USA &amp; CANADA,
+road freight, rail freight, logistic company in newark New Jersey'
+        />
+
+        <meta
+          name='keywords'
+          content='first connect, first connect world, best freight forwarding companies,transportation services,
+forwarder companies, Freight broker, logistic company near me, logistic company, global freight services, freight broker near me,
+global forwarding, trucking, shipping, freight forwarder, top 10 freight brokers in usa, international shipping, trucks, trucking,
+ship truckload, full truckload, LTL, 3PL, freight brokers, cross docking, top logistics companies, truckload transportation, 
+quality logistics, intermodal, truckload shipping, ltl shipping, intermodal shipping, less-than-truckload, careers, jobs, 
+ocean/air, ocean & air shipping, careers, jobs, sales jobs, sales careers, logistics careers, less-than-truckload shipping,
+less-than-truckload shipments, logistics jobs, sales careers, shipping, shipments, truckload freight, logistics careers.'
+        />
+
+        <meta
+          property='og:url'
+          content='https://www.firstconnectworldwide.com'
+        />
+
+        <meta name='author' content='firstconnectworldwide' />
+        <meta name='author' content='firstconnectworldwidellc' />
+        <meta
+          property='og:title'
+          content='3pl company | logistic company | freight broker'
+        />
+        <meta
+          name='google-site-verification'
+          content='q6z9g0NUwdZRV_M2xH8uT3QUimHMR59n5JLZXeQlPjk'
+        />
+        <meta name='MobileOptimized' content='width' />
+        <meta name='HandheldFriendly' content='true' />
+        <meta name='distribution' content='global' />
+        <meta name='geo.region' content='IN-New Jersey' />
+        <meta name='geo.placename' content='Newark' />
+        <meta name='robots' content='index, follow' />
+        <meta name='language' content='english' />
+        <meta name='copyright' content='first connect worldwide' />
+        <meta
+          id='subject'
+          name='subject'
+          content='first connect worldwide in Newark, New Jersey'
+        />
+        <meta id='geography' name='geography' content='Newark' />
+        <meta id='document-type' name='document-type' content='public' />
+        <meta id='Revisit-After' name='Revisit-After' content='1 day' />
+        <meta id='city' name='city' content='Newark, New Jersey' />
+        <meta id='country' name='country' content='USA' />
+        <meta id='audience' name='audience' content='All, Business' />
+        <meta id='googlebot' name='googlebot' content='index, follow' />
+        <meta id='rating' name='rating' content='general' />
+        <meta property='og:image:secure_url' content='' />
+        <meta property='og:image:width' content='600' />
+        <meta property='og:image:height' content='600' />
+        <meta property='og:type' content='website' />
+        <meta
+          property='og:site_name'
+          content='first connect worldwide in Newark, New Jersey'
+        />
+        {/* <base href='https://www.firstconnectworldwide.com' /> */}
+      </Helmet>
       <Navbar hh={true} />
-      <section id="home">
-        <div class="parallax-container">
-          <div class="parallax-content">
-            <div className="tagline">
+      <section id='home'>
+        <div class='home-container'>
+          <div class='parallax-content'>
+            <div className='tagline'>
               <p>
                 Navigating Excellence, Beyond Borders.
                 <br />
@@ -79,7 +156,7 @@ const Homepage = () => {
                 <br />
                 Connecting Logistics To Precision.
               </p>
-              <Button variant="contained" disableElevation onClick={handleOpen}>
+              <Button variant='contained' disableElevation onClick={handleOpen}>
                 Get a Quote
               </Button>
               <Modal open={open} onClose={handleClose}>
@@ -103,10 +180,10 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-      <section id="about">
-        <div class="fullPage">
-          <div class="fullPageTop">
-            <div className="about-content">
+      <section id='about'>
+        <div class='fullPage'>
+          <div class='fullPageTop'>
+            <div className='about-content'>
               <h1>About Us</h1>
               <p>
                 We are First Connect Worldwide LLC, a licensed freight brokering
@@ -126,16 +203,16 @@ const Homepage = () => {
               </p>
             </div>
           </div>
-          <div class="fullPageBottom">
-            <div class="fullPageLeft">
-              <div className="left-image">
+          <div class='fullPageBottom'>
+            <div class='fullPageLeft'>
+              <div className='left-image'>
                 <img
-                  src="caleb-ruiter-EmEQ6kK_5P0-unsplash (1).jpg"
-                  alt="Carrier-Image"
+                  src='caleb-ruiter-EmEQ6kK_5P0-unsplash (1).jpg'
+                  alt='Carrier-Image'
                 />
               </div>
-              <div className="carrier">
-                <div className="text-content">
+              <div className='carrier'>
+                <div className='text-content'>
                   <h1>For Carriers</h1>
                   <p>
                     We offer temperature-controlled carriers to keep up with
@@ -175,15 +252,15 @@ const Homepage = () => {
                 </div>
               </div>
             </div>
-            <div class="fullPageRight">
-              <div className="leftr-image">
+            <div class='fullPageRight'>
+              <div className='leftr-image'>
                 <img
-                  src="mitchell-luo-YhoXp0AdEWc-unsplash (1).jpg"
-                  alt="Shipper-Image"
+                  src='mitchell-luo-YhoXp0AdEWc-unsplash (1).jpg'
+                  alt='Shipper-Image'
                 />
               </div>
-              <div className="shipper">
-                <div className="text-content">
+              <div className='shipper'>
+                <div className='text-content'>
                   <h1>For Shipper</h1>
                   <p>
                     Our platforms synchronize inventory across various channels
@@ -226,9 +303,9 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-      <section id="SandI">
-        <div className="container">
-          <div className="services">
+      <section id='SandI'>
+        <div className='container'>
+          <div className='services'>
             <div>
               <h1>Our Services</h1>
               <p>
@@ -247,9 +324,9 @@ const Homepage = () => {
                 to be your preferred logistics partner, delivering reliable and
                 efficient services that drive your business forward.
               </p>
-              <button className="cta-button-L">
+              <button className='cta-button-L'>
                 <a
-                  href="/services"
+                  href='/services'
                   style={{
                     color: "#0e0e0e",
                     textDecoration: "none",
@@ -261,7 +338,7 @@ const Homepage = () => {
               </button>
             </div>
           </div>
-          <div className="industries">
+          <div className='industries'>
             <div>
               <h1>Industries We Serve</h1>
               <p>
@@ -278,9 +355,9 @@ const Homepage = () => {
                 ideal shipments, helping businesses thrive in their respective
                 domains.
               </p>
-              <button className="cta-button-L">
+              <button className='cta-button-L'>
                 <a
-                  href="/industries"
+                  href='/industries'
                   style={{
                     color: "#0e0e0e",
                     textDecoration: "none",
@@ -294,8 +371,8 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-      <section id="testimonials">
-        <div className="testiUpperhalf">
+      <section id='testimonials'>
+        <div className='testiUpperhalf'>
           <Carousel
             showArrows={true}
             infiniteLoop={true}
@@ -305,7 +382,7 @@ const Homepage = () => {
             interval={6100}
           >
             <div>
-              <div className="myCarousel">
+              <div className='myCarousel'>
                 <h3>Patricai</h3>
                 <h4>Drayage Coordinator</h4>
                 <p>
@@ -318,7 +395,7 @@ const Homepage = () => {
             </div>
 
             <div>
-              <div className="myCarousel">
+              <div className='myCarousel'>
                 <h3>Arnold</h3>
                 <h4>Logistics Coordinator</h4>
                 <p>
@@ -330,7 +407,7 @@ const Homepage = () => {
             </div>
 
             <div>
-              <div className="myCarousel">
+              <div className='myCarousel'>
                 <h3>Stephen</h3>
                 <h4>Frieght Manager</h4>
                 <p>
@@ -344,30 +421,30 @@ const Homepage = () => {
             </div>
           </Carousel>
         </div>
-        <div className="testiLowerhalf" ref={ref}>
-          <div className="countUpItem">
+        <div className='testiLowerhalf' ref={ref}>
+          <div className='countUpItem'>
             <h2>DELIVERED PACKAGES</h2>
             {inView && <CountUp end={+10000} />}
           </div>
-          <div className="countUpItem">
+          <div className='countUpItem'>
             <h2>MILES PER YEAR</h2>
             {inView && <CountUp end={+9000} />}
           </div>
-          <div className="countUpItem">
+          <div className='countUpItem'>
             <h2>TONS OF GOODS</h2>
             {inView && <CountUp end={+1500} />}
           </div>
-          <div className="countUpItem">
+          <div className='countUpItem'>
             <h2>SATISFIED CLIENTS</h2>
             {inView && <CountUp end={+140} />}
           </div>
         </div>
       </section>
       {/* <div className='contact-div'> */}
-      <section id="contact">
+      <section id='contact'>
         {/* <FormControl> */}
-        <Stack spacing={2} direction="row" sx={{ margin: 4 }}>
-          <div className="questiontag">
+        <Stack spacing={2} direction='row' sx={{ margin: 4 }}>
+          <div className='questiontag'>
             <h1 style={{ color: "#6C757D" }}>Have any questions?</h1>
             <h3 style={{ color: "#0585c1" }}>We would love to help!</h3>
             <p style={{ color: "#6C757D", fontWeight: "normal" }}>
@@ -375,24 +452,24 @@ const Homepage = () => {
             </p>
           </div>
           <form>
-            <Stack spacing={2} direction="row" sx={{ marginBottom: 4 }}>
+            <Stack spacing={2} direction='row' sx={{ marginBottom: 4 }}>
               <TextField
                 style={{ color: "#3a7590" }}
-                label="Name"
-                variant="outlined"
+                label='Name'
+                variant='outlined'
                 fullWidth // To make the input field take up the full width
               />
-              <TextField label="E-mail" variant="outlined" fullWidth />
+              <TextField label='E-mail' variant='outlined' fullWidth />
             </Stack>
             <TextField
-              label="Message"
-              variant="outlined"
+              label='Message'
+              variant='outlined'
               fullWidth
               multiline
               sx={{ mb: 4 }} // To allow multiline input for the message
               rows={4} // Specify the number of rows for the message input
             />
-             <Button variant="contained" disableElevation onClick={handleOpen}>
+            <Button variant='contained' disableElevation onClick={handleOpen}>
               Submit
             </Button>
             <Modal open={open} onClose={handleClose}>
