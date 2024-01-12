@@ -70,6 +70,7 @@ import drayageExperties from "../assert/drayage.png";
 import customerservice from "../assert/customerservice.jpg";
 import efficient from "../assert/efficient.jpg";
 import MuiModal from "@mui/material/Modal";
+import industriesDrayage from "../assert/Industries.jpg";
 
 // const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 //   '& .MuiDialogContent-root': {
@@ -293,7 +294,7 @@ const Services = () => {
   const cardData = [
     {
       title: "Drayage Experties",
-      image: drayageExperties,
+      image: industriesDrayage,
       description: [
         "Experts in Drayage with understanding of local, state, and federal regulations related to trucking and transportation which includes environmental regulations, safety regulations, and compliance with hours-of-service rules for drivers.",
         "Familiarity with the operations of ports, rail yards, and intermodal terminals is crucial understanding the nderstand the layout, procedures, and protocols at these facilities to streamline cargo movement.",
