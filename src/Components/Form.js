@@ -15,6 +15,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import database from "../firebase";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import CloseIcon from "@mui/icons-material/Close";
 
 const initialFormValues = {
   fullName: "",
@@ -24,23 +25,21 @@ const initialFormValues = {
   success: false,
 };
 const defaultTheme = createTheme();
-export const ContactForm = (where) => {
+export const ContactForm = ({ where, handleClose }) => {
   const [word, setWord] = useState(false);
-  console.log(useParams());
   let { search } = useParams();
   if (typeof search == undefined || search == undefined) {
     search = "";
   }
-  console.log(search);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+
     // pushing data to realtime dataabse
     const email = data.get("email");
     if (where == "quote") {
       const contactRef = database.ref("contactform");
-
       contactRef
         .push({
           firstname: data.get("firstname"),
@@ -114,7 +113,7 @@ export const ContactForm = (where) => {
       });
     }
   };
-  console.log(where);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -202,7 +201,19 @@ less-than-truckload shipments, logistics jobs, sales careers, shipping, shipment
             alignItems: "center",
           }}
         >
-          {where["where"] == "quote" ? (
+          <Box
+            onClick={handleClose}
+            sx={{
+              position: "absolute",
+              top: "40px",
+              cursor: "pointer",
+              right: "44px",
+            }}
+          >
+            <CloseIcon color='red' fontSize='medium' />
+          </Box>
+
+          {where == "quote" ? (
             <Box
               component='form'
               noValidate
