@@ -50,20 +50,7 @@ function YourNavbar() {
           {" "}
           Shipper{" "}
         </a>
-        <Modal open={open} onClose={handleClose}>
-          <div
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              backgroundColor: "#fff",
-              padding: "20px",
-            }}
-          >
-            <ContactForm where={"quote"} style={{ transform: "scale(0.3)" }} />
-          </div>
-        </Modal>
+
         <Link to='/services'>Services</Link>
         <Link to='/industries'>Industries </Link>
         <Link
@@ -79,20 +66,6 @@ function YourNavbar() {
         >
           Contact Us
         </Link>
-        <Modal open={open} onClose={handleClose}>
-          <div
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              backgroundColor: "#fff",
-              padding: "20px",
-            }}
-          >
-            <ContactForm where={"quote"} style={{ transform: "scale(0.3)" }} />
-          </div>
-        </Modal>
 
         <Button
           variant='contained'
@@ -104,20 +77,6 @@ function YourNavbar() {
           Careers
         </Button>
 
-        <Modal open={open} onClose={handleClose}>
-          <div
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              backgroundColor: "#fff",
-              padding: "20px",
-            }}
-          >
-            <ContactForm where={"quote"} style={{ transform: "scale(0.3)" }} />
-          </div>
-        </Modal>
         <Modal open={openCareer} onClose={handleCareerClose}>
           <div
             style={{

@@ -16,6 +16,7 @@ import database from "../firebase";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import CloseIcon from "@mui/icons-material/Close";
+import { useToasts } from "react-toast-notifications";
 
 const initialFormValues = {
   fullName: "",
@@ -27,6 +28,7 @@ const initialFormValues = {
 const defaultTheme = createTheme();
 export const ContactForm = ({ where, handleClose }) => {
   const [word, setWord] = useState(false);
+  const { addToast } = useToasts();
   let { search } = useParams();
   if (typeof search == undefined || search == undefined) {
     search = "";
@@ -57,6 +59,12 @@ export const ContactForm = ({ where, handleClose }) => {
           desc: data.get("desc"),
         })
         .then(() => {
+          addToast("Application submited successfully", {
+            appearance: "success",
+            autoDismissTimeout: 3000,
+            autoDismiss: true,
+          });
+          handleClose();
           console.log("Data successfully pushed to Firebase.");
         })
         .catch(alert);
@@ -93,6 +101,12 @@ export const ContactForm = ({ where, handleClose }) => {
           personalNote: data.get("personalNote"),
         })
         .then(() => {
+          addToast("Application submited successfully", {
+            appearance: "success",
+            autoDismissTimeout: 3000,
+            autoDismiss: true,
+          });
+          handleClose();
           console.log("Data successfully pushed to Firebase.");
         })
         .catch(alert);
