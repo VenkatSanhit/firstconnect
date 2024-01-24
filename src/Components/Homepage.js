@@ -173,6 +173,7 @@ less-than-truckload shipments, logistics jobs, sales careers, shipping, shipment
                   <ContactForm
                     where={"quote"}
                     style={{ transform: "scale(0.3)" }}
+                    handleClose={handleClose}
                   />
                 </div>
               </Modal>
@@ -486,6 +487,7 @@ less-than-truckload shipments, logistics jobs, sales careers, shipping, shipment
                 <ContactForm
                   where={"quote"}
                   style={{ transform: "scale(0.3)" }}
+                  handleClose={handleClose}
                 />
               </div>
             </Modal>
