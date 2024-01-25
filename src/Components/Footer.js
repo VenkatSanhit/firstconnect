@@ -152,7 +152,7 @@ const Footer = () => {
           </Box>
           <Box flexBasis={{ xs: "90%", sm: "20%" }} px={2}>
             <Typography variant='h6' gutterBottom style={{ color: "#000" }}>
-              Contact Us
+              Contact US
             </Typography>
             <Typography variant='body2' color='#000'>
               24 Commerce St #434, Newark, NJ 07102, United States
@@ -166,7 +166,7 @@ const Footer = () => {
           </Box>
           <Box flexBasis={{ xs: "80%", sm: "20%" }} px={2}>
             <Typography variant='h6' gutterBottom style={{ color: "#000" }}>
-              Follow Us
+              Follow US
             </Typography>
             <Link
               href='https://www.linkedin.com/company/usa-first-connect-worldwide-llc/'

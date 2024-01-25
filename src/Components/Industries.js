@@ -309,9 +309,9 @@ less-than-truckload shipments, logistics jobs, sales careers, shipping, shipment
         <meta id='audience' name='audience' content='All, Business' />
         <meta id='googlebot' name='googlebot' content='index, follow' />
         <meta id='rating' name='rating' content='general' />
-        <meta property='og:image:secure_url' content='' />
+        {/* <meta property='og:image:secure_url' content='' />
         <meta property='og:image:width' content='600' />
-        <meta property='og:image:height' content='600' />
+        <meta property='og:image:height' content='600' /> */}
         <meta property='og:type' content='website' />
         <meta
           property='og:site_name'
