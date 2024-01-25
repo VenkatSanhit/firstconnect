@@ -3,6 +3,8 @@ import "./Navbar.css"; // Import your CSS file
 import ContactForm from "./Form";
 import { Modal, Button } from "@mui/material";
 import { Co2Sharp } from "@mui/icons-material";
+import { Link } from "react-router-dom";
+import CloseIcon from "@mui/icons-material/Close";
 
 function YourNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,107 +14,70 @@ function YourNavbar() {
   };
 
   const [open, setOpen] = useState(false);
+  const [openCareer, setOpenCarees] = useState(false);
 
   const handleOpen = () => {
     setOpen(true);
+  };
+  const handleOpenCareer = () => {
+    setOpenCarees(true);
   };
 
   const handleClose = () => {
     setOpen(false);
   };
+  const handleCareerClose = () => {
+    setOpenCarees(false);
+  };
 
   return (
-    <nav className="navbar fixed-navbar">
-      <a href="https://www.firstconnectworldwide.com/" className="navbar-logo">
-        <img src="Logo FCW.png" alt="Logo" />
-      </a>
-      <div className="navbar-links">
+    <nav className='navbar fixed-navbar'>
+      <Link to='/' className='navbar-logo'>
+        <img src='Logo FCW.png' alt='Logo' />
+      </Link>
+      <div className='navbar-links'>
         <a
           href
-          variant="contained"
+          variant='contained'
           disableElevation
           onClick={handleOpen}
           style={{
             cursor: "pointer",
             textDecoration: "none",
-            color: "#000", 
+            color: "#000",
           }}
         >
           {" "}
           Shipper{" "}
         </a>
-        <Modal open={open} onClose={handleClose}>
-          <div
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              backgroundColor: "#fff",
-              padding: "20px",
-            }}
-          >
-            <ContactForm where={"quote"} style={{ transform: "scale(0.3)" }} />
-          </div>
-        </Modal>
-        <a href="/services">Services</a>
-        <a href="/industries">Industries</a>
-        <a href
-          variant="contained"
+
+        <Link to='/services'>Services</Link>
+        <Link to='/industries'>Industries </Link>
+        <Link
+          to='#'
+          variant='contained'
           disableElevation
           onClick={handleOpen}
           style={{
             cursor: "pointer",
             textDecoration: "none",
             color: "#000", // Set the color you want for the text
-          }}>
+          }}
+        >
           Contact Us
-        </a>
-        <Modal open={open} onClose={handleClose}>
-          <div
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              backgroundColor: "#fff",
-              padding: "20px",
-            }}
-          >
-            <ContactForm where={"quote"} style={{ transform: "scale(0.3)" }} />
-          </div>
-        </Modal>
+        </Link>
 
-
-        {/* <a href="/ContactForm/career"
-          variant="contained"
+        <Button
+          variant='contained'
           disableElevation
-          // onClick={handleOpen}
-          style={{
-            cursor: "pointer",
-            textDecoration: "none",
-            color: "#000",
-          }}>
+          onClick={handleOpenCareer}
+          className='get-quote-button'
+          style={{ marginRight: "40px" }}
+        >
           Careers
-        </a> */}
-        
-        <Button
-  variant="contained"
-  disableElevation
-  component="a"
-  href="/ContactForm/career"
-  style={{
-    cursor: "pointer",
-    textDecoration: "none",
-    textAlign: "center",
-    color: "#fff",
-    padding: "8px 20px",
-  }}
->
-  Careers
-</Button>
+        </Button>
 
-        <Modal open={open} onClose={handleClose}>
+        <Modal open={openCareer} onClose={handleCareerClose}>
           <div
             style={{
               position: "absolute",
@@ -123,15 +88,19 @@ function YourNavbar() {
               padding: "20px",
             }}
           >
-            <ContactForm where={"quote"} style={{ transform: "scale(0.3)" }} />
+            <ContactForm
+              where={"career"}
+              style={{ transform: "scale(0.3)" }}
+              handleClose={handleCareerClose}
+            />
           </div>
         </Modal>
 
         <Button
-          variant="contained"
+          variant='contained'
           disableElevation
           onClick={handleOpen}
-          className="get-quote-button"
+          className='get-quote-button'
           style={{ marginRight: "40px" }}
         >
           Get a Quote
@@ -148,7 +117,11 @@ function YourNavbar() {
               padding: "20px",
             }}
           >
-            <ContactForm where={"quote"} style={{ transform: "scale(0.3)" }} />
+            <ContactForm
+              where={"quote"}
+              style={{ transform: "scale(0.3)" }}
+              handleClose={handleClose}
+            />
           </div>
         </Modal>
 
