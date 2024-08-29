@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import "./Services.css";
 import Fullpage, {
   FullPageSections,
@@ -10,7 +10,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import { TextField, Container, Stack } from "@mui/material";
+import { TextField, Container, Stack, Divider } from "@mui/material";
 import Modal from "react-modal";
 // import question_form from './question_form.js';
 import question_form from "./question_form";
@@ -56,6 +56,21 @@ import {
   IconButton,
 } from "@mui/material";
 import ContactForm from "./Form";
+import { Helmet } from "react-helmet";
+import ftl from "../assert/ftl-ltl.png";
+import drayage from "../assert/drayage.png";
+import warehouse from "../assert/warehouse.png";
+import route from "../assert/route.png";
+import flatbed from "../assert/flatbed.png";
+import fbroker from "../assert/fbroker.png";
+import whiteg from "../assert/whiteg.png";
+import dock from "../assert/dock.png";
+import dryvan from "../assert/dryvan.png";
+import drayageExperties from "../assert/drayage.png";
+import customerservice from "../assert/customerservice.jpg";
+import efficient from "../assert/efficient.jpg";
+import MuiModal from "@mui/material/Modal";
+import industriesDrayage from "../assert/Industries.jpg";
 
 // const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 //   '& .MuiDialogContent-root': {
@@ -66,7 +81,7 @@ import ContactForm from "./Form";
 //   },
 // }));
 const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
+  return <Slide direction='up' ref={ref} {...props} />;
 });
 const customStyles = {
   content: {
@@ -116,11 +131,14 @@ const Services = () => {
   const handleClose = () => {
     setOpen(false);
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const servicesData = [
     {
       title: "FTL & LTL",
-      imageSrc: "ftl-ltl.png",
+      imageSrc: ftl,
       altText: "FTL & LTL",
       description: [
         "First Connect Worldwide offers two primary shipping options: Full Truckload (FTL) and Less than Truckload (LTL) shipping services to cater to the diverse needs of our clients.",
@@ -133,7 +151,7 @@ const Services = () => {
     },
     {
       title: "Drayage",
-      imageSrc: "drayage.png",
+      imageSrc: drayage,
       altText: "Drayage",
       description: [
         "First Connect Worldwide specializes in efficient and reliable drayage services, seamlessly moving cargo within short distances, whether locally or between nearby transportation hubs. Our comprehensive solutions are designed to facilitate a smooth transition of goods and enable connections to various transportation modes. With in-depth knowledge of local routes, regulations, and terminals, we expedite cargo movement. We excel in intermodal connections, ensuring a continuous flow of goods between different transportation modes. Our services encompass container handling, prioritizing safe and punctual cargo transfer. Efficiency and speed are our focus, reducing cargo movement times and minimizing downtime. We offer customized drayage solutions to meet unique requirements, whether to or from a port, rail yard, or other facilities. Safety and regulatory compliance are paramount, ensuring secure and legally compliant cargo delivery. At First Connect Worldwide, count on us for efficient cargo transportation with a commitment to safety and compliance.",
@@ -142,7 +160,7 @@ const Services = () => {
     },
     {
       title: "warehousing",
-      imageSrc: "warehouse.png",
+      imageSrc: warehouse,
       altText: "Warehousing",
       description: [
         "Businesses should consider factors such as presence at preferred locations, facility capabilities and capacity, security strategies, scalability, pricing structures, and the provider's experience and reputation in the industry. As a warehousing provider, we streamline our operations for manufacturers, distributors, and business owners with an all-in-one solution, from storage and inventory management to order fulfillment and distribution.",
@@ -166,7 +184,7 @@ const Services = () => {
     // },
     {
       title: "Routing",
-      imageSrc: "route.png",
+      imageSrc: route,
       altText: "Routing",
       description: [
         "First Connect Worldwide offers cutting-edge routing services that determine the optimal route for transferring goods from the point of origin to the final destination.",
@@ -176,7 +194,7 @@ const Services = () => {
     },
     {
       title: "Flatbed Trucking",
-      imageSrc: "flatbed.png",
+      imageSrc: flatbed,
       altText: "Flatbed Trucking",
       description: [
         "First Connect Worldwide specializes in providing client-driven flatbed trucking services, meticulously engineered and executed with advanced logistics technology. Our approach remains consistent regardless of the distance involved, ensuring flawless execution every time. We begin with a thorough assessment to determine the ideal type and size of flatbed truck required for transportation.",
@@ -186,7 +204,7 @@ const Services = () => {
     },
     {
       title: "Broker & Forwarder Enterprise",
-      imageSrc: "fbroker.png",
+      imageSrc: fbroker,
       altText: "Broker & Forwarder Enterprise",
       description: [
         "First Connect Worldwide's Broker and Forwarder Enterprise Services seamlessly combine the roles of brokerage and forwarding to provide comprehensive logistics management. Acting as a vital link between shippers and carriers, our brokers leverage their extensive network and industry expertise to identify cost-effective carriers that precisely match the transportation requirements of shippers.",
@@ -197,7 +215,7 @@ const Services = () => {
     },
     {
       title: "White-Glove",
-      imageSrc: "whiteg.png",
+      imageSrc: whiteg,
       altText: "White-Glove",
       description: [
         "First Connect Worldwide complies with White Glove Services attribute special preference and extra bit attention to demand basically for goods such as fine art, luxury goods, high-end furniture, medical equipment, electronics, and other sensitive or high-value items. The term white glove indicates the immense level of care and handling of supply chain operations, that makes the difference between a good and a great service.",
@@ -207,7 +225,7 @@ const Services = () => {
     },
     {
       title: "Cross Docking & Transloading",
-      imageSrc: "dock.png",
+      imageSrc: dock,
       altText: "Cross Docking & Transloading",
       description: [
         "We used to expedite the transportation cycle through cross-docking techniques and strategies in our logistics management and operations that included unloading incoming delivery vehicles and loading the materials directly into outbound delivery vehicles, omitting traditional warehouse logistical practices.",
@@ -217,7 +235,7 @@ const Services = () => {
     },
     {
       title: "Dry Van Trucking Services",
-      imageSrc: "dryvan.png",
+      imageSrc: dryvan,
       altText: "Dry Van Trucking Services",
       description: [
         "First Connect Worldwide is your trusted provider of dry van hauling services, with a strong preference for dedicated loads to ensure consistency in transportation. We proudly serve clients across the country, specializing in the repetitive movement of a wide range of items ideally suited for traditional or expedited dry van trucking solutions.",
@@ -252,14 +270,31 @@ const Services = () => {
     //   button:"Get a quote",
     // },
   ];
+  const [isOpen, setIsOpen] = useState(false);
+  const [text, setText] = useState("");
+
   const handleCardClick = (description) => {
-    alert(description);
+    setIsOpen(true);
+    setText(description);
+  };
+
+  const style = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 400,
+    bgcolor: "background.paper",
+    border: "2px solid #000",
+    boxShadow: 24,
+    p: 4,
+    width: "80vw",
   };
 
   const cardData = [
     {
       title: "Drayage Experties",
-      image: "drayage expert.jpg",
+      image: industriesDrayage,
       description: [
         "Experts in Drayage with understanding of local, state, and federal regulations related to trucking and transportation which includes environmental regulations, safety regulations, and compliance with hours-of-service rules for drivers.",
         "Familiarity with the operations of ports, rail yards, and intermodal terminals is crucial understanding the nderstand the layout, procedures, and protocols at these facilities to streamline cargo movement.",
@@ -268,7 +303,7 @@ const Services = () => {
 
     {
       title: "Customer & Quality Service",
-      image: "service.jpg",
+      image: customerservice,
       description: [
         "Providing excellent customer service: Effective communication, transparency, and responsiveness to client needs are strengths that build trust and long-term relationships.",
         "Maintaining high standards of quality control and ensuring that products are handled and transported safely is vital for 3PL providers.",
@@ -277,7 +312,7 @@ const Services = () => {
 
     {
       title: "Cost Efficiency & Flexibility",
-      image: "efficient.jpg",
+      image: efficient,
       description: [
         "First Connect Worldwide leverage their volume and expertise to negotiate favorable rates with carriers and suppliers, helping clients reduce logistics costs.",
         " offer tailored solutions to meet the unique requirements of their clients. They can adapt their services to accommodate different industries, types of products, and supply chain complexities.",
@@ -286,14 +321,86 @@ const Services = () => {
   ];
 
   return (
-    <div className="App">
+    <div className='App'>
+      <Helmet>
+        <meta name='description' content='Your meta description' />
+
+        <meta
+          name='description'
+          content='top logistic company, 3pl, best freight brokers, transportation services, USA &amp; CANADA,
+road freight, rail freight, logistic company in newark New Jersey'
+        />
+
+        <meta
+          name='abstract'
+          content='top logistic company, 3pl, best freight brokers, transportation services, USA &amp; CANADA,
+road freight, rail freight, logistic company in newark New Jersey'
+        />
+
+        <meta
+          name='keywords'
+          content='first connect, first connect world, best freight forwarding companies,transportation services,
+forwarder companies, Freight broker, logistic company near me, logistic company, global freight services, freight broker near me,
+global forwarding, trucking, shipping, freight forwarder, top 10 freight brokers in usa, international shipping, trucks, trucking,
+ship truckload, full truckload, LTL, 3PL, freight brokers, cross docking, top logistics companies, truckload transportation, 
+quality logistics, intermodal, truckload shipping, ltl shipping, intermodal shipping, less-than-truckload, careers, jobs, 
+ocean/air, ocean & air shipping, careers, jobs, sales jobs, sales careers, logistics careers, less-than-truckload shipping,
+less-than-truckload shipments, logistics jobs, sales careers, shipping, shipments, truckload freight, logistics careers.'
+        />
+
+        <meta
+          property='og:url'
+          content='https://www.firstconnectworldwide.com'
+        />
+
+        <meta name='author' content='firstconnectworldwide' />
+        <meta name='author' content='firstconnectworldwidellc' />
+        <meta
+          property='og:title'
+          content='3pl company | logistic company | freight broker'
+        />
+        <meta
+          name='google-site-verification'
+          content='q6z9g0NUwdZRV_M2xH8uT3QUimHMR59n5JLZXeQlPjk'
+        />
+        <meta name='MobileOptimized' content='width' />
+        <meta name='HandheldFriendly' content='true' />
+        <meta name='distribution' content='global' />
+        <meta name='geo.region' content='IN-New Jersey' />
+        <meta name='geo.placename' content='Newark' />
+        <meta name='robots' content='index, follow' />
+        <meta name='language' content='english' />
+        <meta name='copyright' content='first connect worldwide' />
+        <meta
+          id='subject'
+          name='subject'
+          content='first connect worldwide in Newark, New Jersey'
+        />
+        <meta id='geography' name='geography' content='Newark' />
+        <meta id='document-type' name='document-type' content='public' />
+        <meta id='Revisit-After' name='Revisit-After' content='1 day' />
+        <meta id='city' name='city' content='Newark, New Jersey' />
+        <meta id='country' name='country' content='USA' />
+        <meta id='audience' name='audience' content='All, Business' />
+        <meta id='googlebot' name='googlebot' content='index, follow' />
+        <meta id='rating' name='rating' content='general' />
+        {/* <meta property='og:image:secure_url' content='' />
+        <meta property='og:image:width' content='600' />
+        <meta property='og:image:height' content='600' /> */}
+        <meta property='og:type' content='website' />
+        <meta
+          property='og:site_name'
+          content='first connect worldwide in Newark, New Jersey'
+        />
+        {/* <base href='https://www.firstconnectworldwide.com' /> */}
+      </Helmet>
       <Navbar hh={false} />
 
       {/* <section id="services">Services</section> */}
 
-      <div class="parallax-container">
-        <div class="parallax-content">
-          <div className="tagline">
+      <div class='service-container'>
+        <div class='parallax-content'>
+          <div className='tagline'>
             {/* <ol className='tagline'> */}
             <p>
               Navigating Excellence, Beyond Borders.
@@ -302,7 +409,7 @@ const Services = () => {
               <br />
               Connecting Logistics To Precision.
             </p>
-            <Button variant="contained" disableElevation onClick={handleOpen}>
+            <Button variant='contained' disableElevation onClick={handleOpen}>
               Get a Quote
             </Button>
             <Modal open={open} onClose={handleClose}>
@@ -326,12 +433,12 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="service-cards-container" color="#CED4DA">
+      <div className='service-cards-container' color='#CED4DA'>
         {servicesData.map((service, i) => (
           <Card
             key={i}
-            className="service-card"
-            onClick={() => handleCardClick(service.description)}
+            className='service-card'
+            onClick={() => handleCardClick(service)}
             sx={{
               // backgroundColor: "#D6E5E3",
               backgroundColor: "#CED4DA",
@@ -350,8 +457,8 @@ const Services = () => {
               }} */}
 
             <CardMedia
-              component="img"
-              className="card-image"
+              component='img'
+              className='card-image'
               image={service.imageSrc}
               alt={service.altText}
               sx={{
@@ -365,9 +472,9 @@ const Services = () => {
             <CardContent>
               <Typography
                 gutterBottom
-                variant="h5"
+                variant='h5'
                 sx={{ fontWeight: "bold" }}
-                component="div"
+                component='div'
                 style={{ color: "#0585c1" }}
               >
                 {service.title}
@@ -410,13 +517,13 @@ const Services = () => {
       </div>
 
       <Container
-        maxWidth="xl"
+        maxWidth='xl'
         style={{ marginBottom: "20px", marginTop: "40px" }}
       >
         <Typography
           gutterBottom
-          variant="h4"
-          align="center"
+          variant='h4'
+          align='center'
           style={{ fontWeight: "bold", fontSize: "40px", color: "#0585c1" }}
         >
           What Sets Us Apart?
@@ -440,26 +547,26 @@ const Services = () => {
               }}
             >
               <CardMedia
-                component="img"
+                component='img'
                 alt={card.title}
-                height="200"
-                width="100"
+                height='200'
+                width='100'
                 image={card.image}
                 title={card.title}
               />
               <CardContent>
                 <Typography
                   gutterBottom
-                  variant="h5"
-                  component="div"
-                  color="#0585C1"
+                  variant='h5'
+                  component='div'
+                  color='#0585C1'
                   style={{ fontWeight: "bold", fontSize: "1.5rem" }}
                 >
                   {card.title}
                 </Typography>
                 <Typography
-                  variant="body2"
-                  color="text.secondary"
+                  variant='body2'
+                  color='text.secondary'
                   style={{
                     textAlign: "center",
                     color: "#000",
@@ -476,6 +583,30 @@ const Services = () => {
           ))}
         </div>
       </Container>
+
+      <MuiModal
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        aria-labelledby='modal-modal-title'
+        aria-describedby='modal-modal-description'
+      >
+        <Box sx={style}>
+          <Typography id='modal-modal-title' variant='h6' component='h2'>
+            {text.title}
+          </Typography>
+          <Divider />
+          <Typography id='modal-modal-description' sx={{ mt: 2 }}>
+            {text.description}
+          </Typography>
+          <Button
+            sx={{ marginTop: "10px", alignItems: "end", float: "right" }}
+            variant='outlined'
+            onClick={() => setIsOpen(false)}
+          >
+            Close
+          </Button>
+        </Box>
+      </MuiModal>
 
       <div>
         <Footer />
