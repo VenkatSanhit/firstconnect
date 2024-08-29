@@ -67,7 +67,7 @@ function YourNavbar() {
           Contact Us
         </Link>
 
-        <Button
+        {/* <Button
           variant='contained'
           disableElevation
           onClick={handleOpenCareer}
@@ -75,7 +75,19 @@ function YourNavbar() {
           style={{ marginRight: "40px" }}
         >
           Careers
-        </Button>
+        </Button> */}
+
+        <Link to="/careers">
+          <Button
+            variant="contained"
+            disableElevation
+            
+            className="get-quote-button"
+            style={{ marginLeft: "40px" }}
+          >
+            Careers
+          </Button>
+        </Link>
 
         <Modal open={openCareer} onClose={handleCareerClose}>
           <div

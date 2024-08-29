@@ -8,6 +8,7 @@ import ContactForm from "./Components/Form";
 import Button from "@mui/material/Button";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Careers from "./Components/Careers";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/services' element={<Services />}></Route>
         <Route path='/industries' element={<Industries />}></Route>
         <Route path='/ContactForm' element={<ContactForm />}></Route>
+        <Route path='/careers' element={<Careers />}></Route>
         <Route path='/ContactForm/:search' element={<ContactForm />}></Route>
       </Routes>
     </BrowserRouter>

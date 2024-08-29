@@ -5,6 +5,7 @@
   "homepage": "http://firstconnectworldwide.com/",
   "dependencies": {
     "@ap.cx/react-fullpage": "^0.3.0",
+    "@emailjs/browser": "^3.4.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fontsource/roboto": "^5.0.8",
